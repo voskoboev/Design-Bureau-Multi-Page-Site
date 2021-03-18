@@ -1,0 +1,168 @@
+@import 'fonts.css';
+
+$secondary-color: #F27935;
+
+$primary-font-color: #000;
+$secondary-font-color: #fff;
+
+$default-font-size: 16px;
+
+@mixin font($weight, $size: 1rem, $clr: #000) {
+  font: {
+    family: 'SF Pro Display'; // $family
+    weight: $weight;
+    size: $size;
+  }
+
+  color: $clr;
+}
+
+@mixin flex($jcc: start, $ai: normal, $fld: row) {
+  display: flex;
+  justify-content: $jcc;
+  align-items: $ai;
+  flex-direction: $fld;
+}
+
+%centering-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: $default-font-size;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.container {
+  min-width: 1110px;
+  margin: 0 auto;
+}
+
+// .wide-container {
+//   min-width: 1110px;
+//   margin: 0 auto;
+// }
+
+.header {
+  background-image: url(../images/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -200px; // main -200, main2 -130
+
+  .header__upper {
+    @include flex(start, center);
+    padding: 30px 60px 0;
+    background-color: transparent;
+  }
+
+  .header__logo {
+    width: 140px;
+    min-height: 40px;
+    margin-right: 200px;
+    cursor: pointer;
+  }
+
+  .header__logo-architecture {
+    display: block;
+    margin-top: 2px;
+    margin-left: 42px;
+  }
+
+  .header__menu {
+    display: flex;
+  }
+
+  .header__menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .header__menu-item-link {
+    @include font(600, 14px, #fff);
+  }
+
+  .header__menu-item-link:hover {
+    color: $secondary-color;
+  }
+
+  .header__call {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .header__call-text {
+    margin-right: 12px;
+    @include font(600, 18px, $secondary-color);
+  }
+
+  .header__call-link {
+    @include font(600, 18px, #fff);
+  }
+
+  .header__center {
+    padding-top: 230px; //370
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .header__title {
+    @include font(600, 90px, #fff);
+
+    // margin-top: -140px;
+    margin-left: 250px;
+    margin-bottom: 170px;
+  }
+
+  .header__title-start {
+    color: $secondary-color;
+  }
+
+  .header__lower {
+    display: flex;
+    justify-content: center;
+    padding: 0 60px 86px;
+  }
+
+  .header__play-btn {
+    width: 110px;
+    height: 110px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 49px center;
+    cursor: pointer;
+  }
+
+  .header__play-btn:hover {
+    opacity: .8;
+  }
+
+  .header__promo-text {
+    position: absolute;
+    bottom: 86px;
+    right: 60px;
+    max-width: 380px;
+    min-height: 84px; 
+    @include font(400, 15px, #fff);
+    line-height: 140%;
+  }
+
+}
+
+.section__about {
+  height: 500px;
+  
+}
