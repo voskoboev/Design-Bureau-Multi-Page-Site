@@ -1,13 +1,24 @@
-@import url(d:\P-R-O-G-R-A-M-M-I-N-G\Portfolio\Benhome\project\css\fonts.css);
+.services .services__list-item-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -17,7 +28,7 @@ a {
 }
 
 .container {
-  min-width: 1110px;
+  width: 1110px;
   margin: 0 auto;
 }
 
@@ -77,7 +88,7 @@ a {
 }
 
 .header .header__menu-item-link:hover {
-  color: #F27935;
+  color: #f27935;
 }
 
 .header .header__call {
@@ -92,7 +103,7 @@ a {
   font-family: 'SF Pro Display';
   font-weight: 600;
   font-size: 18px;
-  color: #F27935;
+  color: #f27935;
 }
 
 .header .header__call-link {
@@ -123,7 +134,7 @@ a {
 }
 
 .header .header__title-start {
-  color: #F27935;
+  color: #f27935;
 }
 
 .header .header__lower {
@@ -164,7 +175,273 @@ a {
   line-height: 140%;
 }
 
-.section__about {
-  height: 500px;
+.about .about__upper {
+  padding-top: 125px;
+  border-bottom: 1px solid #000;
+}
+
+.about .about__upper-title {
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+}
+
+.about .about__central {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about .about__central-text {
+  width: 396px;
+  height: 105px;
+  margin-top: 470px;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  line-height: 140%;
+  margin-left: 180px;
+}
+
+.about .about__central-text:hover {
+  color: #f27935;
+  cursor: pointer;
+}
+
+.about .about__central-img {
+  position: relative;
+  left: 150px;
+  width: 875px;
+  height: 525px;
+  background-image: url(../images/exterior-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 155px;
+}
+
+.about .about__lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+.about .about__lower-title-container {
+  padding-top: 155px;
+}
+
+.about .about__lower-title {
+  text-align: right;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+}
+
+.about .about__lower-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .about__lower-img {
+  width: 555px;
+  height: 522px;
+  background-image: url(../images/exterior-2.jpg);
+  background-position-y: -150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about .about__lower-text-container {
+  border-top: 1px solid #000;
+  padding-left: 150px;
+  padding-top: 340px;
+  position: absolute;
+  right: 0;
+  width: 42.1%;
+}
+
+.about .about__lower-text {
+  width: 405px;
+  min-height: 63px;
+  text-align: right;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  line-height: 140%;
+}
+
+.about .about__lower-text:hover {
+  color: #f27935;
+  cursor: pointer;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f9f9f9;
+  padding-bottom: 165px;
+}
+
+.services .services__left {
+  width: 50%;
+  padding-top: 170px;
+}
+
+.services .services__title {
+  max-width: 530px;
+  border-bottom: 1px solid #000;
+  text-align: right;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+  line-height: 22px;
+}
+
+.services .services__right {
+  width: 50%;
+}
+
+.services .services__list {
+  padding-top: 170px;
+}
+
+.services .services__list-item {
+  max-width: 555px;
+}
+
+.services .services__list-item-upper {
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 7px;
+}
+
+.services .services__list-item-title {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
+}
+
+.services .services__list-item-btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.services .services__list-item-btn:hover {
+  background-color: #f27935;
+  border: none;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+.services .services__list-item-btn:hover:after {
+  content: url(/images/white-up-arrow.png);
+  position: absolute;
+  left: 9px;
+  top: 2px;
+}
+
+.services .services__list-item-btn-down-arrow {
+  background-image: url(/images/black-down-arrow.svg);
+  background-position: center center;
+  width: 7px;
+  height: 7px;
+}
+
+.services .services__list-item-lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 40px 0 40px;
+}
+
+.services .services__list-item-link {
+  margin-top: auto;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  color: #f27935;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.services .services__list-item-link:after {
+  content: url(/images/orange-arrow.png);
+  padding-left: 8px;
+}
+
+.services .services__list-item-link:hover {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.services .services__list-item-text {
+  width: 380px;
+  text-align: right;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  line-height: 140%;
 }
 /*# sourceMappingURL=index.css.map */
