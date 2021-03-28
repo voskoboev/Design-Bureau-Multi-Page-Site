@@ -444,4 +444,112 @@ a {
   color: #000;
   line-height: 140%;
 }
+
+.projects .projects__upper {
+  padding-top: 220px;
+}
+
+.projects .projects__title {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 57px;
+  color: #000;
+  line-height: 60px;
+}
+
+.projects .projects__lower {
+  padding-top: 90px;
+}
+
+.projects .swiper-container {
+  margin-bottom: 200px;
+}
+
+.projects .swiper-slide {
+  width: 600px;
+  height: 566px;
+  background-color: #fff;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .swiper-slide__upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 560px;
+  border-bottom: 1px solid #000;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-right: 30px;
+}
+
+.projects .swiper-slide__title {
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+  line-height: 20px;
+  width: 150px;
+  margin-right: 280px;
+}
+
+.projects .swiper-slide__title::first-line {
+  line-height: 32px;
+}
+
+.projects .swiper-slide__category {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 13px;
+  color: #f27935;
+  line-height: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.projects .swiper-slide__lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 60px 40px 50px;
+}
+
+.projects .swiper-slide__link-btn {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: #f27935;
+  background-image: url(/images/white-right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 250px;
+}
+
+.projects .swiper-slide__text {
+  width: 330px;
+  text-align: center;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  line-height: 21px;
+}
 /*# sourceMappingURL=index.css.map */

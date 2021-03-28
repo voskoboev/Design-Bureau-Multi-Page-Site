@@ -8,10 +8,12 @@
   <title>Benhome</title>
 
   <link rel="stylesheet" href="libs/reset/reset.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/index.css">
 
-  <script src="js/index.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+  <script src="js/index.js" defer></script>
 </head>
 
 <body>
@@ -243,6 +245,53 @@
           </div>
         </li>
       </ul>
+    </div>
+
+  </section>
+
+  <section class="projects">
+
+    <div class="projects__upper container">
+      <h2 class="projects__title">
+        Projects.
+      </h2>
+    </div>
+
+    <div class="projects__lower">
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide swiper-slide-one">
+            <div class="swiper-slide__upper">
+              <h3 class="swiper-slide__title">
+                HOUSE IN FOREST
+              </h3>
+              <div class="swiper-slide__category">
+                ARCHITECTURE
+              </div>
+            </div>
+            <div class="swiper-slide__lower">
+              <a class="swiper-slide__link-btn" href="#">
+
+              </a>
+              <div class="swiper-slide__text">
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"  are also reproduced in their  accompanied by English 14 translation by H. Rackham.
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
     </div>
 
 

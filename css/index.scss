@@ -207,7 +207,7 @@ a {
   }
 
   .about__central-text:hover {
-    color: #f27935;
+    color: $accent-color;
     cursor: pointer;
   }
 
@@ -284,7 +284,7 @@ a {
   }
 
   .about__lower-text:hover {
-    color: #f27935;
+    color: $accent-color;
     cursor: pointer;
   }
 }
@@ -344,7 +344,7 @@ a {
   }
 
   .services__list-item-btn:hover {
-    background-color: #f27935;
+    background-color: $accent-color;
     border: none;
 
     transition: .2s all ease;
@@ -381,7 +381,7 @@ a {
   .services__list-item-link {
     margin-top: auto;
     @include font(400, 15px);
-    color: #f27935;
+    color: $accent-color;
     transform: translateX(0px);
     transition: .3s all ease;
   }
@@ -402,4 +402,96 @@ a {
     @include font(400, 15px);
     line-height: 140%;
   }
+}
+
+.projects {
+
+  .projects__upper {
+    padding-top: 220px;
+  }
+
+  .projects__title {
+    @include font(600, 57px);
+    line-height: 60px;
+  }
+
+  .projects__lower {
+    padding-top: 90px;
+  }
+
+  .swiper-container {
+    margin-bottom: 200px;
+  }
+
+  .swiper-slide {
+    width: 600px; // 600
+    height: 566px; // 566
+    background-color: #fff;
+    border: 1px solid #000;
+    
+    display: flex;
+    flex-direction: column;
+    // align-items: end;
+  }
+
+  .swiper-slide__upper {
+    display: flex;
+    max-width: 560px;
+
+    border-bottom: 1px solid #000;
+    // flex-direction: row;
+    // align-self: end;
+    margin-left: auto;
+    padding-top: 50px;
+    padding-right: 30px;
+  }
+
+  .swiper-slide__title {
+    @include font(700, 25px);
+    line-height: 20px;
+    width: 150px;
+    // letter-spacing: 0.03em;
+    margin-right: 280px;
+  }
+
+  .swiper-slide__title::first-line {
+    line-height: 32px;
+  }
+
+  .swiper-slide__category {
+    @include font(600, 13px, $accent-color);
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .swiper-slide__lower {
+    display: flex;
+    @include flex(space-between);
+    padding: 60px 40px 50px;
+    
+  }
+
+  .swiper-slide__link-btn {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    background-image: url(/images/white-right-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 250px;
+
+   
+
+  }
+
+  .swiper-slide__text {
+    width: 330px;
+    text-align: center;
+    @include font(400, 15px);
+    line-height: 21px;
+
+  }
+
 }
