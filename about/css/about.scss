@@ -1,0 +1,258 @@
+// @import '../../common/_fonts';
+@import '../../common/_vars';
+@import '../../common/_mixins';
+
+@import '../../blocks/_upper-header';
+@import '../../blocks/_services';
+@import '../../blocks/_brands';
+
+
+html {
+  box-sizing: border-box;
+  font-size: $default-font-size;
+
+  // overflow-x: hidden;
+
+  font-family: $main-font-family;
+}
+
+body {
+  box-sizing: inherit;
+  overflow-x: hidden;
+  // display: flex;
+  // flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+// .header {
+//   background-color: black;
+// }
+
+.header__menu-item-link,
+.header__call-link {
+
+  color: #000;
+}
+
+.header__central {
+  padding-top: 200px;
+  padding-left: 400px;
+  padding-bottom: 65px;
+}
+
+.header__title-span {
+  color: $accent-color;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 57px;
+  line-height: 60px;
+  max-width: 550px;
+}
+
+.header__lower {
+  width: 100%;
+  height: 768px;
+
+  border: 1px solid #000;
+}
+
+.idea {
+  padding-top: 190px;
+
+  .idea__upper {
+    display: flex;
+    padding-bottom: 250px;
+  }
+
+  .idea__upper-left {
+    width: 50%;
+  }
+
+  .idea__upper-right {
+    width: 50%;
+
+  }
+
+  .idea__title {
+    max-width: 620px;
+    text-align: right;
+
+    border-bottom: 1px solid #000;
+
+    margin-bottom: 235px;
+
+
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 20px;
+
+    text-transform: uppercase;
+  }
+
+  .idea__text {
+    max-width: 400px;
+    margin-left: 410px;
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .idea__video {
+    width: 900px;
+    height: 475px;
+
+    border: 1px solid #000;
+  }
+
+  .idea__lower {
+    display: flex;
+    padding-bottom: 190px;
+  }
+
+  .idea__lower-left,
+  .idea__lower-right {
+    padding: 67px 0 84px 50px;
+  }
+
+  .idea__lower-left {
+    width: 50%;
+    background-color: #f9f9f9;
+  }
+
+  .idea__lower-right {
+    width: 50%;
+  }
+
+  .idea__lower-number {
+    color: $accent-color;
+    font-weight: 600;
+    font-size: 110px;
+    line-height: 90px;
+
+    margin-bottom: 55px;
+  }
+
+  .idea__lower-title {
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 80px;
+  }
+
+  .idea__lower-text {
+    max-width: 330px;
+    text-align: center;
+    margin-left: auto;
+
+
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+
+.team {
+
+  .team__upper {
+    padding-top: 250px;
+    margin-bottom: 120px;
+  }
+
+  .team__title {
+    max-width: 600px;
+    text-align: right;
+    border-bottom: 1px solid #000;
+
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .team__lower {
+    display: flex;
+
+  }
+
+  .team__person {
+    width: 25%;
+
+    padding: 35px 45px 35px 35px;
+
+    background-color: #f9f9f9;
+
+    border: 1px solid #000;
+  }
+
+  .team__person-title {
+    margin-bottom: 85px;
+
+
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $accent-color;
+  }
+
+  .team__person-text {
+    max-width: 320px;
+    margin-left: auto;
+    text-align: center;
+
+    margin-bottom: 265px;
+
+    
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .team__person-socials {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .team__person-socials-link {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  .team__person-socials-link:hover {
+    opacity: .7;
+  }
+
+  .team__person-socials-link:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .team__person-socials-link--fb {
+    background: url(/images/about/fb.png) no-repeat;
+  }
+
+  .team__person-socials-link--tw {
+    background: url(/images/about/tw.png) no-repeat 0 2px;
+  }
+
+  .team__person-socials-link--inst {
+    background: url(/images/about/inst.png) no-repeat;
+  }
+}

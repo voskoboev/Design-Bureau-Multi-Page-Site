@@ -1,0 +1,51 @@
+.header__upper {
+  @include flex(start, center);
+  padding: 30px 60px 0;
+  background-color: transparent;
+}
+
+.header__logo {
+  width: 140px;
+  min-height: 40px;
+  margin-right: 200px;
+  cursor: pointer;
+}
+
+.header__logo-architecture {
+  display: block;
+  margin-top: 2px;
+  margin-left: 42px;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.header__menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__menu-item-link {
+  @include font(600, 14px, #fff);
+
+
+  font-family: 'SF Pro Display';
+}
+
+.header__menu-item-link:hover {
+  color: $accent-color;
+}
+
+.header__call {
+  display: flex;
+  margin-left: auto;
+}
+
+.header__call-text {
+  margin-right: 12px;
+  @include font(600, 18px, $accent-color);
+}
+
+.header__call-link {
+  @include font(600, 18px, #fff);
+}

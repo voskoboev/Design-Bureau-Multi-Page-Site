@@ -1,0 +1,16 @@
+@mixin flex($jcc: start, $ai: normal, $fld: row) {
+  display: flex;
+  justify-content: $jcc;
+  align-items: $ai;
+  flex-direction: $fld;
+}
+
+@mixin font($weight, $size: 1rem, $color: #000) {
+  font: {
+    family: $main-font-family;
+    weight: $weight;
+    size: $size;
+  }
+
+  color: $color;
+}

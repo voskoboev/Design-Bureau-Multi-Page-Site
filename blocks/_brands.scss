@@ -1,0 +1,39 @@
+// .brands {
+
+// }
+
+.brands__container {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 200px 0;
+}
+
+.brands__item--first {
+  width: 150px;
+  height: 45px;
+
+  background: url(/images/brands/creative.png) no-repeat;
+}
+
+.brands__item--second {
+  width: 141px;
+  height: 37px;
+
+  background: url(/images/brands/at.png) no-repeat;
+}
+
+.brands__item--third {
+  width: 104px;
+  height: 38px;
+
+  background: url(/images/brands/neuton.png) no-repeat;
+}
+
+.brands__item--fourth {
+  width: 135px;
+  height: 35px;
+
+  background: url(/images/brands/francois.png) no-repeat;
+
+}
