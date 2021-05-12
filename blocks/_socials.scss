@@ -1,0 +1,31 @@
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials__link {
+  width: 20px;
+  height: 20px;
+  display: block;
+
+}
+
+.socials__link:hover {
+  opacity: .7;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.socials__link--first {
+  background: url(/images/about/fb.png) no-repeat;
+}
+
+.socials__link--second {
+  background: url(/images/about/tw.png) no-repeat 0 2px;
+}
+
+.socials__link--third {
+  background: url(/images/about/inst.png) no-repeat;
+}

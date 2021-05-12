@@ -30,10 +30,13 @@
 
 
   font-family: 'SF Pro Display';
+
+  transition: .2s color ease;
 }
 
 .header__menu-item-link:hover {
   color: $accent-color;
+  transition: .2s color ease;
 }
 
 .header__call {

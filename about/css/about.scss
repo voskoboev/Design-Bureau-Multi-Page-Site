@@ -3,8 +3,9 @@
 @import '../../common/_mixins';
 
 @import '../../blocks/_upper-header';
-@import '../../blocks/_services';
+@import '../../blocks/services/_services';
 @import '../../blocks/_brands';
+@import '../../blocks/_socials';
 
 
 html {
@@ -16,11 +17,23 @@ html {
   font-family: $main-font-family;
 }
 
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+}
+
 body {
-  box-sizing: inherit;
+  box-sizing: border-box;
+
   overflow-x: hidden;
   // display: flex;
   // flex-direction: column;
+}
+
+::selection {
+  background-color: lighten($accent-color, 20%);
 }
 
 a {
@@ -63,8 +76,11 @@ a {
 .header__lower {
   width: 100%;
   height: 768px;
+  // border: 1px solid #000;
 
-  border: 1px solid #000;
+  background: url(/images/about/office-meeting.jpg) no-repeat 0 -250px;
+  background-size: cover;
+
 }
 
 .idea {
@@ -81,6 +97,9 @@ a {
 
   .idea__upper-right {
     width: 50%;
+
+    position: relative;
+
 
   }
 
@@ -109,11 +128,59 @@ a {
     line-height: 150%;
   }
 
-  .idea__video {
-    width: 900px;
+  .idea__video-container {
+    max-width: 900px;
     height: 475px;
 
-    border: 1px solid #000;
+    position: relative;
+
+    // border: 1px solid #000;
+  }
+
+  .idea__video {
+    width: 900px;
+    max-height: 475px;
+
+    object-fit: cover;
+
+    // border: 1px solid #000;
+  }
+
+  .idea__poster {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 100;
+
+    // border: 1px solid #000;
+
+    @extend %centering-flex-container;
+  }
+
+  .idea__play-btn {
+    width: 110px;
+    height: 110px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    @extend %centering-flex-container;
+
+    transition: .2s all ease;
+  }
+
+  .idea__poster:hover .idea__play-btn {
+    background-color: #fff;
+
+    transition: .2s all ease;
+  }
+
+  .idea__poster-arrow {
+    width: 24px;
+    height: 24px;
+    background: url(/images/about/video-arrow.png) no-repeat;
+    margin-left: 10px;
   }
 
   .idea__lower {
@@ -192,18 +259,31 @@ a {
 
   .team__person {
     width: 25%;
+    min-height: 555px;
+    background-color: #f9f9f9;
+    // border: 1px solid #000;
+
+    position: relative;
+  }
+
+  .team__person-info {
+    visibility: hidden;
+    opacity: 0;
 
     padding: 35px 45px 35px 35px;
 
-    background-color: #f9f9f9;
+    transition: .5s all ease;
 
-    border: 1px solid #000;
+  }
+
+  .team__person-info--active {
+    visibility: visible;
+    opacity: 1;
+    transition: .5s all ease;
   }
 
   .team__person-title {
     margin-bottom: 85px;
-
-
     font-weight: bold;
     font-size: 25px;
     line-height: 20px;
@@ -218,41 +298,97 @@ a {
 
     margin-bottom: 265px;
 
-    
+
     font-weight: normal;
     font-size: 15px;
     line-height: 140%;
   }
 
-  .team__person-socials {
-    display: flex;
-    align-items: center;
+  .team__person-photo {
+    opacity: 1;
+    transition: .5s all ease;
 
   }
 
-  .team__person-socials-link {
-    width: 20px;
-    height: 20px;
+  .team__person-photo--inactive {
+    opacity: 0;
+    transition: .5s all ease;
+    visibility: hidden;
+  }
+
+  .team__person-photo-img {
+    height: 480px;
+    // visibility: visible;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+  }
+
+
+
+
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  padding-top: 120px;
+  padding-bottom: 110px;
+
+  border-top: 1px solid rgba(0, 0, 0, .5);
+
+  padding-right: 60px;
+  padding-left: 60px;
+
+
+  .footer__rights-span {
+    margin-top: 10px;
     display: block;
   }
 
-  .team__person-socials-link:hover {
-    opacity: .7;
+  .footer__rights {
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 170%;
   }
 
-  .team__person-socials-link:not(:last-child) {
-    margin-right: 30px;
+
+  .footer__menu-item:not(:last-child) {
+    margin-bottom: 10px;
   }
 
-  .team__person-socials-link--fb {
-    background: url(/images/about/fb.png) no-repeat;
+  //font($weight, $size: 1rem, $color: #000)
+  .footer__menu-link {
+    @include font(normal, 14px);
+    line-height: 140%;
+    font-family: inherit;
+
+    transition: .2s color ease;
   }
 
-  .team__person-socials-link--tw {
-    background: url(/images/about/tw.png) no-repeat 0 2px;
+  .footer__menu-link:hover {
+    color: $accent-color;
+    transition: .2s color ease;
   }
 
-  .team__person-socials-link--inst {
-    background: url(/images/about/inst.png) no-repeat;
+  .footer__languages-item {
+    text-transform: uppercase;
+    cursor: pointer;
+
   }
+
+  .footer__languages-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .footer__languages-item:first-child {
+    color: $accent-color;
+    transition: .2s color ease;
+  }
+
 }
