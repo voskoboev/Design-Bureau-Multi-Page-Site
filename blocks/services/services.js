@@ -15,9 +15,5 @@ function toggleAccordionTabs() {
       item.lastElementChild.children[0].classList.toggle(arrowActivationClass);
     });
   });
-
-
-
-
 }
 

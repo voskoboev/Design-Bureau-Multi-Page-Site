@@ -4,11 +4,26 @@
   background-color: transparent;
 }
 
+@media screen and (max-width: 1350px) {
+  .header__upper {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .header__logo {
   width: 140px;
   min-height: 40px;
+
   margin-right: 200px;
+
   cursor: pointer;
+}
+
+@media screen and (max-width: 1350px) {
+  .header__logo {
+   margin-right: auto;
+  }
 }
 
 .header__logo-architecture {
@@ -23,6 +38,12 @@
 
 .header__menu-item:not(:last-child) {
   margin-right: 50px;
+}
+
+@media screen and (max-width: 1350px) {
+  .header__menu-item:not(:last-child) {
+    margin-right: 25px;
+  }
 }
 
 .header__menu-item-link {

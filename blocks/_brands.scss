@@ -5,8 +5,16 @@
 .brands__container {
   display: flex;
   justify-content: space-between;
-
+  flex-wrap: wrap;
+  
   padding: 200px 0;
+}
+
+
+@media screen and (max-width: 1550px) {
+  .brands__container {
+    padding: 175px 0;
+  }
 }
 
 .brands__item--first {
