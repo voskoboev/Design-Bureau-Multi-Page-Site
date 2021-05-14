@@ -1,0 +1,31 @@
+:root {
+  box-sizing: border-box;
+  font-size: $default-font-size;
+  font-family: $main-font-family;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+}
+
+body {
+  overflow-x: hidden;
+
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+::selection {
+  background-color: lighten($accent-color, 20%);
+}

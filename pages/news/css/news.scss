@@ -1,0 +1,125 @@
+@import '../../../common/_vars';
+@import '../../../common/_mixins';
+
+
+@import '../../../common/_common.styles';
+@import '../../../blocks/_upper-header';
+@import '../../../blocks/_footer';
+
+
+.header {
+
+  .header__lower {
+    padding-top: 210px;
+    border-bottom: 1px solid rgba(000, 000, 000, .3);
+  }
+
+  .header__title {
+    margin-left: 400px;
+
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 42px;
+  }
+}
+
+.news {
+
+  .news__nav {
+    padding-top: 70px;
+    padding-bottom: 55px;
+  }
+
+  .news__menu {
+    display: flex;
+  }
+
+  .news__menu-item {
+    text-transform: capitalize;
+    transition: .2s color ease;
+  }
+
+  .news__menu-item:hover {
+    color: $accent-color;
+    cursor: pointer;
+    transition: .2s color ease;
+  }
+
+  .news__menu-item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  .news__card {
+    max-width: 600px;
+    min-height: 570px;
+    // background-color: lighten($accent-color, 5%);
+
+
+  }
+
+  .news__card:hover {
+    background-color: $accent-color;
+    transition: .3s all ease;
+  }
+
+  .news__card:hover .news__card-pic {
+    background: none;
+    // background-color: $accent-color;
+
+    transition: .3s all ease;
+  }
+
+  .news__card:hover .news__card-info {
+    visibility: visible;
+
+    // transition: .3s all ease;
+  }
+
+  .news__card-pic {
+    position: relative;
+
+    padding: 50px 0 33px 40px;
+    background: url('../../../images/exterior-1.jpg') no-repeat;
+    max-width: 600px;
+    min-height: 570px;
+
+    transition: .3s all ease;
+  }
+  
+  
+  .news__card-info {
+    background-color: $accent-color;
+    visibility: hidden;
+  }
+
+  // .news__card-pic {
+
+  // }
+
+  .news__category {
+    position: absolute;
+    top: 50px;
+    right: 32px;
+  }
+
+  .news__card-title {
+    border-bottom: 1px solid #000;
+    margin-bottom: 55px;
+  }
+
+  .news__card-text {
+    max-width: 330px;
+    min-height: 130px;
+    margin-left: auto;
+    margin-right: 30px;
+    text-align: center;
+  }
+
+  .news__card-link {
+    position: absolute;
+    bottom: 33px;
+
+  }
+
+
+}

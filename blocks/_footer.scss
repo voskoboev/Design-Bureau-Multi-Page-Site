@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-
+  
   padding-top: 120px;
   padding-bottom: 110px;
 
@@ -11,14 +11,15 @@
   padding-right: 60px;
   padding-left: 60px;
 
+  width: 100%;
 }
 
-@media screen and (max-width: 1550px) {
-  .footer {
-    padding-top: 60px;
-  padding-bottom: 55px;
-  }
-}
+// @media screen and (max-width: 1550px) {
+//   .footer {
+//     padding-top: 60px;
+//     padding-bottom: 55px;
+//   }
+// }
 
 
 .footer__rights-span {

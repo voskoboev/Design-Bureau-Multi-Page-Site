@@ -2,6 +2,8 @@
 @import '../../../common/_vars';
 @import '../../../common/_mixins';
 
+
+@import '../../../common/common.styles';
 @import '../../../blocks/_upper-header';
 @import '../../../blocks/services/_services';
 @import '../../../blocks/_brands';
@@ -9,43 +11,43 @@
 @import '../../../blocks/_footer';
 
 
-html {
-  box-sizing: border-box;
-  font-size: $default-font-size;
+// :root {
+//   box-sizing: border-box;
+//   font-size: $default-font-size;
 
-  // overflow-x: hidden;
+//   // overflow-x: hidden;
 
-  font-family: $main-font-family;
-}
+//   font-family: $main-font-family;
+// }
 
-*,
-*::before,
-*::after {
+// *,
+// *::before,
+// *::after {
 
-  box-sizing: border-box;
-}
+//   box-sizing: inherit;
+// }
 
-body {
-  box-sizing: border-box;
+// body {
+ 
 
-  overflow-x: hidden;
-  // display: flex;
-  // flex-direction: column;
-}
+//   overflow-x: hidden;
+//   // display: flex;
+//   // flex-direction: column;
+// }
 
-::selection {
-  background-color: lighten($accent-color, 20%);
-}
+// ::selection {
+//   background-color: lighten($accent-color, 20%);
+// }
 
-a {
-  text-decoration: none;
-  outline: none;
-}
+// a {
+//   text-decoration: none;
+//   outline: none;
+// }
 
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-}
+// .container {
+//   max-width: 1110px;
+//   margin: 0 auto;
+// }
 
 // .header {
 //   background-color: black;

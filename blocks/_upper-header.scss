@@ -47,7 +47,7 @@
 }
 
 .header__menu-item-link {
-  @include font(600, 14px, #fff);
+  @include font(600, 14px, #000);
 
 
   font-family: 'SF Pro Display';
@@ -71,5 +71,5 @@
 }
 
 .header__call-link {
-  @include font(600, 18px, #fff);
+  @include font(600, 18px, #000);
 }

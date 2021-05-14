@@ -10,6 +10,42 @@
           align-items: center;
 }
 
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: "SF Pro Display";
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+::-moz-selection {
+  background-color: #f8b995;
+}
+
+::selection {
+  background-color: #f8b995;
+}
+
 .header__upper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +114,7 @@
   font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   font-family: 'SF Pro Display';
   -webkit-transition: .2s color ease;
   transition: .2s color ease;
@@ -109,7 +145,7 @@
   font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 18px;
-  color: #fff;
+  color: #000;
 }
 
 .services {
@@ -353,15 +389,15 @@
 }
 
 .socials__link--first {
-  background: url(/images/about/fb.png) no-repeat;
+  background: url(/images/socials/fb.png) no-repeat;
 }
 
 .socials__link--second {
-  background: url(/images/about/tw.png) no-repeat 0 2px;
+  background: url(/images/socials/tw.png) no-repeat 0 2px;
 }
 
 .socials__link--third {
-  background: url(/images/about/inst.png) no-repeat;
+  background: url(/images/socials/inst.png) no-repeat;
 }
 
 .footer {
@@ -379,13 +415,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.5);
   padding-right: 60px;
   padding-left: 60px;
-}
-
-@media screen and (max-width: 1550px) {
-  .footer {
-    padding-top: 60px;
-    padding-bottom: 55px;
-  }
+  width: 100%;
 }
 
 .footer__rights-span {
@@ -435,44 +465,6 @@
   color: #f27935;
   -webkit-transition: .2s color ease;
   transition: .2s color ease;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px;
-  font-family: "SF Pro Display";
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-::-moz-selection {
-  background-color: #f8b995;
-}
-
-::selection {
-  background-color: #f8b995;
-}
-
-a {
-  text-decoration: none;
-  outline: none;
-}
-
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
 }
 
 .header__menu-item-link,
