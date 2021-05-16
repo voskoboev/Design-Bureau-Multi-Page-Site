@@ -4,6 +4,8 @@
 
 @import '../../../common/_common.styles';
 @import '../../../blocks/_upper-header';
+@import '../../../blocks/_card';
+@import '../../../blocks/_socials';
 @import '../../../blocks/_footer';
 
 
@@ -49,77 +51,73 @@
     margin-right: 45px;
   }
 
-  .news__card {
-    max-width: 600px;
-    min-height: 570px;
-    // background-color: lighten($accent-color, 5%);
+  .news__lower {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(570px, auto);
+    grid-gap: 60px;
+  }
 
+  .news__card:first-child {
+    background: url('../../../images/news/table.jpg') no-repeat;
+    background-size: cover;
+  }
 
+  .news__card:nth-child(2) {
+    background: url('../../../images/news/facade.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:nth-child(3) {
+    background: url('../../../images/news/hall.jpg ') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:nth-child(4) {
+    background: url('../../../images/news/houses.jpg ') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:nth-child(5) {
+    background: url('../../../images/news/bed.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:nth-child(6) {
+    background: url('../../../images/news/plant.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:nth-child(7) {
+    background: url('../../../images/news/yard.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:nth-child(8) {
+    background: url('../../../images/news/wood-interior.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .news__card:last-child {
+    background: url('../../../images/news/bedroom.jpg ') no-repeat;
+    background-size: cover;
   }
 
   .news__card:hover {
-    background-color: $accent-color;
-    transition: .3s all ease;
-  }
-
-  .news__card:hover .news__card-pic {
     background: none;
-    // background-color: $accent-color;
-
-    transition: .3s all ease;
-  }
-
-  .news__card:hover .news__card-info {
-    visibility: visible;
-
-    // transition: .3s all ease;
-  }
-
-  .news__card-pic {
-    position: relative;
-
-    padding: 50px 0 33px 40px;
-    background: url('../../../images/exterior-1.jpg') no-repeat;
-    max-width: 600px;
-    min-height: 570px;
-
-    transition: .3s all ease;
-  }
-  
-  
-  .news__card-info {
     background-color: $accent-color;
+    transition: .3s all ease;
+  }
+
+  .news__card:hover .card__info {
+    visibility: visible;
+  }
+
+  .card__info {
     visibility: hidden;
   }
+}
 
-  // .news__card-pic {
-
-  // }
-
-  .news__category {
-    position: absolute;
-    top: 50px;
-    right: 32px;
-  }
-
-  .news__card-title {
-    border-bottom: 1px solid #000;
-    margin-bottom: 55px;
-  }
-
-  .news__card-text {
-    max-width: 330px;
-    min-height: 130px;
-    margin-left: auto;
-    margin-right: 30px;
-    text-align: center;
-  }
-
-  .news__card-link {
-    position: absolute;
-    bottom: 33px;
-
-  }
-
-
+.footer {
+  border-top: none;
 }

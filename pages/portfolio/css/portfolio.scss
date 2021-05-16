@@ -1,0 +1,150 @@
+@import '../../../common/_vars';
+@import '../../../common/_mixins';
+
+
+@import '../../../common/_common.styles';
+@import '../../../blocks/_upper-header';
+
+@import '../../../blocks/_card';
+
+@import '../../../blocks/_socials';
+@import '../../../blocks/_footer';
+
+
+.header {
+
+  .header__lower {
+    padding-top: 210px;
+    border-bottom: 1px solid rgba(000, 000, 000, .3);
+  }
+
+  .header__title {
+    margin-left: 400px;
+
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 42px;
+  }
+}
+
+.projects {
+
+  .projects__nav {
+    padding-top: 70px;
+    padding-bottom: 55px;
+  }
+
+  .projects__menu {
+    display: flex;
+  }
+
+  .projects__menu-item {
+    text-transform: capitalize;
+    transition: .2s color ease;
+  }
+
+  .projects__menu-item:hover {
+    color: $accent-color;
+    cursor: pointer;
+    transition: .2s color ease;
+  }
+
+  .projects__menu-item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  .projects__lower {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(570px, auto);
+    grid-gap: 60px;
+  }
+
+  .projects__card {
+    background-color: #fff;
+  }
+
+  .projects__card-category {
+    color: $accent-color;
+  }
+
+  .projects__card:first-child {
+    background: url('/images/portfolio/bedroom.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(2) {
+    background: url('/images/portfolio/hall.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(3) {
+    grid-row: 1 / 3;
+    grid-column: 3 / 3;
+    background: url('/images/portfolio/yard.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(4) {
+    grid-column: 1 / 1;
+    grid-row: 2 / 4;
+    background: url('/images/portfolio/sofa.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(5) {
+    background: url('/images/portfolio/houses.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(6) {
+    background: url('/images/portfolio/white-houses.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(7) {
+    background: url('/images/portfolio/building.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:nth-child(8) {
+    background: url('/images/portfolio/hall.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .projects__card:last-child {
+    grid-column: 2 / 4;
+    grid-row: 4 / 4;
+    background: url('/images/portfolio/divan.jpg') no-repeat 0 -230px;
+    background-size: cover;
+  }
+
+  .card:hover {
+    background: none;
+    outline: 1px solid black;
+  }
+
+  .projects__card:last-child:hover {
+    background-position: 0 -230px;
+  }
+
+  .projects__card-link {
+    display: block;
+    width: 88px;
+    height: 88px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects__card-link::after {
+    content: url(/images/portfolio/arrow.png);
+    margin-left: -7px;
+  }
+}
+
+.footer {
+  border-top: none;
+}
