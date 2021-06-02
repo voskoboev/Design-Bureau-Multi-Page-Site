@@ -10,9 +10,7 @@
   // background-size: cover;
 
   transition: .3s all ease;
-
 }
-
 
 .card:hover {
   background: none;
@@ -22,11 +20,15 @@
 
 .card:hover .card__info {
   visibility: visible;
+  opacity: 1;
+  transition: .2s all ease;
 }
 
 .card__info {
   background-color: #fff;
   visibility: hidden;
+  opacity: 0;
+  transition: .2s all ease;
 }
 
 .card__category {
@@ -77,6 +79,13 @@
   color: #000;
 
   transition: .3s transform ease;
+
+  width: 88px;
+  height: 88px;
+  background-color: $accent-color;
+  border-radius: 50%;
+
+  @extend %centering-flex-container;
 }
 
 .card__link:hover {
@@ -85,6 +94,6 @@
 }
 
 .card__link::after {
-  content: url(/images/news/arrow.png);
-  padding-left: 10px;
+  content: url(/images/white-right-arrow.png);
+  // padding-left: 10px;
 }

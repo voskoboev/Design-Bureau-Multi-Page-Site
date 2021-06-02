@@ -14,7 +14,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Display", sans-serif;
 }
 
 *,
@@ -33,17 +33,17 @@ a {
   outline: none;
 }
 
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-}
-
 ::-moz-selection {
   background-color: #f8b995;
 }
 
 ::selection {
   background-color: #f8b995;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 .header__upper {

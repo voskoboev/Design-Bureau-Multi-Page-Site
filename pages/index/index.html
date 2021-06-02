@@ -5,48 +5,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benhome</title>
+  <title>Benhome: main page</title>
 
-  <link rel="stylesheet" href="libs/reset/reset.css">
-  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="../../libs/reset/reset.css">
+  <link rel="stylesheet" href="../../libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../../ancillary-styles/fonts.css">
+  <link rel="stylesheet" href="scss/index.css">
 
-  <script src="libs/swiper/swiper-bundle.min.js" defer></script>
-  <script src="js/index.js" defer></script>
+  <script src="../../libs/swiper/swiper-bundle.min.js"></script>
+  <script src="../../common-blocks/services/services.js" defer></script>
+  <script src="index.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__upper">
-      <a href="#" class="header__logo">
-        <img class="header__logo-benhome" src="images/benhome.png" alt="benhome">
-        <img class="header__logo-architecture" src="images/architecture.png" alt="architecture">
+      <a class="header__logo" href="#">
+        <img class="header__logo-benhome" src="../../images/header/logo-white.png" alt="logo-white">
       </a>
       <nav class="header__nav">
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a href="/index/index.html" class="header__menu-item-link">
               HOME
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               ABOUT
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               PORTFOLIO
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               NEWS
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               CONTACT
             </a>
           </li>
@@ -62,73 +62,186 @@
         </a>
       </div>
     </div>
-    <div class="header__center">
-      <h1 class="header__title">
-        <span class="header__title-start">
-          We know
-        </span>
-        <br>
-        design
-        <br>
-        well
-      </h1>
-    </div>
+
     <div class="header__lower">
-      <div class="header__play-btn">
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide swiper-slide__first">
+            <div class="swiper-slide__upper">
+              <h2 class="swiper-slide__title">
+                Slide 1
+              </h2>
+            </div>
+            <div class="swiper-slide__lower">
+              <button class="swiper-slide__btn">
+                LEARN MORE
+              </button>
+              <p class="swiper-slide__text">
+                The font blends perfectly with white backgrounds, making the design unique and presentable The font
+                blends perfectly with
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide__second">
+            <div class="swiper-slide__upper">
+              <h2 class="swiper-slide__title">
+                Slide 2
+              </h2>
+            </div>
+            <div class="swiper-slide__lower">
+              <button class="swiper-slide__btn">
+                LEARN MORE
+              </button>
+              <p class="swiper-slide__text">
+                The font blends perfectly with white backgrounds, making the design unique and presentable The font
+                blends perfectly with
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide__third">
+            <div class="swiper-slide__upper">
+              <h2 class="swiper-slide__title">
+                Slide 3
+              </h2>
+            </div>
+            <div class="swiper-slide__lower">
+              <button class="swiper-slide__btn">
+                LEARN MORE
+              </button>
+              <p class="swiper-slide__text">
+                The font blends perfectly with white backgrounds, making the design unique and presentable The font
+                blends perfectly with
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need pagination -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
-      <p class="header__promo-text">
-        The font blends perfectly with white backgrounds, making the design unique and presentable The font blends
-        perfectly with white backgrounds, making the design unique and presentable
-      </p>
+
     </div>
   </header>
 
-  <section class="about">
+  <section class="portfolio">
+    <div class="card portfolio__card portfolio__card--first">
+      <div class="card__info">
+        <p class="card__category projects__card-category">
+          ARCHITECTURE
+        </p>
+        <h2 class="card__title">
+          House in <br>
+          Forest
+        </h2>
+        <p class="card__text">
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced in their accompanied by
+          English
+          14 translation by H. Rackham.
+        </p>
+        <a href="#" class="card__link projects__card-link">
 
-    <div class="about__upper">
-      <div class="container">
-        <h3 class="about__upper-title">
-          We create architectural designs
-        </h3>
-      </div>
-    </div>
-    <div class="about__central">
-      <!-- <div class="container about__central-container"> -->
-      <p class="about__central-text">
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced in their accompanied by English
-        14
-        translation by H. Rackham.
-      </p>
-      <div class="about__central-img">
-      </div>
-
-      <!-- <img src="images/main2.jpg" alt="house" class="about__central-img"> -->
-      <!-- </div> -->
-
-
-    </div>
-    <div class="about__lower-title-container container">
-      <h3 class="about__lower-title">
-        Spatial Instruments
-      </h3>
-    </div>
-
-    <div class="about__lower">
-
-
-      <div class="container about__lower-container">
-        <div class="about__lower-img">
-        </div>
-        <div class="about__lower-text-container">
-          <div class="about__lower-text">
-            To achieve maximum results, you need to set goals and move towards them. The best investment is investing in
-            yourself. Our team will help you.
-          </div>
-        </div>
+        </a>
       </div>
     </div>
 
+
+
+
+    <div class="card portfolio__card portfolio__card--second">
+      <div class="card__info">
+        <p class="card__category projects__card-category">
+          ARCHITECTURE
+        </p>
+        <h2 class="card__title">
+          House in <br>
+          Forest
+        </h2>
+        <p class="card__text">
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced in their accompanied by
+          English
+          14 translation by H. Rackham.
+        </p>
+        <a href="#" class="card__link projects__card-link">
+
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="card portfolio__card portfolio__card--third">
+      <div class="card__info">
+        <p class="card__category projects__card-category">
+          ARCHITECTURE
+        </p>
+        <h2 class="card__title">
+          House in <br>
+          Forest
+        </h2>
+        <p class="card__text">
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced in their accompanied by
+          English
+          14 translation by H. Rackham.
+        </p>
+        <a href="#" class="card__link projects__card-link">
+
+        </a>
+      </div>
+    </div>
+    <div class="card portfolio__card portfolio__card--fourth">
+      <div class="card__info">
+        <p class="card__category projects__card-category">
+          ARCHITECTURE
+        </p>
+        <h2 class="card__title">
+          House in <br>
+          Forest
+        </h2>
+        <p class="card__text">
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced in their accompanied by
+          English
+          14 translation by H. Rackham.
+        </p>
+        <a href="#" class="card__link projects__card-link">
+
+        </a>
+      </div>
+    </div>
+    <div class="card portfolio__card portfolio__card--fifth">
+      <div class="card__info">
+        <p class="card__category projects__card-category">
+          ARCHITECTURE
+        </p>
+        <h2 class="card__title">
+          House in <br>
+          Forest
+        </h2>
+        <p class="card__text">
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced in their accompanied by
+          English
+          14 translation by H. Rackham.
+        </p>
+        <a href="#" class="card__link projects__card-link">
+
+        </a>
+      </div>
+    </div>
   </section>
 
   <section class="services">
@@ -144,13 +257,12 @@
             <h4 class="services__list-item-title">
               ARCHITECTURE DESIGN
             </h4>
-            <button class="services__list-item-btn">
-              <div class="services__list-item-btn-down-arrow">
-
+            <button class="services__list-item-btn services__list-item-btn--active">
+              <div class="services__list-item-btn-down-arrow services__list-item-btn-down-arrow--active">
               </div>
             </button>
           </div>
-          <div class="services__list-item-lower">
+          <div class="services__list-item-lower services__list-item-lower--active">
             <a href="#" class="services__list-item-link">
               Explore
             </a>
@@ -246,71 +358,47 @@
         </li>
       </ul>
     </div>
-
   </section>
 
-  <section class="projects">
-
-    <div class="projects__upper container">
-      <h2 class="projects__title">
-        Projects.
-      </h2>
-    </div>
-
-    <div class="projects__lower">
-
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide swiper-slide-one">
-            <div class="swiper-slide__upper">
-              <h3 class="swiper-slide__title">
-                HOUSE IN FOREST
-              </h3>
-              <div class="swiper-slide__category">
-                ARCHITECTURE
-              </div>
-            </div>
-            <div class="swiper-slide__lower">
-              <a class="swiper-slide__link-btn" href="#">
-
-              </a>
-              <div class="swiper-slide__text">
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"  are also reproduced in their  accompanied by English 14 translation by H. Rackham.
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-
+  <section class="trends">
+    <div class="container trends__container">
+      <div class="trends__upper">
+        <div class="trends__upper-left">
+          <h3 class="trends__title">
+            <span class="trends__title-span">
+              Follow
+            </span>
+            trends.
+          </h3>
+          <p class="trends__upper-text">
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" are also reproduced
+          </p>
         </div>
-        <!-- <div class="swiper-pagination"></div> -->
+        <div class="trends__upper-right">
+          <div class="trends__upper-img">
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
+          </div>
+        </div>
+      </div>
+      <div class="trends__lower">
+        <div class="trends__lower-left">
+          <p class="trends__lower-number">
+            7
+          </p>
+          <h2 class="trends__lower-title">
+            Years Experience
+          </h2>
+          <p class="trends__lower-text">
+            de Finibus Bonorum et Malorum" are also reproduced in their accompanied by English 14 translation by H.
+            Rackham
+          </p>
+        </div>
       </div>
     </div>
 
 
   </section>
-  <section class="clients">
-    <div class="clients__upper">
-      <div class="clients__title">
-        From great our clients
-      </div> 
-    </div>
-    <div class="clients__lower">
-
-    </div>
-  </section>
-
-
-
-
-
-
 
 
 </body>

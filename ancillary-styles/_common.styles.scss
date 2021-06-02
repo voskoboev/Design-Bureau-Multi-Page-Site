@@ -1,19 +1,18 @@
 :root {
   box-sizing: border-box;
   font-size: $default-font-size;
-  font-family: $main-font-family;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-
 }
 
 body {
+  // width: 100vw;
   overflow-x: hidden;
-
+  font-family: $main-font-family, sans-serif; // add default fonts list
 }
 
 a {
@@ -21,11 +20,11 @@ a {
   outline: none;
 }
 
+::selection {
+  background-color: lighten($accent-color, 20%);
+}
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
-}
-
-::selection {
-  background-color: lighten($accent-color, 20%);
 }
