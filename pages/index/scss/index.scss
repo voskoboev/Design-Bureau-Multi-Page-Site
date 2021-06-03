@@ -1,13 +1,13 @@
-@import '../../../ancillary-styles/_vars';
-@import '../../../ancillary-styles/_mixins';
-@import '../../../ancillary-styles/_common.styles';
+@import "../../../ancillary-styles/_vars";
+@import "../../../ancillary-styles/_mixins";
+@import "../../../ancillary-styles/_common.styles";
 
-@import '../../../common-blocks/_upper-header';
-@import '../../../common-blocks/_card';
-@import '../../../common-blocks/_socials';
-@import '../../../common-blocks/_brands';
-@import '../../../common-blocks/_footer';
-@import '../../../common-blocks/services/_services';
+@import "../../../common-blocks/_upper-header";
+@import "../../../common-blocks/_card";
+@import "../../../common-blocks/_socials";
+@import "../../../common-blocks/_brands";
+@import "../../../common-blocks/_footer";
+@import "../../../common-blocks/services/_services";
 
 .header {
   // background-color: teal;
@@ -33,12 +33,12 @@
 
   .header__menu-item-link {
     color: #fff;
-    transition: .2s color ease;
+    transition: 0.2s color ease;
   }
 
   .header__menu-item-link:hover {
     color: $accent-color;
-    transition: .2s color ease;
+    transition: 0.2s color ease;
   }
 
   .header__call-link {
@@ -63,7 +63,7 @@
     width: 20px;
     height: 45px;
     color: #fff;
-    transition: .2s all ease;
+    transition: 0.2s all ease;
   }
 
   .swiper-button-prev {
@@ -75,12 +75,10 @@
     left: 120px;
   }
 
-
   .swiper-button-prev:hover,
   .swiper-button-next:hover {
     color: $accent-color;
-    transition: .2s all ease;
-
+    transition: 0.2s all ease;
   }
 
   .swiper-scrollbar {
@@ -88,17 +86,17 @@
   }
 
   .swiper-slide__first {
-    background: url('../../../images/exterior-1.jpg') no-repeat;
+    background: url("../../../images/exterior-1.jpg") no-repeat;
     background-size: cover;
   }
 
   .swiper-slide__second {
-    background: url('../../../images/exterior-2.jpg') no-repeat;
+    background: url("../../../images/exterior-2.jpg") no-repeat;
     background-size: cover;
   }
 
   .swiper-slide__third {
-    background: url('../../../images/exterior-3.jpg') no-repeat;
+    background: url("../../../images/exterior-3.jpg") no-repeat;
     background-size: cover;
   }
 
@@ -108,7 +106,7 @@
   // }
 
   .swiper-slide__upper {
-    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -118,7 +116,6 @@
   }
 
   .swiper-slide__title {
-
     @include font(600, 5.625rem, #fff);
     // font-family: 'SF Pro Display';
     // font-style: normal;
@@ -145,14 +142,14 @@
     @include font(600, 13px, #fff);
     font-family: inherit;
     background-color: $accent-color;
-    transition: .2s all ease;
+    transition: 0.2s all ease;
   }
 
   .swiper-slide__btn:hover {
     outline: 2px solid darken($accent-color, 5%);
     color: darken(#fff, 5%);
     background-color: darken($accent-color, 5%);
-    transition: .2s all ease;
+    transition: 0.2s all ease;
   }
 
   .swiper-slide__text {
@@ -191,8 +188,6 @@
   }
 }
 
-
-
 .portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,15 +200,14 @@
 
   .portfolio__card--second {
     grid-column: 2 / 4;
-
   }
 }
 
 .trends {
+  padding-top: 260px;
 
-  .trends__container {
-    padding-top: 260px;
-  }
+  // .trends__container {
+  // }
 
   .trends__upper {
     display: flex;
@@ -251,18 +245,27 @@
   }
 
   .trends__upper-right {
-    background: url('../../../images/portfolio/divan.jpg') no-repeat;
+    background: url("../../../images/portfolio/divan.jpg") no-repeat;
     background-size: cover;
   }
 
   .trends__lower {
     padding-top: 150px;
+    display: flex;
   }
 
   .trends__lower-left {
     width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .trends__lower-left-wrapper {
     padding: 67px 0 84px 50px;
     background-color: #f9f9f9;
+
+    width: 555px;
+    min-height: 505px;
   }
 
   .trends__lower-number {
@@ -274,12 +277,12 @@
     margin-bottom: 55px;
   }
 
-  .trends__lower-title {
+  .trends__lower-left-title {
     border-bottom: 1px solid #000;
     font-weight: bold;
     font-size: 24px;
     line-height: 20px;
-    letter-spacing: 0.03em;
+    // letter-spacing: 0.03em;
     text-transform: uppercase;
 
     margin-bottom: 80px;
@@ -290,10 +293,32 @@
     text-align: center;
     margin-left: auto;
 
-
     font-weight: normal;
     font-size: 15px;
     line-height: 140%;
   }
+
+  .trends__lower-right {
+    width: 50%;
+  }
+
+  .trends__lower-right-title {
+    border-bottom: 1px solid #000;
+    margin-left: 150px;
+
+    @include font(700, 1.625rem);
+
+    line-height: 80%;
+    // letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  .trends__video {
+    width: 100%;
+  }
+}
+
+.clients {
+  padding-top: 200px;
 
 }

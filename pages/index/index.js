@@ -19,6 +19,7 @@ function initHeaderSwiper() {
       el: '.swiper-pagination',
       type: 'bullets',
     },
+
     // allowSlidePrev: false,
     // breakpoints: {
     //   970: {
@@ -30,5 +31,38 @@ function initHeaderSwiper() {
     //     spaceBetween: 30,
     //   }
     // }
+
   });
+}
+
+function initClientsCarousel() {
+  const tab1 = document.querySelector('')
+  const tab2 = document.querySelector('')
+  const tab3 = document.querySelector('')
+  const wrapper = document.querySelector('.wrapper')
+
+  const myArr = [box, box1, box2, box3]
+  let counter = 0
+
+  function changeTabs(arr) {
+    let conditionalCounter = counter === 0 ? arr.length - 1 : counter - 1
+
+    if (counter === arr.length) {
+      counter = 0
+    }
+
+    arr[counter].classList.add('clients__carousel--active')
+    arr[conditionalCounter].classList.remove('clients__carousel--active')
+    counter++
+  }
+
+  let timer = setInterval(changeTabs, 1200, myArr)
+
+  wrapper.onmouseover = () => {
+    clearInterval(timer)
+  }
+
+  wrapper.onmouseout = () => {
+    timer = setInterval(changeTabs, 1200, myArr)
+  }
 }

@@ -570,14 +570,14 @@ a {
 
 .header .header__menu-item-link {
   color: #fff;
-  -webkit-transition: .2s color ease;
-  transition: .2s color ease;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
 }
 
 .header .header__menu-item-link:hover {
   color: #f27935;
-  -webkit-transition: .2s color ease;
-  transition: .2s color ease;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
 }
 
 .header .header__call-link {
@@ -598,8 +598,8 @@ a {
   width: 20px;
   height: 45px;
   color: #fff;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .header .swiper-button-prev {
@@ -613,8 +613,8 @@ a {
 .header .swiper-button-prev:hover,
 .header .swiper-button-next:hover {
   color: #f27935;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .header .swiper-scrollbar {
@@ -680,16 +680,16 @@ a {
   color: #fff;
   font-family: inherit;
   background-color: #f27935;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .header .swiper-slide__btn:hover {
   outline: 2px solid #f0691d;
   color: #f2f2f2;
   background-color: #f0691d;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .header .swiper-slide__text {
@@ -742,7 +742,7 @@ a {
   grid-column: 2 / 4;
 }
 
-.trends .trends__container {
+.trends {
   padding-top: 260px;
 }
 
@@ -795,12 +795,26 @@ a {
 
 .trends .trends__lower {
   padding-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .trends .trends__lower-left {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.trends .trends__lower-left-wrapper {
   padding: 67px 0 84px 50px;
   background-color: #f9f9f9;
+  width: 555px;
+  min-height: 505px;
 }
 
 .trends .trends__lower-number {
@@ -811,12 +825,11 @@ a {
   margin-bottom: 55px;
 }
 
-.trends .trends__lower-title {
+.trends .trends__lower-left-title {
   border-bottom: 1px solid #000;
   font-weight: bold;
   font-size: 24px;
   line-height: 20px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 80px;
 }
@@ -828,5 +841,28 @@ a {
   font-weight: normal;
   font-size: 15px;
   line-height: 140%;
+}
+
+.trends .trends__lower-right {
+  width: 50%;
+}
+
+.trends .trends__lower-right-title {
+  border-bottom: 1px solid #000;
+  margin-left: 150px;
+  font-family: "SF Pro Display";
+  font-weight: 700;
+  font-size: 1.625rem;
+  color: #000;
+  line-height: 80%;
+  text-transform: uppercase;
+}
+
+.trends .trends__video {
+  width: 100%;
+}
+
+.clients {
+  padding-top: 200px;
 }
 /*# sourceMappingURL=index.css.map */
