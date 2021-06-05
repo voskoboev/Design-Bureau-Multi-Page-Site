@@ -1,4 +1,4 @@
-.card__link, .services .services__list-item-btn {
+.card__link, .services .services__list-item-btn, .news .news__accordion-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +31,7 @@ body {
 a {
   text-decoration: none;
   outline: none;
+  font-family: "SF Pro Display", sans-serif;
 }
 
 ::-moz-selection {
@@ -111,7 +112,6 @@ a {
 }
 
 .header__menu-item-link {
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 14px;
   color: #000;
@@ -135,14 +135,12 @@ a {
 
 .header__call-text {
   margin-right: 12px;
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 18px;
   color: #f27935;
 }
 
 .header__call-link {
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 18px;
   color: #000;
@@ -350,7 +348,6 @@ a {
 }
 
 .footer__menu-link {
-  font-family: "SF Pro Display";
   font-weight: normal;
   font-size: 14px;
   color: #000;
@@ -405,7 +402,6 @@ a {
   max-width: 530px;
   border-bottom: 1px solid #000;
   text-align: right;
-  font-family: "SF Pro Display";
   font-weight: 700;
   font-size: 25px;
   color: #000;
@@ -447,7 +443,6 @@ a {
 }
 
 .services .services__list-item-title {
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 15px;
   color: #000;
@@ -461,22 +456,22 @@ a {
   outline: none;
   border: 1px solid #000;
   background-color: transparent;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .services .services__list-item-btn--active {
   background-color: #f27935;
   border: none;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .services .services__list-item-btn:hover {
   background-color: #f27935;
   border: none;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 
 .services .services__list-item-btn-down-arrow {
@@ -523,15 +518,14 @@ a {
 
 .services .services__list-item-link {
   margin-top: auto;
-  font-family: "SF Pro Display";
   font-weight: 400;
   font-size: 15px;
   color: #000;
   color: #f27935;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .services .services__list-item-link:after {
@@ -542,14 +536,13 @@ a {
 .services .services__list-item-link:hover {
   -webkit-transform: translateX(4px);
           transform: translateX(4px);
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .services .services__list-item-text {
   width: 380px;
   text-align: right;
-  font-family: "SF Pro Display";
   font-weight: 400;
   font-size: 15px;
   color: #000;
@@ -652,7 +645,6 @@ a {
 }
 
 .header .swiper-slide__title {
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 5.625rem;
   color: #fff;
@@ -674,7 +666,6 @@ a {
   border: none;
   outline: 2px solid #f27935;
   margin-right: 80px;
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 13px;
   color: #fff;
@@ -695,7 +686,6 @@ a {
 .header .swiper-slide__text {
   max-width: 330px;
   z-index: 10;
-  font-family: "SF Pro Display";
   font-weight: 400;
   font-size: 1rem;
   color: #fff;
@@ -759,7 +749,6 @@ a {
 
 .trends .trends__title {
   max-width: 190px;
-  font-family: "SF Pro Display";
   font-weight: 600;
   font-size: 3.5rem;
   color: #000;
@@ -774,7 +763,6 @@ a {
 
 .trends .trends__upper-text {
   max-width: 405px;
-  font-family: "SF Pro Display";
   font-weight: 400;
   font-size: 1rem;
   color: #000;
@@ -850,7 +838,6 @@ a {
 .trends .trends__lower-right-title {
   border-bottom: 1px solid #000;
   margin-left: 150px;
-  font-family: "SF Pro Display";
   font-weight: 700;
   font-size: 1.625rem;
   color: #000;
@@ -864,5 +851,328 @@ a {
 
 .clients {
   padding-top: 200px;
+  padding-bottom: 200px;
+  position: relative;
+}
+
+.clients .clients__title {
+  position: absolute;
+  left: 0;
+}
+
+.clients .clients__upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.clients .clients__title {
+  width: 730px;
+  border-bottom: 1px solid #000;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+  line-height: 80%;
+}
+
+.clients .clients__arrow-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients .clients__arrow--left {
+  margin-right: 35px;
+}
+
+.clients .clients__arrow {
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.clients .clients__arrow:hover .clients__arrow-line {
+  stroke: #f27935;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.clients .clients__lower {
+  padding-top: 230px;
+}
+
+.clients .clients__carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients .clients__lower--left,
+.clients .clients__lower--right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.clients .clients__pic {
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  margin-bottom: 80px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.clients .clients__name {
+  border-bottom: 1px solid #000;
+  width: 480px;
+  margin-bottom: 35px;
+  position: relative;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+  line-height: 80%;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.clients .clients__name::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: url("../../../images/clients/q-marks.svg");
+  width: 37px;
+  height: 33px;
+}
+
+.clients .clients__text {
+  max-width: 300px;
+  text-align: right;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #000;
+  line-height: 140%;
+}
+
+.news {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: #f9f9f9;
+}
+
+.news .news__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news .news__side {
+  width: 50%;
+}
+
+.news .news__title {
+  margin-bottom: 200px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  color: #000;
+}
+
+.news .news__accordion-tab {
+  max-width: 485px;
+}
+
+.news .news__accordion-tab-upper {
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+
+.news .news__accordion-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
+}
+
+.news .news__accordion-tab-upper:hover .news__accordion-title {
+  color: #f27935;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
+}
+
+.news .news__accordion-tab-upper:hover .news__accordion-btn {
+  background-color: #f27935;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  border: none;
+}
+
+.news .news__accordion-title {
+  text-transform: uppercase;
+}
+
+.news .news__accordion-btn {
+  padding-left: 2px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+.news .news__accordion-arrow {
+  display: block;
+}
+
+.news .news__accordion-arrow--active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.news .news__accordion-tab-lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.news .news__accordion-tab--slide-down {
+  -webkit-animation: slide-down-accordion-tab-lower 0.5s forwards;
+          animation: slide-down-accordion-tab-lower 0.5s forwards;
+}
+
+@-webkit-keyframes slide-down-accordion-tab-lower {
+  0% {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  100% {
+    height: 145px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@keyframes slide-down-accordion-tab-lower {
+  0% {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  100% {
+    height: 145px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.news .news__accordion-tab--slide-up {
+  -webkit-animation: slide-up-accordion-tab-lower 0.5s forwards;
+          animation: slide-up-accordion-tab-lower 0.5s forwards;
+}
+
+@-webkit-keyframes slide-up-accordion-tab-lower {
+  0% {
+    height: 145px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  100% {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@keyframes slide-up-accordion-tab-lower {
+  0% {
+    height: 145px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  100% {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.news .news__accordion-link {
+  color: #f27935;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
+}
+
+.news .news__accordion-link:hover {
+  color: #e55c0f;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
+}
+
+.news .news__acccordion-text {
+  max-width: 400px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #000;
+  line-height: 140%;
+  height: 66px;
+  overflow: hidden;
+}
+
+.news .news__side--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.news .news__pic {
+  width: 485px;
+  height: 505px;
+  background-color: grey;
 }
 /*# sourceMappingURL=index.css.map */

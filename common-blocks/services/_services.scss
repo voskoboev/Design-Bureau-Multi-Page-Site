@@ -36,7 +36,7 @@
   }
 
   // .services__list {
-    // padding-top: 170px; // ? мб заменить на 1 значение
+  // padding-top: 170px; // ? мб заменить на 1 значение
   // }
 
   .services__list-item {
@@ -51,7 +51,6 @@
     padding-bottom: 7px;
 
     cursor: pointer;
-
   }
 
   .services__list-item-title {
@@ -69,21 +68,20 @@
 
     @extend %centering-flex-container;
 
-    transition: .2s all ease;
-
+    transition: 0.2s all ease;
   }
 
   .services__list-item-btn--active {
     background-color: $accent-color;
     border: none;
-    transition: .2s all ease;
+    transition: 0.2s all ease;
   }
 
   .services__list-item-btn:hover {
     background-color: $accent-color;
     border: none;
 
-    transition: .2s all ease;
+    transition: 0.2s all ease;
   }
 
   // .services__list-item-btn:hover:after {
@@ -112,7 +110,6 @@
   // }
 
   .services__list-item-lower {
-
     @include flex(space-between);
     visibility: hidden;
     opacity: 0;
@@ -134,7 +131,7 @@
     @include font(400, 15px);
     color: $accent-color;
     transform: translateX(0px);
-    transition: .3s all ease;
+    transition: 0.3s all ease;
   }
 
   .services__list-item-link:after {
@@ -144,7 +141,7 @@
 
   .services__list-item-link:hover {
     transform: translateX(4px);
-    transition: .3s all ease;
+    transition: 0.3s all ease;
   }
 
   .services__list-item-text {

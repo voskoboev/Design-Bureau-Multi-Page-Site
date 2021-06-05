@@ -2,6 +2,8 @@
 
 initHeaderSwiper()
 
+toggleAccordionTabs()
+
 function initHeaderSwiper() {
   const slider = document.querySelector('.swiper-container')
 
@@ -65,4 +67,36 @@ function initClientsCarousel() {
   wrapper.onmouseout = () => {
     timer = setInterval(changeTabs, 1200, myArr)
   }
+}
+
+
+function toggleAccordionTabs() {
+  const tabsUppers = document.querySelectorAll('.news__accordion-tab-upper')
+  const slideDownClass = 'news__accordion-tab--slide-down'
+  const slideUpClass = 'news__accordion-tab--slide-up'
+
+  const btnActivationClass = 'news__accordion-arrow--active'
+
+
+  tabsUppers.forEach(el => {
+    el.onclick = () => {
+      const lowerClassList = el.nextElementSibling.classList
+      const btnArrowClassList = el.lastElementChild.firstElementChild.classList;
+
+      if (!lowerClassList.contains(slideDownClass)) {
+        lowerClassList.remove(slideUpClass)
+        lowerClassList.add(slideDownClass)
+      } else {
+        lowerClassList.remove(slideDownClass)
+        lowerClassList.add(slideUpClass)
+      }
+
+      if (btnArrowClassList.contains(btnActivationClass)) {
+        btnArrowClassList.remove(btnActivationClass)
+      } else {
+        btnArrowClassList.add(btnActivationClass)
+
+      }
+    }
+  })
 }

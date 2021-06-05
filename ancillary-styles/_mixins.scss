@@ -7,7 +7,7 @@
 
 @mixin font($weight, $size: 1rem, $color: #000) {
   font: {
-    family: $main-font-family;
+    // family: $main-font-family;
     weight: $weight;
     size: $size;
   }

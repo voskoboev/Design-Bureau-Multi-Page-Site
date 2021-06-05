@@ -15,9 +15,19 @@ body {
   font-family: $main-font-family, sans-serif; // add default fonts list
 }
 
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   text-transform: uppercase;
+// }
+
 a {
   text-decoration: none;
   outline: none;
+  font-family: $main-font-family, sans-serif;
 }
 
 ::selection {
