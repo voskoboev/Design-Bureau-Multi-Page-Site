@@ -2,12 +2,14 @@
 
 initHeaderSwiper()
 
-toggleAccordionTabs()
+// initClientsCarousel() 
+
+toggleNewsAccordionTabs()
 
 function initHeaderSwiper() {
   const slider = document.querySelector('.swiper-container')
 
-  const mySwiper = new Swiper(slider, {
+  const swiper = new Swiper(slider, {
     speed: 400,
     initialSlide: 0,
     slidesPerView: 1,
@@ -69,19 +71,16 @@ function initClientsCarousel() {
   }
 }
 
-
-function toggleAccordionTabs() {
+function toggleNewsAccordionTabs() {
   const tabsUppers = document.querySelectorAll('.news__accordion-tab-upper')
   const slideDownClass = 'news__accordion-tab--slide-down'
   const slideUpClass = 'news__accordion-tab--slide-up'
-
   const btnActivationClass = 'news__accordion-arrow--active'
-
 
   tabsUppers.forEach(el => {
     el.onclick = () => {
       const lowerClassList = el.nextElementSibling.classList
-      const btnArrowClassList = el.lastElementChild.firstElementChild.classList;
+      const btnArrowClassList = el.lastElementChild.firstElementChild.classList
 
       if (!lowerClassList.contains(slideDownClass)) {
         lowerClassList.remove(slideUpClass)
@@ -95,7 +94,6 @@ function toggleAccordionTabs() {
         btnArrowClassList.remove(btnActivationClass)
       } else {
         btnArrowClassList.add(btnActivationClass)
-
       }
     }
   })

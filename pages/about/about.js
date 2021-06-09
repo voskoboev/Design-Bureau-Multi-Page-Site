@@ -8,14 +8,15 @@ function toggleTeamCards() {
   const photoInactivationClass = 'team__person-photo--inactive';
 
   cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
+    card.onmouseenter = () => {
       card.firstElementChild.classList.add(infoActivationClass);
       card.lastElementChild.classList.add(photoInactivationClass);
-    });
+    };
 
-    card.addEventListener('mouseleave', () => {
+    card.onmouseleave = () => {
       card.firstElementChild.classList.remove(infoActivationClass);
       card.lastElementChild.classList.remove(photoInactivationClass);
-    });
+    };
   });
 }
+

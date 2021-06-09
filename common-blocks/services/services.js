@@ -1,8 +1,8 @@
 'use strict';
 
-toggleAccordionTabs();
+toggleServicesAccordionTabs();
 
-function toggleAccordionTabs() {
+function toggleServicesAccordionTabs() {
   const upperItems = document.querySelectorAll('.services__list-item-upper');
   const slideActivationClass = 'services__list-item-lower--active';
   const arrowActivationClass = 'services__list-item-btn-down-arrow--active';
@@ -16,4 +16,5 @@ function toggleAccordionTabs() {
     });
   });
 }
+
 

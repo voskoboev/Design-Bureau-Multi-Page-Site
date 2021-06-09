@@ -14,3 +14,10 @@
 
   color: $color;
 }
+
+@mixin pl-pr($val) {
+  padding: {
+    left: $val;
+    right: $val;
+  }
+}

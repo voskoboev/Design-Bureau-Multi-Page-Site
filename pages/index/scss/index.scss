@@ -2,7 +2,7 @@
 @import "../../../ancillary-styles/_mixins";
 @import "../../../ancillary-styles/_common.styles";
 
-@import "../../../common-blocks/_upper-header";
+@import "../../../common-blocks/header-upper/_header-upper";
 @import "../../../common-blocks/_card";
 @import "../../../common-blocks/_socials";
 @import "../../../common-blocks/_brands";
@@ -11,11 +11,20 @@
 
 .header {
   // background-color: teal;
-  // width: 100vw;
-  // height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-  width: 100%;
-  height: 100%;
+  @media screen and (max-width: 768px) {
+    & {
+      // width: 70vw;
+      height: 70vh;
+    }
+  }
+
+  // position: relative;
+
+  // width: 100%;
+  // height: 100%;
 
   .header__upper {
     position: absolute;
@@ -45,13 +54,26 @@
     color: #fff;
   }
 
+  // .header__lower {
+  //   position: relative; // ?
+  // }
+
   .swiper-container {
     position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    .swiper-container {
+      // width: 100vw;
+      height: 70vh;
+    }
   }
 
   .swiper-wrapper {
-    width: 100vw;
-    height: 100vh;
+    // width: 100vw;
+    // height: 100vh;
   }
 
   // .swiper-slide {
@@ -85,25 +107,36 @@
     display: none;
   }
 
+  .swiper-slide {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .swiper-slide__first {
-    background: url("../../../images/exterior-1.jpg") no-repeat;
+    background: url("../../../images/pages/index-page/header-section/exterior-2.jpg")
+      no-repeat;
     background-size: cover;
+    // background-position-y: -200px; // изменить картинку или позиционирование в адаптиве
   }
 
   .swiper-slide__second {
-    background: url("../../../images/exterior-2.jpg") no-repeat;
+    background: url("../../../images/pages/index-page/header-section/interior-1.jpg")
+      no-repeat;
     background-size: cover;
+    // background-position-y: -200px;
   }
 
   .swiper-slide__third {
-    background: url("../../../images/exterior-3.jpg") no-repeat;
+    background: url("../../../images/pages/index-page/header-section/exterior-1.jpg")
+      no-repeat;
     background-size: cover;
+    // background-position-y: -100px;
   }
 
-  // .swiper-slide__upper,
-  // .swiper-slide__lower {
-  //   height: 50%;
-  // }
+  .swiper-slide__upper,
+  .swiper-slide__lower {
+    height: 35vh;
+  }
 
   .swiper-slide__upper {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -115,14 +148,20 @@
     height: 52.5%;
   }
 
+  @media screen and (max-width: 768px) {
+    .swiper-slide__upper {
+      padding-left: 200px;
+    }
+  }
+
   .swiper-slide__title {
     @include font(600, 5.625rem, #fff);
-    // font-family: 'SF Pro Display';
-    // font-style: normal;
-    // font-weight: 600;
-    // font-size: 90px;
-    line-height: 70px;
-    // color: #fff;
+    // line-height: 70px;
+
+    // line-height: 80%;
+
+    text-transform: capitalize;
+
     cursor: default;
   }
 
@@ -130,6 +169,12 @@
     display: flex;
     padding-left: 405px;
     padding-top: 60px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .swiper-slide__lower {
+      padding-left: 65px;
+    }
   }
 
   .swiper-slide__btn {
@@ -165,10 +210,6 @@
   }
 
   .swiper-pagination {
-    // position: absolute ;
-    // left: 60px;
-    // bottom: 45px;
-    // z-index: 100;
     text-align: left;
     margin-left: 60px;
     margin-bottom: 45px;
@@ -195,7 +236,41 @@
   width: 100%;
 
   .portfolio__card {
-    border: 1px solid #000;
+    // background-size: cover;
+  }
+
+  .portfolio__card:hover {
+    background: none;
+  }
+
+  .portfolio__card--first {
+    background: url("../../../images/pages/index-page/portfolio-section/interior-1-cut.jpg")
+      no-repeat;
+    background-size: cover;
+  }
+
+  .portfolio__card--second {
+    background: url("../../../images/pages/index-page/portfolio-section/interior-2-cut.jpg")
+      no-repeat;
+    background-size: cover;
+  }
+
+  .portfolio__card--third {
+    background: url("../../../images/pages/index-page/portfolio-section/exterior-1-cut.jpg")
+      no-repeat;
+    background-size: cover;
+  }
+
+  .portfolio__card--fourth {
+    background: url("../../../images/pages/index-page/portfolio-section/interior-3-cut.jpg")
+      no-repeat;
+    background-size: cover;
+  }
+
+  .portfolio__card--fifth {
+    background: url("../../../images/pages/index-page/portfolio-section/extrior-2.jpg")
+      no-repeat;
+    background-size: cover;
   }
 
   .portfolio__card--second {
@@ -221,7 +296,12 @@
   .trends__title {
     max-width: 190px;
     @include font(600, 3.5rem);
-    line-height: 100%; // ? заменить везде % или оставить пиксели
+    // line-height: 100%; // ? заменить везде % или оставить пиксели
+
+    // line-height: 80%;
+
+    text-transform: capitalize;
+
     letter-spacing: 0.1rem; // ? rem или em
     margin-bottom: 200px;
   }
@@ -239,13 +319,15 @@
   .trends__upper-right {
     // width: 50%;
     position: absolute;
-    right: 0;
+    // right: 0;
+    left: 50%;
     width: 950px;
     height: 566px;
   }
 
   .trends__upper-right {
-    background: url("../../../images/portfolio/divan.jpg") no-repeat;
+    background: url("../../../images/pages/index-page/trends-section/interior-1.jpg")
+      no-repeat;
     background-size: cover;
   }
 
@@ -281,7 +363,8 @@
     border-bottom: 1px solid #000;
     font-weight: bold;
     font-size: 24px;
-    line-height: 20px;
+    // line-height: 20px;
+    // line-height: 80%;
     // letter-spacing: 0.03em;
     text-transform: uppercase;
 
@@ -308,7 +391,7 @@
 
     @include font(700, 1.625rem);
 
-    line-height: 80%;
+    // line-height: 80%;
     // letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
@@ -341,8 +424,10 @@
     border-bottom: 1px solid #000;
     text-align: right;
 
+    // line-height: 80%;
+
     @include font(700, 1.5rem);
-    line-height: 80%;
+    // line-height: 80%;
     // letter-spacing: 0.em;
   }
 
@@ -391,6 +476,18 @@
     align-self: center;
   }
 
+  .clients__pic--first {
+    background: url("../../../images/pages/index-page/clients-section/person-2.jpg");
+    background-size: cover;
+    background-position-x: -15px;
+  }
+
+  .clients__pic--second {
+    background: url("../../../images/pages/index-page/clients-section/person-1.jpg");
+    background-size: cover;
+    background-position-x: -15px;
+  }
+
   .clients__name {
     border-bottom: 1px solid #000;
     width: 480px;
@@ -398,7 +495,7 @@
     position: relative;
 
     @include font(700, 1.5rem);
-    line-height: 80%;
+    // line-height: 80%;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
   }
@@ -407,7 +504,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    content: url("../../../images/clients/q-marks.svg");
+    content: url("../../../images/pages/index-page/clients-section/q-marks.svg");
     width: 37px;
     height: 33px;
   }
@@ -444,7 +541,9 @@
     margin-bottom: 200px;
 
     @include font(600, 3.5rem);
+    // line-height: 80%;
 
+    text-transform: capitalize;
   }
 
   .news__accordion-tab {
@@ -581,6 +680,8 @@
     width: 485px;
     height: 505px;
 
-    background-color: grey;
+    background: url("../../../images/pages/index-page/news-section/interior-1.jpg")
+      no-repeat;
+    background-size: cover;
   }
 }
