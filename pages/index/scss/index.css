@@ -484,12 +484,34 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  padding-top: 120px;
-  padding-bottom: 110px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 120px 60px 110px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
-  padding-right: 60px;
-  padding-left: 60px;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer > *:not(:last-child) {
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.footer__logo {
+  display: block;
 }
 
 .footer__rights-span {
@@ -515,14 +537,22 @@ a {
   color: #000;
   line-height: 140%;
   font-family: inherit;
-  -webkit-transition: .2s color ease;
-  transition: .2s color ease;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
 }
 
 .footer__menu-link:hover {
   color: #f27935;
-  -webkit-transition: .2s color ease;
-  transition: .2s color ease;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
+}
+
+@media screen and (max-width: 450px) {
+  .footer__languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__languages-item {
@@ -534,10 +564,17 @@ a {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 450px) {
+  .footer__languages-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
 .footer__languages-item:first-child {
   color: #f27935;
-  -webkit-transition: .2s color ease;
-  transition: .2s color ease;
+  -webkit-transition: 0.2s color ease;
+  transition: 0.2s color ease;
 }
 
 .services {
@@ -802,11 +839,6 @@ a {
 .header .swiper-slide__third {
   background: url("../../../images/pages/index-page/header-section/exterior-1.jpg") no-repeat;
   background-size: cover;
-}
-
-.header .swiper-slide__upper,
-.header .swiper-slide__lower {
-  height: 35vh;
 }
 
 .header .swiper-slide__upper {

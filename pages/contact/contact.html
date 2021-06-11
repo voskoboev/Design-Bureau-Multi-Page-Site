@@ -8,23 +8,28 @@
   <title>Benhome: contact</title>
 
   <link rel="stylesheet" href="../../libs/reset/reset.css">
-  <link rel="stylesheet" href="../../common/fonts.css">
+  <link rel="stylesheet" href="../../fonts/stylesheet.css">
   <link rel="stylesheet" href="css/contact.css">
 
   <script src="./contact.js" defer></script>
+  <script src="../../common-blocks/header-upper/header-upper.js" defer></script>
 </head>
 
 <body>
 
   <header class="header">
     <div class="header__upper">
+      <button class="header__mobile-btn--open">
+      </button>
       <a class="header__logo" href="#">
-        <img class="header__logo-benhome" src="../../images/about/logo.png" alt="benhome">
+        <img class="header__logo-benhome" src="../../images/general-imgs/logo-black.png" alt="logo-white">
       </a>
       <nav class="header__nav">
+        <button class="header__mobile-btn--close">
+        </button>
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a href="/index/index.html" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               HOME
             </a>
           </li>
@@ -60,6 +65,7 @@
         </a>
       </div>
     </div>
+
     <div class="header__central">
       <h1 class="header__title">
         Contact us
@@ -115,11 +121,29 @@
             Follow us:
           </div>
           <div class="contacts__socials-items-container">
-            <a class="contacts__socials-link contacts__socials-link--first" href="#">
+            <a class="contacts__socials-link contacts__socials-link--first" href="#" target="_blank" rel="noopener">
+              <svg class="contacts__socials-img" width="9" height="18" viewBox="0 0 9 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="contacts__socials-path"
+                  d="M6 6H9L8.625 9H6V18H2.10938V9H0V6H2.10938V3.98438C2.10938 2.67188 2.4375 1.6875 3.09375 1.03125C3.75 0.34375 4.84375 0 6.375 0H9V3H7.40625C6.8125 3 6.42188 3.09375 6.23438 3.28125C6.07812 3.46875 6 3.78125 6 4.21875V6Z"
+                  fill="#000" />
+              </svg>
             </a>
-            <a class="contacts__socials-link contacts__socials-link--second" href="#">
+            <a class="contacts__socials-link contacts__socials-link--second" href="#" target="_blank" rel="noopener">
+              <svg class="contacts__socials-img" width="23" height="18" viewBox="0 0 23 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="contacts__socials-path"
+                  d="M22.125 2.15625C21.5625 3.03125 20.8125 3.8125 19.875 4.5V5.0625C19.875 8.34375 18.6875 11.3281 16.3125 14.0156C13.9688 16.6719 10.8438 18 6.9375 18C4.4375 18 2.125 17.3125 0 15.9375C0.5 16 0.859375 16.0312 1.07812 16.0312C3.17188 16.0312 5.04688 15.375 6.70312 14.0625C5.73438 14.0312 4.85938 13.7344 4.07812 13.1719C3.29688 12.5781 2.76562 11.8281 2.48438 10.9219C2.85938 10.9844 3.14062 11.0156 3.32812 11.0156C3.64062 11.0156 4.04688 10.9531 4.54688 10.8281C3.51562 10.6094 2.64062 10.0938 1.92188 9.28125C1.23438 8.4375 0.890625 7.46875 0.890625 6.375V6.32812C1.57812 6.70312 2.26562 6.89062 2.95312 6.89062C1.60938 6.01562 0.9375 4.75 0.9375 3.09375C0.9375 2.3125 1.14062 1.5625 1.54688 0.84375C3.95312 3.8125 7.0625 5.39062 10.875 5.57812C10.8125 5.35938 10.7812 5.01562 10.7812 4.54688C10.7812 3.26563 11.2188 2.1875 12.0938 1.3125C12.9688 0.4375 14.0469 0 15.3281 0C16.6094 0 17.7031 0.484375 18.6094 1.45312C19.5469 1.29688 20.5156 0.921875 21.5156 0.328125C21.2031 1.42187 20.5312 2.26562 19.5 2.85938C20.4688 2.76562 21.3438 2.53125 22.125 2.15625Z"
+                  fill="#000" />
+              </svg>
             </a>
-            <a class="contacts__socials-link contacts__socials-link--third" href="#">
+            <a class="contacts__socials-link contacts__socials-link--third" href="#" target="_blank" rel="noopener">
+              <svg class="contacts__socials-img" width="21" height="22" viewBox="0 0 21 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="contacts__socials-path"
+                  d="M3.04688 3.59375C5.10938 1.53125 7.59375 0.5 10.5 0.5C13.4062 0.5 15.875 1.53125 17.9062 3.59375C19.9688 5.625 21 8.09375 21 11C21 13.9062 19.9688 16.3906 17.9062 18.4531C15.875 20.4844 13.4062 21.5 10.5 21.5C9.4375 21.5 8.4375 21.3594 7.5 21.0781C8.0625 20.0781 8.42188 19.3281 8.57812 18.8281L9.32812 15.9219C9.79688 16.7969 10.6406 17.2344 11.8594 17.2344C13.5469 17.2344 14.9062 16.5625 15.9375 15.2188C17 13.875 17.5312 12.1562 17.5312 10.0625C17.5312 8.4375 16.9062 7.03125 15.6562 5.84375C14.4062 4.625 12.8125 4.01562 10.875 4.01562C8.5625 4.01562 6.73438 4.70313 5.39062 6.07812C4.04688 7.42188 3.375 8.92188 3.375 10.5781C3.375 12.6719 4.09375 14.0156 5.53125 14.6094C5.8125 14.7344 6 14.6406 6.09375 14.3281C6.09375 14.2656 6.10938 14.125 6.14062 13.9062C6.20312 13.6875 6.25 13.5469 6.28125 13.4844C6.34375 13.2969 6.29688 13.1094 6.14062 12.9219C5.67188 12.3594 5.4375 11.6719 5.4375 10.8594C5.4375 9.48438 5.90625 8.3125 6.84375 7.34375C7.8125 6.34375 9.0625 5.84375 10.5938 5.84375C11.9688 5.84375 13.0469 6.21875 13.8281 6.96875C14.6094 7.6875 15 8.64062 15 9.82812C15 11.3906 14.6875 12.7188 14.0625 13.8125C13.4375 14.875 12.6406 15.4062 11.6719 15.4062C11.1094 15.4062 10.6562 15.2188 10.3125 14.8438C9.96875 14.4375 9.85938 13.9531 9.98438 13.3906C10.0469 13.0781 10.1562 12.6562 10.3125 12.125C10.5 11.5938 10.6406 11.125 10.7344 10.7188C10.8594 10.3125 10.9219 9.96875 10.9219 9.6875C10.9219 9.25 10.7969 8.875 10.5469 8.5625C10.2969 8.25 9.95312 8.09375 9.51562 8.09375C8.95312 8.09375 8.46875 8.35938 8.0625 8.89062C7.6875 9.39062 7.5 10.0312 7.5 10.8125C7.5 11.0938 7.53125 11.375 7.59375 11.6562C7.65625 11.9375 7.71875 12.1562 7.78125 12.3125L7.82812 12.5C7.04688 15.75 6.59375 17.6562 6.46875 18.2188C6.28125 18.9688 6.21875 19.7656 6.28125 20.6094C4.40625 19.7656 2.89062 18.4844 1.73438 16.7656C0.578125 15.0469 0 13.125 0 11C0 8.09375 1.01562 5.625 3.04688 3.59375Z"
+                  fill="#000" />
+              </svg>
             </a>
           </div>
         </div>
@@ -153,7 +177,7 @@
 
   <footer class="footer">
     <a href="#" class="footer__logo">
-      <img class="footer__logo-link" src="../../images/logo-black.png" alt="logo">
+      <img class="footer__logo-link" src="../../images/general-imgs/logo-black.png" alt="logo">
     </a>
 
     <p class="footer__rights">
@@ -217,7 +241,6 @@
       </li>
     </ul>
 
-
     <ul class="footer__languages">
       <li class="footer__languages-item">
         ENG
@@ -244,9 +267,8 @@
         </a>
       </li>
     </ul>
-
   </footer>
-
+  
 </body>
 
 </html>
