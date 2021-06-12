@@ -8,22 +8,27 @@
   <title>Benhome: news</title>
 
   <link rel="stylesheet" href="../../libs/reset/reset.css">
-  <link rel="stylesheet" href="../../common/fonts.css">
+  <link rel="stylesheet" href="../../fonts/stylesheet.css">
   <link rel="stylesheet" href="css/news.css">
 
+  <script src="../../common-blocks/header-upper/header-upper.js" defer></script>
   <script src="./news.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__upper">
+      <button class="header__mobile-btn--open">
+      </button>
       <a class="header__logo" href="#">
-        <img class="header__logo-benhome" src="../../images/about/logo.png" alt="benhome">
+        <img class="header__logo-benhome" src="../../images/general-imgs/logo-black.png" alt="logo-white">
       </a>
       <nav class="header__nav">
+        <button class="header__mobile-btn--close">
+        </button>
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a href="/index/index.html" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               HOME
             </a>
           </li>
@@ -59,6 +64,7 @@
         </a>
       </div>
     </div>
+
     <div class="header__lower">
       <h1 class="header__title">
         News.
@@ -70,16 +76,16 @@
     <div class="news__upper container">
       <nav class="news__nav">
         <ul class="news__menu">
-          <li class="news__menu-item">
+          <li class="news__menu-item news__menu-item--all">
             All
           </li>
-          <li class="news__menu-item">
+          <!-- <li class="news__menu-item news__menu-item--arch">
             Architecture
-          </li>
-          <li class="news__menu-item">
+          </li> -->
+          <li class="news__menu-item news__menu-item--exterior">
             Exterior
           </li>
-          <li class="news__menu-item">
+          <li class="news__menu-item news__menu-item--interior">
             Interior
           </li>
         </ul>
@@ -87,12 +93,12 @@
     </div>
     <div class="news__lower">
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--first">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -102,18 +108,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--second">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -123,18 +129,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--third">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -144,18 +150,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--fourth">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -165,18 +171,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--fifth">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -186,18 +192,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--sixth">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -207,18 +213,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--seventh">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -228,18 +234,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--eighth">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -249,18 +255,18 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
       </div>
 
-      <div class="card news__card">
-        <div class="card__info">
-          <p class="card__category">
+      <div class="card news__card news__card--nineth">
+        <div class="card__info news__card-info">
+          <p class="card__category news__card-category">
             ARCHITECTURE
           </p>
-          <h2 class="card__title">
+          <h2 class="card__title news__card-title">
             House in <br>
             Forest
           </h2>
@@ -270,7 +276,7 @@
             English
             14 translation by H. Rackham.
           </p>
-          <a href="#" class="card__link">
+          <a href="#" class="card__link news__card-link">
             Explore more
           </a>
         </div>
