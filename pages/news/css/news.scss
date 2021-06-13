@@ -163,7 +163,7 @@
   }
 
   // .news__card {
-  //   background-size: cover;
+
   // }
 
   @media screen and (max-width: 600px) {
@@ -171,14 +171,6 @@
       padding-top: 30px;
       padding-left: 30px;
     }
-  }
-
-  .news__card--active {
-    display: block;
-  }
-
-  .news__card--inactive {
-    display: none;
   }
 
   .news__card--first {
@@ -197,8 +189,6 @@
     background: url("../../../images/pages/news-page/hall.jpg ") center center
       no-repeat;
     background-size: cover;
-
-    // display: none;
   }
 
   .news__card--fourth {
@@ -240,20 +230,16 @@
   .news__card:hover {
     background: none;
     background-color: $accent-color;
-    transition: 0.2s all ease;
+    background-position: center center;
   }
 
   .news__card:hover .news__card-info {
     visibility: visible;
-
     background-color: $accent-color;
-    transition: 0.2s all ease;
   }
 
   .news__card-info {
     visibility: hidden;
-
-    // transition: 0.2s all ease;
   }
 
   @media screen and (max-width: 600px) {
@@ -268,8 +254,10 @@
     }
   }
 
-  .news__card-category {
-    font-size: 0.7rem;
+  @media screen and (max-width: 450px) {
+    .news__card-category {
+      font-size: 0.7rem;
+    }
   }
 
   .news__card-link {

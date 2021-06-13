@@ -24,9 +24,9 @@ function toggleGalleryCards() {
       .news__card--nineth
      `)
 
-  const toggleCards = (menuItem, galleryItems, allGallery) => {
+  const toggleCards = (menuItem, galleryItems, allGalleryItems) => {
     menuItem.onclick = () => {
-      allGallery.forEach(item => {
+      allGalleryItems.forEach(item => {
         item.style.display = 'none'
       })
 
