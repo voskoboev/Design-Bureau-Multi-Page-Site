@@ -9,9 +9,40 @@
   padding: 200px 0;
 }
 
-@media screen and (max-width: 1550px) {
+// @media screen and (max-width: 1550px) {
+//   .brands__container {
+//     padding: 175px 0;
+//   }
+// }
+
+@media screen and (max-width: 1250px) {
   .brands__container {
-    padding: 175px 0;
+    @include pl-pr(40px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .brands__container {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .brands__container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .brands__container {
+    padding: 50px 0;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .brands__item {
+    margin: 20px;
   }
 }
 

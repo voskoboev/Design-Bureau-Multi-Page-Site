@@ -5,10 +5,18 @@
 
   padding-top: 170px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1250px) {
     & {
-      padding-bottom: 82.5px;
+      padding-right: 40px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    & {
+      padding-bottom: 85px;
       padding-top: 85px;
+      flex-direction: column;
+      padding-right: 0;
     }
   }
 
@@ -18,16 +26,22 @@
   }
 
   .services__title {
-    max-width: 530px;
+    width: 530px;
     border-bottom: 1px solid #000;
     text-align: right;
     @include font(700, 25px);
     // line-height: 22px;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 700px) {
     .services__title {
-      max-width: 410px;
+      width: 280px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .services__title {
+      font-size: 1.2rem;
     }
   }
 
@@ -35,12 +49,23 @@
     width: 50%;
   }
 
-  // .services__list {
-  // padding-top: 170px; // ? мб заменить на 1 значение
-  // }
+  @media screen and (max-width: 1150px) {
+    .services__right {
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .services__list {
+    margin-right: 20px;
+    margin-left: 20px;
+    max-width: 555px;
+  }
 
   .services__list-item {
-    max-width: 555px;
+    // max-width: 555px;
 
     margin-bottom: 6px;
   }
@@ -113,7 +138,7 @@
     @include flex(space-between);
     visibility: hidden;
     opacity: 0;
-    transition: .2s all linear;
+    transition: 0.2s all linear;
     height: 0;
     z-index: -5;
   }
@@ -121,7 +146,7 @@
   .services__list-item-lower--active {
     padding: 40px 0 40px;
     opacity: 1;
-    transition: .2s all linear;
+    transition: 0.2s all linear;
     height: 100%;
     visibility: visible;
   }
@@ -132,6 +157,12 @@
     color: $accent-color;
     transform: translateX(0px);
     transition: 0.3s all ease;
+  }
+
+  @media screen and (max-width: 520px) {
+    .services__list-item-link:after {
+      display: none;
+    }
   }
 
   .services__list-item-link:after {
@@ -145,7 +176,7 @@
   }
 
   .services__list-item-text {
-    width: 380px;
+    max-width: 380px;
     text-align: right;
     @include font(400, 15px);
     line-height: 140%;

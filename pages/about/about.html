@@ -8,42 +8,48 @@
   <title>Benhome: about</title>
 
   <link rel="stylesheet" href="/libs/reset/reset.css">
-  <link rel="stylesheet" href="/common/fonts.css">
+  <link rel="stylesheet" href="../../fonts/stylesheet.css">
   <link rel="stylesheet" href="/pages/about/css/about.css">
 
+  <script src="../../common-blocks/header-upper/header-upper.js" defer></script>
+  <script src="../../common-blocks//services/services.js" defer></script>
   <script src="/pages/about/about.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__upper">
-      <a href="#" class="header__logo">
-        <img class="header__logo-benhome" src="../../images/about/logo.png" alt="benhome">
+      <button class="header__mobile-btn--open">
+      </button>
+      <a class="header__logo" href="#">
+        <img class="header__logo-benhome" src="../../images/general-imgs/logo-black.png" alt="logo-white">
       </a>
       <nav class="header__nav">
+        <button class="header__mobile-btn--close">
+        </button>
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a href="/index/index.html" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               HOME
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               ABOUT
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               PORTFOLIO
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               NEWS
             </a>
           </li>
           <li class="header__menu-item">
-            <a href="#" class="header__menu-item-link">
+            <a class="header__menu-item-link" href="#">
               CONTACT
             </a>
           </li>
@@ -66,12 +72,12 @@
           your way
         </span>
       </h1>
+      <div class="header__central-decor-el">
+      </div>
     </div>
     <div class="header__lower">
 
     </div>
-
-
   </header>
   <section class="idea">
     <div class="idea__upper">
@@ -86,27 +92,28 @@
       </div>
       <div class="idea__upper-right">
         <div class="idea__video-container">
-          <video class="idea__video" src="/videos/about/modern-house.mp4" poster="/images/about/facade.jpg" controls>
+
+          <video class="idea__video" src="/videos/about/modern-house.mp4" poster="../../images/main.jpg">
             Your browser can't play the video. Please, change browser.
           </video>
 
-          <!-- <div class="idea__poster">
+          <!-- <div class="idea__poster"> -->
             <div class="idea__play-btn">
               <div class="idea__poster-arrow">
               </div>
             </div>
-          </div> -->
+          <!-- </div>  -->
 
-        </div>
+         </div>
       </div>
     </div>
     <div class="idea__lower container">
       <div class="idea__lower-left">
-        <p class="idea__lower-number">
+        <p class="idea__lower-number idea__lower-number--experience">
           7
         </p>
         <h2 class="idea__lower-title">
-          Years Experience
+          Years of Experience
         </h2>
         <p class="idea__lower-text">
           de Finibus Bonorum et Malorum" are also reproduced in their accompanied by English 14 translation by H.
@@ -114,7 +121,7 @@
         </p>
       </div>
       <div class="idea__lower-right">
-        <p class="idea__lower-number">
+        <p class="idea__lower-number idea__lower-number--projects">
           20
         </p>
         <h2 class="idea__lower-title">
@@ -253,117 +260,125 @@
         Meet our team
       </h2>
     </div>
+
     <div class="team__lower">
-      <div class="team__person">
-        <div class="team__person-info">
-          <h3 class="team__person-title">
-            Adam Raymond
-          </h3>
-          <p class="team__person-text">
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-          </p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--first">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--second">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--third">
-              </a>
-            </li>
-          </ul>
+      <div class="team__lower-wrapper--first">
+
+        <div class="team__person team__person--first">
+          <div class="team__person-info">
+            <h3 class="team__person-title">
+              Adam Raymond
+            </h3>
+            <p class="team__person-text">
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+            </p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--first">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--second">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--third">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="team__person-photo">
+            <img class="team__person-photo-img" src="../../images/pages/about-page/person1.png" alt="person1">
+          </div>
         </div>
-        <div class="team__person-photo">
-          <img src="/images/about/person1.png" alt="person1" class="team__person-photo-img">
-        </div>
-      </div>
-      <div class="team__person">
-        <div class="team__person-info">
-          <h3 class="team__person-title">
-            Adam Raymond
-          </h3>
-          <p class="team__person-text">
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-          </p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--first">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--second">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--third">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="team__person-photo">
-          <img src="/images/about/person6.png" alt="person2" class="team__person-photo-img">
-        </div>
-      </div>
-      <div class="team__person">
-        <div class="team__person-info">
-          <h3 class="team__person-title">
-            Adam Raymond
-          </h3>
-          <p class="team__person-text">
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-          </p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--first">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--second">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--third">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="team__person-photo">
-          <img src="/images/about/person3.png" alt="person3" class="team__person-photo-img">
+        <div class="team__person team__person--second">
+          <div class="team__person-info">
+            <h3 class="team__person-title">
+              Adam Raymond
+            </h3>
+            <p class="team__person-text">
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+            </p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--first">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--second">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--third">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="team__person-photo">
+            <img class="team__person-photo-img" src="../../images/pages/about-page/person6.png" alt="person6">
+          </div>
         </div>
       </div>
-      <div class="team__person">
-        <div class="team__person-info">
-          <h3 class="team__person-title">
-            Adam Raymond
-          </h3>
-          <p class="team__person-text">
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-          </p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--first">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--second">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--third">
-              </a>
-            </li>
-          </ul>
+
+      <div class="team__lower-wrapper--second">
+
+        <div class="team__person team__person--third">
+          <div class="team__person-info">
+            <h3 class="team__person-title">
+              Adam Raymond
+            </h3>
+            <p class="team__person-text">
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+            </p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--first">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--second">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--third">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="team__person-photo">
+            <img class="team__person-photo-img" src="../../images/pages/about-page/person3.png" alt="person3">
+          </div>
         </div>
-        <div class="team__person-photo">
-          <img src="/images/about/person4.png" alt="person4" class="team__person-photo-img">
+        <div class="team__person team__person--fourth">
+          <div class="team__person-info">
+            <h3 class="team__person-title">
+              Adam Raymond
+            </h3>
+            <p class="team__person-text">
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+            </p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--first">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--second">
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" target="_blank" rel="noopener" class="socials__link socials__link--third">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="team__person-photo">
+            <img class="team__person-photo-img" src="../../images/pages/about-page/person4.png" alt="person4">
+          </div>
         </div>
       </div>
     </div>
@@ -384,7 +399,7 @@
 
   <footer class="footer">
     <a href="#" class="footer__logo">
-      <img class="footer__logo-link" src="../images/about/logo.png" alt="logo">
+      <img class="footer__logo-link" src="../../images/general-imgs/logo-black.png" alt="logo">
     </a>
 
     <p class="footer__rights">
