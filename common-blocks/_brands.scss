@@ -1,6 +1,6 @@
-// .brands {
-
-// }
+.brands {
+  @include section-popup-onscroll;
+}
 
 .brands__container {
   display: flex;
@@ -38,7 +38,6 @@
     padding: 50px 0;
   }
 }
-
 
 @media screen and (max-width: 992px) {
   .brands__item {

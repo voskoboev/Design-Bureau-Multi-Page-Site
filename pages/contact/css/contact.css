@@ -339,6 +339,11 @@ a {
 }
 
 .footer {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,6 +362,14 @@ a {
   padding: 120px 60px 110px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
   width: 100%;
+}
+
+.footer--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
 }
 
 @media screen and (max-width: 768px) {
