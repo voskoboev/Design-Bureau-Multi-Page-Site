@@ -149,6 +149,8 @@
 // }
 
 .idea {
+  @include section-popup-onscroll;
+
   padding-top: 190px;
 
   @media screen and (max-width: 1024px) {
@@ -333,7 +335,6 @@
       height: 250px;
 
       overflow-x: scroll;
-
     }
   }
 
@@ -500,8 +501,10 @@
 }
 
 .team {
+ @include section-popup-onscroll;
+
   .team__upper {
-    padding-top: 250px;
+    padding-top: 200px;
     margin-bottom: 120px;
   }
 

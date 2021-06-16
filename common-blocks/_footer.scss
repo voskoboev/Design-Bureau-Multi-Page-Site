@@ -1,5 +1,7 @@
 .footer {
+  @include section-popup-onscroll;
   @include flex(space-between, start);
+
   flex-wrap: wrap;
   padding: 120px 60px 110px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);

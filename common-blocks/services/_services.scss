@@ -1,4 +1,7 @@
 .services {
+  @include section-popup-onscroll;
+
+
   display: flex;
   background-color: #f9f9f9;
   padding-bottom: 165px;

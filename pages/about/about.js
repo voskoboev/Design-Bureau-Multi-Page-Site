@@ -1,11 +1,15 @@
-'use strict';
+'use strict'
 
+manageFnsOnScroll()
+manageVideo()
 toggleTeamCards()
 
 function toggleTeamCards() {
   const cards = document.querySelectorAll('.team__person')
-  const infoActivationClass = 'team__person-info--active'
-  const photoInactivationClass = 'team__person-photo--inactive'
+
+  const
+    infoActivationClass = 'team__person-info--active',
+    photoInactivationClass = 'team__person-photo--inactive'
 
   cards.forEach(card => {
     card.onmouseenter = () => {
@@ -20,66 +24,104 @@ function toggleTeamCards() {
   })
 }
 
-
-
-function changeNumbers() {
-  const experience = document.querySelector('.idea__lower-number--experience')
-  const projects = document.querySelector('.idea__lower-number--projects')
-
-  let startNum = 0
-  const projectsEndNum = 20
-  const experienceEndNum = 7
-
-  function addNums(endNum, htmlElem) {
-    if (startNum > endNum) return
-    htmlElem.textContent = startNum++
-  }
-
-  setInterval(addNums, 70, projectsEndNum, projects)
-  setInterval(addNums, 70, experienceEndNum, experience)
-}
-
-// changeNumbers()
-
-
-
 function manageVideo() {
-  const vid = document.querySelector('.idea__video')
-  const playBtn = document.querySelector('.idea__play-btn')
+  const
+    video = document.querySelector('.idea__video'),
+    playBtn = document.querySelector('.idea__play-btn')
 
-
-  // vid.onclick = function (ev) {
-  //   ev.preventDefault()
-
-  //   this.play()
-  // }
-
-  function playVid() {
-    vid.play()
+  const playVideo = () => {
+    video.play()
     playBtn.classList.add('idea__play-btn--inactive')
 
-    if (vid.hasAttribute('controls') === true) {
+    if (video.hasAttribute('controls') === true) {
       return
     }
 
-    vid.setAttribute('controls', 'controls')
+    video.setAttribute('controls', 'controls')
   }
 
-  // function pauseVid() {
-    // vid.pause()
-    // vid.dataset.
-  // }
-
-  vid.onclick = function (ev) {
+  video.onclick = ev => {
     ev.preventDefault()
-    playVid()
+    playVideo()
   }
 
-  playBtn.onclick = function (ev) {
+  playBtn.onclick = ev => {
     ev.preventDefault()
-    playVid()
+    playVideo()
   }
 }
 
-manageVideo()
+function manageFnsOnScroll() {
+  let calledOnce = false
+
+  const showPopupSections = () => {
+    const
+      idea = 'idea',
+      services = 'services',
+      team = 'team',
+      brands = 'brands',
+      footer = 'footer'
+
+    const showSections = sectionName => {
+      const sectionNode = document.querySelector(`.${sectionName}`)
+
+      const
+        sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
+        upperOffsetWindow = window.pageYOffset,
+        windowHeingt = window.innerHeight
+
+      if (sectionCoords < upperOffsetWindow + windowHeingt) {
+        sectionNode.classList.add(`${sectionName}--active`)
+      }
+    }
+
+    showSections(idea)
+    showSections(services)
+    showSections(team)
+    showSections(brands)
+    showSections(footer)
+  }
+
+  const manageNumberIncrement = () => {
+    const
+      experience = document.querySelector('.idea__lower-number--experience'),
+      projects = document.querySelector('.idea__lower-number--projects'),
+      section = document.querySelector('.idea__lower')
+
+    const
+      sectionCoords = section.getBoundingClientRect().top + window.pageYOffset,
+      upperOffsetWindow = window.pageYOffset,
+      windowHeingt = window.innerHeight
+
+    let startNum = 0
+    const
+      projectsEndNum = 20,
+      experienceEndNum = 14
+
+    const incrementNums = (endNum, htmlElem) => {
+      if (startNum > endNum) return
+      htmlElem.textContent = startNum++
+    }
+
+    if (sectionCoords < upperOffsetWindow + windowHeingt) {
+      if (!calledOnce) {
+        const joinSetIntervalsCalls = () => {
+          setInterval(incrementNums, 100, experienceEndNum, experience)
+          setInterval(incrementNums, 100, projectsEndNum, projects)
+        }
+
+        setTimeout(joinSetIntervalsCalls, 900)
+
+        calledOnce = true
+      }
+    }
+  }
+
+  window.onscroll = () => {
+    showPopupSections()
+    manageNumberIncrement()
+  }
+}
+
+
 

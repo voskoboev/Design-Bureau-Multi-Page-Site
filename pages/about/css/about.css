@@ -316,12 +316,25 @@ a {
 }
 
 .services {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #f9f9f9;
   padding-bottom: 165px;
   padding-top: 170px;
+}
+
+.services--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
 }
 
 @media screen and (max-width: 1250px) {
@@ -609,6 +622,22 @@ a {
   content: url(/images/white-right-arrow.png);
 }
 
+.brands {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
+}
+
+.brands--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
+}
+
 .brands__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -714,6 +743,11 @@ a {
 }
 
 .footer {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,6 +766,14 @@ a {
   padding: 120px 60px 110px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
   width: 100%;
+}
+
+.footer--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -902,7 +944,20 @@ a {
 }
 
 .idea {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
   padding-top: 190px;
+}
+
+.idea--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1227,8 +1282,24 @@ a {
   line-height: 140%;
 }
 
+.team {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
+}
+
+.team--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
+}
+
 .team .team__upper {
-  padding-top: 250px;
+  padding-top: 200px;
   margin-bottom: 120px;
 }
 
