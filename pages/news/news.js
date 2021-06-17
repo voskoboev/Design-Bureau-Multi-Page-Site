@@ -1,8 +1,18 @@
 'use strict'
 
-toggleGalleryCards()
+toggleGalleryTabs()
 
-function toggleGalleryCards() {
+showSectionOnLoad('news')
+
+function showSectionOnLoad(sectionName) {
+  window.onload = () => {
+    const section = document.querySelector(`.${sectionName}`)
+
+    section.classList.add(`${sectionName}--active`)
+  }
+}
+
+function toggleGalleryTabs() {
   const
     menuItemAll = document.querySelector('.news__menu-item--all'),
     menuItemExterior = document.querySelector('.news__menu-item--exterior'),
@@ -39,4 +49,8 @@ function toggleGalleryCards() {
   toggleCards(menuItemAll, galleryItemsAll, galleryItemsAll)
   toggleCards(menuItemExterior, galleryItemsExterior, galleryItemsAll)
   toggleCards(menuItemInterior, galleryItemsInterior, galleryItemsAll)
+}
+
+window.onscroll = () => {
+  showBtnToTopOnScroll(document.querySelector('.footer'))
 }

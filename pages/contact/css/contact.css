@@ -45,6 +45,40 @@ a {
   margin: 0 auto;
 }
 
+.btn-to-top {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  border-radius: 50%;
+  border: 7px solid #ece9e9;
+  opacity: 0.9;
+  background: url("/images/common-blocks/btn-to-top/arrow.png") no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  visibility: hidden;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+@media screen and (max-width: 550px) {
+  .btn-to-top {
+    display: none;
+  }
+}
+
+.btn-to-top--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
 .header__upper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,11 +373,6 @@ a {
 }
 
 .footer {
-  opacity: 0;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
-  -webkit-transition: 1.7s all ease;
-  transition: 1.7s all ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,14 +391,6 @@ a {
   padding: 120px 60px 110px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
   width: 100%;
-}
-
-.footer--active {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: 1.7s all ease;
-  transition: 1.7s all ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -515,7 +536,20 @@ a {
 }
 
 .contacts {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
   padding-bottom: 200px;
+}
+
+.contacts--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
 }
 
 @media screen and (max-width: 1024px) {
@@ -644,6 +678,7 @@ a {
   font-weight: 700;
   font-size: 2rem;
   color: #f27935;
+  max-width: 300px;
   display: block;
   margin-bottom: 120px;
 }
@@ -735,7 +770,7 @@ a {
   transition: 0.1s all ease;
 }
 
-.contacts .contacts__socials-path:hover {
+.contacts .contacts__socials-img:hover .contacts__socials-path {
   -webkit-transition: 0.1s all ease;
   transition: 0.1s all ease;
   fill: #f27935;
@@ -771,7 +806,7 @@ a {
   margin-bottom: 30px;
   font-weight: normal;
   font-size: 15px;
-  color: #7e7e7e;
+  color: #000;
 }
 
 .contacts .contacts__input:not(.contacts__input--btn):focus::-webkit-input-placeholder {

@@ -2,6 +2,7 @@
 @import "../../../ancillary-styles/_mixins";
 @import "../../../ancillary-styles/_common.styles";
 
+@import "../../../common-blocks/btn-to-top/_btn-to-top";
 @import "../../../common-blocks/header-upper/_header-upper";
 @import "../../../common-blocks/_card";
 @import "../../../common-blocks/_socials";
@@ -51,6 +52,8 @@
 }
 
 .news {
+  @include section-popup-onscroll;
+
   .news__nav {
     padding-top: 70px;
     padding-bottom: 55px;
@@ -163,7 +166,6 @@
   }
 
   // .news__card {
-
   // }
 
   @media screen and (max-width: 600px) {
@@ -228,14 +230,16 @@
   }
 
   .news__card:hover {
-    background: none;
-    background-color: $accent-color;
+    background: $accent-color;
     background-position: center center;
+
+    // transition: 0.2s all ease;
   }
 
   .news__card:hover .news__card-info {
     visibility: visible;
     background-color: $accent-color;
+    // transition: 0.2s all ease;
   }
 
   .news__card-info {

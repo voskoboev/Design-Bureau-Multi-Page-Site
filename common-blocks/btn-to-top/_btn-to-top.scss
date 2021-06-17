@@ -1,0 +1,32 @@
+.btn-to-top {
+  width: 75px;
+  height: 75px;
+  // background-color: #f9f9f9;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  border-radius: 50%;
+  border: 7px solid #ece9e9;
+  opacity: 0.9;
+
+  background: url("/images/common-blocks/btn-to-top/arrow.png") no-repeat;
+  background-position: center center;
+  cursor: pointer;
+
+  transform: translateY(30px);
+  visibility: hidden;
+  transition: 0.5s all ease;
+}
+
+@media screen and (max-width: 550px) {
+  .btn-to-top {
+    display: none;
+  }
+}
+
+.btn-to-top--active {
+  transform: translateY(0);
+  visibility: visible;
+  transition: 0.5s all ease;
+}

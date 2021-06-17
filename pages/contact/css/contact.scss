@@ -2,6 +2,7 @@
 @import "../../../ancillary-styles/_mixins";
 @import "../../../ancillary-styles/_common.styles";
 
+@import "../../../common-blocks/btn-to-top/_btn-to-top";
 @import "../../../common-blocks/header-upper/_header-upper";
 @import "../../../common-blocks/_socials";
 @import "../../../common-blocks/_footer";
@@ -68,6 +69,8 @@
 }
 
 .contacts {
+  @include section-popup-onscroll;
+
   padding-bottom: 200px;
 
   @media screen and (max-width: 1024px) {
@@ -182,7 +185,7 @@
 
   .contacts__tel {
     @include font(700, 2rem, $accent-color);
-
+    max-width: 300px;
     display: block;
     margin-bottom: 120px;
   }
@@ -269,7 +272,7 @@
     transition: 0.1s all ease;
   }
 
-  .contacts__socials-path:hover {
+  .contacts__socials-img:hover .contacts__socials-path {
     transition: 0.1s all ease;
     fill: $accent-color;
   }
@@ -294,6 +297,8 @@
   .contacts__input {
     font-family: inherit;
     letter-spacing: 0.05rem;
+
+    // color: #000;
   }
 
   // @media screen and (max-width: 1250px) {
@@ -310,7 +315,7 @@
 
     font-weight: normal;
     font-size: 15px;
-    color: #7e7e7e;
+    color: #000;
   }
 
   .contacts__input:not(.contacts__input--btn):focus::placeholder {

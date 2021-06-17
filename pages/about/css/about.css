@@ -57,6 +57,40 @@ a {
   margin: 0 auto;
 }
 
+.btn-to-top {
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  border-radius: 50%;
+  border: 7px solid #ece9e9;
+  opacity: 0.9;
+  background: url("/images/common-blocks/btn-to-top/arrow.png") no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  visibility: hidden;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+@media screen and (max-width: 550px) {
+  .btn-to-top {
+    display: none;
+  }
+}
+
+.btn-to-top--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
 .header__upper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,12 +691,6 @@ a {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .brands__container {
-    padding: 100px 0;
-  }
-}
-
 @media screen and (max-width: 992px) {
   .brands__container {
     -webkit-box-pack: space-evenly;
@@ -858,28 +886,40 @@ a {
   transition: 0.2s color ease;
 }
 
-.header__menu-item-link,
-.header__call-link {
+.header {
+  opacity: 0;
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
+}
+
+.header--active {
+  opacity: 1;
+  -webkit-transition: 1.7s all ease;
+  transition: 1.7s all ease;
+}
+
+.header .header__menu-item-link,
+.header .header__call-link {
   color: #000;
 }
 
-.header__central {
+.header .header__central {
   padding-top: 200px;
 }
 
 @media screen and (max-width: 1024px) {
-  .header__central {
+  .header .header__central {
     padding-top: 100px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .header__central {
+  .header .header__central {
     padding-top: 50px;
   }
 }
 
-.header__title {
+.header .header__title {
   font-weight: bold;
   font-size: 57px;
   line-height: 80%;
@@ -889,48 +929,48 @@ a {
 }
 
 @media screen and (max-width: 1250px) {
-  .header__title {
+  .header .header__title {
     margin-left: 80px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .header__title {
+  .header .header__title {
     font-size: 2rem;
     width: 350px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .header__title {
+  .header .header__title {
     margin-left: 50px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .header__title {
+  .header .header__title {
     font-size: 1.5rem;
     width: 250px;
   }
 }
 
-.header__title-span {
+.header .header__title-span {
   color: #f27935;
 }
 
-.header__central-decor-el {
+.header .header__central-decor-el {
   height: 75px;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 450px) {
-  .header__central-decor-el {
+  .header .header__central-decor-el {
     height: 50px;
   }
 }
 
-.header__lower {
+.header .header__lower {
   width: 100%;
   min-height: 768px;
   background: url("../../../images/pages/about-page/office-meeting.jpg") center center no-repeat;
@@ -938,7 +978,7 @@ a {
 }
 
 @media screen and (max-width: 1350px) {
-  .header__lower {
+  .header .header__lower {
     min-height: 500px;
   }
 }

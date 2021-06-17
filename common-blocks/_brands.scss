@@ -21,11 +21,11 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .brands__container {
-    padding: 100px 0;
-  }
-}
+// @media screen and (max-width: 1024px) {
+//   .brands__container {
+//     @include pl-pr(40px)
+//   }
+// }
 
 @media screen and (max-width: 992px) {
   .brands__container {

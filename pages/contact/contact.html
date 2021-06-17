@@ -11,13 +11,17 @@
   <link rel="stylesheet" href="../../fonts/stylesheet.css">
   <link rel="stylesheet" href="css/contact.css">
 
-  <script src="./contact.js" defer></script>
+  <!-- <script src="./contact.js" defer></script> -->
   <script src="../../common-blocks/header-upper/header-upper.js" defer></script>
+  <script src="../../common-blocks/btn-to-top/btn-to-top.js" defer></script>
+  <script src="./contact.js" defer></script>
 </head>
 
 <body>
 
   <header class="header">
+    <div class="btn-to-top">
+    </div>
     <div class="header__upper">
       <button class="header__mobile-btn--open">
       </button>
@@ -55,7 +59,6 @@
           </li>
         </ul>
       </nav>
-
       <div class="header__call">
         <p class="header__call-text">
           CALL US:
@@ -65,57 +68,45 @@
         </a>
       </div>
     </div>
-
     <div class="header__central">
       <h1 class="header__title">
         Contact us
       </h1>
       <div class="header__central-decor-el">
-
       </div>
     </div>
     <div class="header__lower">
       <iframe class="header__lower-map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13357.452768923553!2d144.95259085401014!3d-37.81489657159644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4949e03ba7%3A0x3a4bed3cd2de0c6!2zMjY5IEtpbmcgU3QsIE1lbGJvdXJuZSBWSUMgMzAwMCwg0JDQstGB0YLRgNCw0LvQuNGP!5e0!3m2!1sru!2sru!4v1620974394038!5m2!1sru!2sru"
-        width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </header>
-
-
-
-
-
   <section class="contacts">
-
     <div class="contacts__upper">
       <h1 class="contacts__title">
         Australia
       </h1>
     </div>
-
     <div class="contacts__lower container">
       <div class="contacts__lower-left">
-
-        <a class="contacts__tel" type="tel" href="#">
+        <a class="contacts__tel" href="tel:+19226279252">
           +1 (922) 627-92-52
         </a>
-
         <address class="contacts__address">
           269 King Str, 05th Floor, Utral Hosue Building, <br>
           <span class="contacts__address-span">
             Melbourne, VIC 3000, Australia.
           </span>
         </address>
-
         <div class="contacts__email-container">
           <span class="contacts__email-text">
             Email:
           </span>
-          <a class="contacts__email-link" type="mailto" href="#">
+          <a class="contacts__email-link" type="mailto:info@benhouse.co" href="#">
             info@benhouse.co
           </a>
         </div>
-
         <div class="contacts__socials-container">
           <div class="contacts__socials-text">
             Follow us:
@@ -148,9 +139,7 @@
           </div>
         </div>
       </div>
-
       <div class="contacts__lower-right">
-
         <p class="contacts__text">
           Let's grab a coffee and jump on
           conversation
@@ -158,33 +147,24 @@
             chat with us.
           </span>
         </p>
-
         <form class="contacts__form" action="#">
-
           <input class="contacts__input contacts__input--name" type="text" placeholder="Name *" required>
-
           <input class="contacts__input contacts__input--email" type="email" placeholder="Email *" required>
-
           <textarea name="textarea" class="contacts__input contacts__input--textarea" placeholder="Message *"
             required></textarea>
-
           <input class="contacts__input contacts__input--btn" type="submit" value="Learn more">
-
         </form>
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <a href="#" class="footer__logo">
       <img class="footer__logo-link" src="../../images/general-imgs/logo-black.png" alt="logo">
     </a>
-
     <p class="footer__rights">
       © Sentro 2021 <br>
       All Rights Resevered
     </p>
-
     <ul class="footer__menu footer__menu--secondary">
       <li class="footer__menu-item">
         <a href="#" class="footer__menu-link">
@@ -212,7 +192,6 @@
         </a>
       </li>
     </ul>
-
     <ul class="footer__menu footer__menu--primary">
       <li class="footer__menu-item">
         <a href="#" class="footer__menu-link">
@@ -240,7 +219,6 @@
         </a>
       </li>
     </ul>
-
     <ul class="footer__languages">
       <li class="footer__languages-item">
         ENG
@@ -252,7 +230,6 @@
         GER
       </li>
     </ul>
-
     <ul class="socials">
       <li class="socials__item">
         <a href="#" class="socials__link socials__link--first">
@@ -268,7 +245,6 @@
       </li>
     </ul>
   </footer>
-  
 </body>
 
 </html>
