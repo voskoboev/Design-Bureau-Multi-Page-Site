@@ -1,8 +1,7 @@
 'use strict'
-
 initHeaderSwiper()
+manageVideo()
 
-// initClientsCarousel() 
 
 toggleNewsAccordionTabs()
 
@@ -40,12 +39,15 @@ function initHeaderSwiper() {
 }
 
 function initClientsCarousel() {
-  const tab1 = document.querySelector('')
-  const tab2 = document.querySelector('')
-  const tab3 = document.querySelector('')
-  const wrapper = document.querySelector('.wrapper')
+  const tab1 = document.querySelector('.clients__carousel-slide--first')
+  const tab2 = document.querySelector('.clients__carousel-slide--second')
+  // const tab3 = document.querySelector('')
+  const wrapper = document.querySelector('.clients__carousel')
 
-  const myArr = [box, box1, box2, box3]
+  const arrowLeft = document.querySelector('.clients__arrow--left')
+  const arrowRight = document.querySelector('.clients__arrow--right')
+
+  const myArr = [tab1, tab2]
   let counter = 0
 
   function changeTabs(arr) {
@@ -55,21 +57,40 @@ function initClientsCarousel() {
       counter = 0
     }
 
-    arr[counter].classList.add('clients__carousel--active')
-    arr[conditionalCounter].classList.remove('clients__carousel--active')
+    arr[counter].classList.add('clients__carousel-slide--active')
+    arr[conditionalCounter].classList.remove('clients__carousel-slide--active')
     counter++
+
   }
 
-  let timer = setInterval(changeTabs, 1200, myArr)
+  setTimeout(changeTabs, 700, myArr)
 
-  wrapper.onmouseover = () => {
+  let timer = setInterval(changeTabs, 2000, myArr)
+
+  wrapper.addEventListener('mouseenter', () => {
     clearInterval(timer)
-  }
+  })
 
-  wrapper.onmouseout = () => {
-    timer = setInterval(changeTabs, 1200, myArr)
-  }
+  wrapper.addEventListener('mouseleave', () => {
+    timer = setInterval(changeTabs, 2000, myArr)
+  })
+
+  // arrowLeft.addEventListener('click', () => {
+  //   clearInterval(timer)
+  //   timer = setInterval(changeTabs, 2000, myArr)
+  // })
+
+  // arrowRight.addEventListener('click', () => {
+  //   ++counter
+  // })
 }
+
+initClientsCarousel()
+
+
+
+
+
 
 function toggleNewsAccordionTabs() {
   const tabsUppers = document.querySelectorAll('.news__accordion-tab-upper')
@@ -98,3 +119,106 @@ function toggleNewsAccordionTabs() {
     }
   })
 }
+
+
+const showPopupSections = () => {
+  const
+    portfolio = 'portfolio',
+    services = 'services',
+    trends = 'trends',
+    clients = 'clients',
+    news = 'news',
+    brands = 'brands'
+
+  // footer = 'footer'
+  // header = 'header',
+
+  const showSections = sectionName => {
+    const sectionNode = document.querySelector(`.${sectionName}`)
+
+    const
+      sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
+      upperOffsetWindow = window.pageYOffset,
+      windowHeingt = window.innerHeight
+
+    if (sectionCoords < upperOffsetWindow + windowHeingt) {
+      sectionNode.classList.add(`${sectionName}--active`)
+    }
+  }
+
+  showSections(portfolio)
+  showSections(services)
+  showSections(trends)
+  showSections(clients)
+  showSections(news)
+  showSections(brands)
+}
+
+window.onscroll = () => {
+  showPopupSections()
+
+  // manageNumberIncrement()
+  // showBtnToTopOnScroll(document.querySelector('.services'))
+}
+
+
+
+
+function manageVideo() {
+  const
+    video = document.querySelector('.trends__video'),
+    playBtn = document.querySelector('.trends__play-btn')
+
+  const playVideo = () => {
+    video.play()
+    playBtn.classList.add('trends__play-btn--inactive')
+
+    if (video.hasAttribute('controls') === true) {
+      return
+    }
+
+    video.setAttribute('controls', 'controls')
+  }
+
+  [video, playBtn].forEach(item => {
+    item.onclick = ev => {
+      ev.preventDefault()
+      playVideo()
+    }
+  })
+}
+
+function manageFnsOnScroll() {
+  let calledOnce = false
+
+  const manageNumberIncrement = () => {
+    const numberEl = document.querySelector('.trends__lower-number')
+
+    const
+      sectionCoords = numberEl.getBoundingClientRect().top + window.pageYOffset,
+      upperOffsetWindow = window.pageYOffset,
+      windowHeingt = window.innerHeight
+
+    let startNum = 0
+    const elEndNum = 14
+
+    const incrementNums = (endNum, htmlElem) => {
+      if (startNum > endNum) return
+      htmlElem.textContent = startNum++
+    }
+
+    if (sectionCoords < upperOffsetWindow + windowHeingt) {
+      if (!calledOnce) {
+        setTimeout(() => {
+          setInterval(incrementNums, 100, elEndNum, numberEl)
+        }, 200)
+
+        calledOnce = true
+      }
+    }
+  }
+
+  window.addEventListener('scroll', manageNumberIncrement)
+}
+
+manageFnsOnScroll()

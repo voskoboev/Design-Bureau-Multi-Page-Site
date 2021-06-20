@@ -21,6 +21,12 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .header__upper {
+    @include pl-pr(20px);
+  }
+}
+
 .header__mobile-btn--open {
   display: none;
 }
@@ -41,6 +47,12 @@
     top: 20px;
     visibility: visible;
     transition: 1s all ease;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__mobile-btn--open {
+    right: 20px;
   }
 }
 

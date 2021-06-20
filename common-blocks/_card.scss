@@ -12,6 +12,12 @@
   // transition: .2s all ease;
 }
 
+@media screen and (max-width: 450px) {
+  .card {
+    padding-left: 20px;
+  }
+}
+
 .card:hover {
   background: none;
   background-color: #fff;
@@ -41,8 +47,14 @@
 
   font-weight: 600;
   font-size: 13px;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 450px) {
+  .card__category {
+    font-size: 0.7rem;
+  }
 }
 
 .card__title {
@@ -52,8 +64,20 @@
   font-weight: bold;
   font-size: 25px;
   // line-height: 20px;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .card__title {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card__title {
+    font-size: 1.2rem;
+  }
 }
 
 .card__title:first-line {
@@ -68,8 +92,14 @@
   text-align: center;
 
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 140%;
+}
+
+@media screen and (max-width: 450px) {
+  .card__text {
+    font-size: 0.9rem;
+  }
 }
 
 .card__link {
@@ -81,7 +111,7 @@
   font-size: 18px;
   color: #000;
 
-  transition: .3s transform ease;
+  transition: 0.3s transform ease;
 
   width: 88px;
   height: 88px;
@@ -93,7 +123,7 @@
 
 .card__link:hover {
   transform: translateX(5px);
-  transition: .2s transform ease;
+  transition: 0.2s transform ease;
 }
 
 .card__link::after {

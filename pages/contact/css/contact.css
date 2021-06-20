@@ -112,6 +112,13 @@ a {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .header__upper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .header__mobile-btn--open {
   display: none;
 }
@@ -132,6 +139,12 @@ a {
     visibility: visible;
     -webkit-transition: 1s all ease;
     transition: 1s all ease;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__mobile-btn--open {
+    right: 20px;
   }
 }
 
