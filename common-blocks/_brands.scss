@@ -9,23 +9,11 @@
   padding: 200px 0;
 }
 
-// @media screen and (max-width: 1550px) {
-//   .brands__container {
-//     padding: 175px 0;
-//   }
-// }
-
 @media screen and (max-width: 1250px) {
   .brands__container {
     @include pl-pr(40px);
   }
 }
-
-// @media screen and (max-width: 1024px) {
-//   .brands__container {
-//     @include pl-pr(40px)
-//   }
-// }
 
 @media screen and (max-width: 992px) {
   .brands__container {
@@ -33,9 +21,12 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 470px) {
   .brands__container {
-    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 

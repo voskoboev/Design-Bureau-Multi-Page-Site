@@ -1,6 +1,8 @@
 'use strict'
 
-const showPopupSections = () => {
+showPopupSections()
+
+function showPopupSections() {
   const
     contacts = 'contacts',
     footer = 'footer'
@@ -18,11 +20,15 @@ const showPopupSections = () => {
     }
   }
 
-  showSections(contacts)
-  showSections(footer)
+  window.addEventListener('scroll', () => {
+    showSections(contacts)
+    showSections(footer)
+  })
 }
 
-window.onscroll = () => {
-  showPopupSections()
+
+
+
+window.addEventListener('scroll', () => {
   showBtnToTopOnScroll(document.querySelector('.contacts'))
-}
+})

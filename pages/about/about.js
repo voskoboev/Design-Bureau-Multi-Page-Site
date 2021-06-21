@@ -1,51 +1,57 @@
 'use strict'
 
-manageFnsOnScroll()
-manageVideo()
+showPopupSections()
+manageNumberIncrement()
+
+// manageVideo()
 toggleTeamCards()
 
-showSectionOnLoad('header')
+// showSectionOnLoad('header')
 
-function showSectionOnLoad(sectionName) {
-  window.onload = () => {
-    const section = document.querySelector(`.${sectionName}`)
+// function showSectionOnLoad(sectionName) {
+//   window.onload = () => {
+//     const section = document.querySelector(`.${sectionName}`)
 
-    section.classList.add(`${sectionName}--active`)
-  }
-}
+//     section.classList.add(`${sectionName}--active`)
+//   }
+// }
 
-function manageFnsOnScroll() {
-  let calledOnce = false
 
-  const showPopupSections = () => {
+
+function showPopupSections() {
+  const
+    idea = 'idea',
+    services = 'services',
+    team = 'team',
+    brands = 'brands',
+    footer = 'footer'
+
+  const showSections = sectionName => {
+    const sectionNode = document.querySelector(`.${sectionName}`)
+
     const
-      idea = 'idea',
-      services = 'services',
-      team = 'team',
-      brands = 'brands',
-      footer = 'footer'
+      sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
+      upperOffsetWindow = window.pageYOffset,
+      windowHeingt = window.innerHeight
 
-    const showSections = sectionName => {
-      const sectionNode = document.querySelector(`.${sectionName}`)
-
-      const
-        sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
-        upperOffsetWindow = window.pageYOffset,
-        windowHeingt = window.innerHeight
-
-      if (sectionCoords < upperOffsetWindow + windowHeingt) {
-        sectionNode.classList.add(`${sectionName}--active`)
-      }
+    if (sectionCoords < upperOffsetWindow + windowHeingt) {
+      sectionNode.classList.add(`${sectionName}--active`)
     }
+  }
 
+  window.addEventListener('scroll', () => {
     showSections(idea)
     showSections(services)
     showSections(team)
     showSections(brands)
     showSections(footer)
-  }
+  })
+}
 
-  const manageNumberIncrement = () => {
+function manageNumberIncrement() {
+  let calledOnce = false
+
+  const startNumberIncrement = () => {
     const
       experience = document.querySelector('.idea__lower-number--experience'),
       projects = document.querySelector('.idea__lower-number--projects'),
@@ -80,22 +86,29 @@ function manageFnsOnScroll() {
     }
   }
 
-  window.onscroll = () => {
-    showPopupSections()
-    manageNumberIncrement()
-
-    showBtnToTopOnScroll(document.querySelector('.services'))
-  }
+  window.addEventListener('scroll', startNumberIncrement)
 }
 
-function manageVideo() {
+
+
+
+
+
+// Вынести в отдельный файл
+
+const idea = 'idea'
+const news = 'news'
+
+manageVideo(idea)
+
+function manageVideo(sectionName) {
   const
-    video = document.querySelector('.idea__video'),
-    playBtn = document.querySelector('.idea__play-btn')
+    video = document.querySelector(`.${sectionName}__video`),
+    playBtn = document.querySelector(`.${sectionName}__play-btn`)
 
   const playVideo = () => {
     video.play()
-    playBtn.classList.add('idea__play-btn--inactive')
+    playBtn.classList.add(`${sectionName}__play-btn--inactive`)
 
     if (video.hasAttribute('controls') === true) {
       return
@@ -105,30 +118,29 @@ function manageVideo() {
   }
 
   [video, playBtn].forEach(item => {
-    item.onclick = ev => {
+    item.addEventListener('click', ev => {
       ev.preventDefault()
       playVideo()
-    }
+    })
   })
 }
 
 function toggleTeamCards() {
-  const cards = document.querySelectorAll('.team__person')
-
   const
+    cards = document.querySelectorAll('.team__person'),
     infoActivationClass = 'team__person-info--active',
     photoInactivationClass = 'team__person-photo--inactive'
 
   cards.forEach(card => {
-    card.onmouseenter = () => {
+    card.addEventListener('mouseenter', () => {
       card.firstElementChild.classList.add(infoActivationClass)
       card.lastElementChild.classList.add(photoInactivationClass)
-    }
+    })
 
-    card.onmouseleave = () => {
+    card.addEventListener('mouseleave', () => {
       card.firstElementChild.classList.remove(infoActivationClass)
       card.lastElementChild.classList.remove(photoInactivationClass)
-    }
+    })
   })
 }
 

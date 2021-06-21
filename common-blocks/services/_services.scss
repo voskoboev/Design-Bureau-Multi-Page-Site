@@ -1,7 +1,6 @@
 .services {
   @include section-popup-onscroll;
 
-
   display: flex;
   background-color: #f9f9f9;
   padding-bottom: 165px;
@@ -82,7 +81,7 @@
   }
 
   .services__list-item-title {
-    @include font(600, 15px);
+    @include font(600, 1rem);
   }
 
   .services__list-item-btn {
@@ -120,7 +119,7 @@
   // }
 
   .services__list-item-btn-down-arrow {
-    background-image: url(/images/black-down-arrow.svg);
+    background-image: url("/images/black-down-arrow.svg");
     // background-size: contain;
     background-position: center center;
 
@@ -129,7 +128,7 @@
   }
 
   .services__list-item-btn-down-arrow--active {
-    background-image: url(/images/white-up-arrow.png);
+    background-image: url("/images/white-up-arrow.png");
   }
 
   // .services__list-item-btn-down-arrow:hover {
@@ -169,7 +168,7 @@
   }
 
   .services__list-item-link:after {
-    content: url(/images/orange-arrow.png);
+    content: url("/images/orange-arrow.png");
     padding-left: 8px;
   }
 
@@ -183,5 +182,11 @@
     text-align: right;
     @include font(400, 15px);
     line-height: 140%;
+  }
+
+  @media screen and (max-width: 450px) {
+    .services__list-item-text {
+      font-size: 0.9rem;
+    }
   }
 }

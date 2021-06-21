@@ -1,8 +1,10 @@
 'use strict'
+
+showPopupSections()
 initHeaderSwiper()
 manageVideo()
-
-
+manageNumberIncrement()
+initClientsCarousel()
 toggleNewsAccordionTabs()
 
 function initHeaderSwiper() {
@@ -21,21 +23,8 @@ function initHeaderSwiper() {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-    },
-
-    // allowSlidePrev: false,
-    // breakpoints: {
-    //   970: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 36,
-    //   },
-    //   1280: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 30,
-    //   }
-    // }
-
-  });
+    }
+  })
 }
 
 function initClientsCarousel() {
@@ -44,8 +33,8 @@ function initClientsCarousel() {
   // const tab3 = document.querySelector('')
   const wrapper = document.querySelector('.clients__carousel')
 
-  const arrowLeft = document.querySelector('.clients__arrow--left')
-  const arrowRight = document.querySelector('.clients__arrow--right')
+  // const arrowLeft = document.querySelector('.clients__arrow--left')
+  // const arrowRight = document.querySelector('.clients__arrow--right')
 
   const myArr = [tab1, tab2]
   let counter = 0
@@ -85,43 +74,7 @@ function initClientsCarousel() {
   // })
 }
 
-initClientsCarousel()
-
-
-
-
-
-
-function toggleNewsAccordionTabs() {
-  const tabsUppers = document.querySelectorAll('.news__accordion-tab-upper')
-  const slideDownClass = 'news__accordion-tab--slide-down'
-  const slideUpClass = 'news__accordion-tab--slide-up'
-  const btnActivationClass = 'news__accordion-arrow--active'
-
-  tabsUppers.forEach(el => {
-    el.onclick = () => {
-      const lowerClassList = el.nextElementSibling.classList
-      const btnArrowClassList = el.lastElementChild.firstElementChild.classList
-
-      if (!lowerClassList.contains(slideDownClass)) {
-        lowerClassList.remove(slideUpClass)
-        lowerClassList.add(slideDownClass)
-      } else {
-        lowerClassList.remove(slideDownClass)
-        lowerClassList.add(slideUpClass)
-      }
-
-      if (btnArrowClassList.contains(btnActivationClass)) {
-        btnArrowClassList.remove(btnActivationClass)
-      } else {
-        btnArrowClassList.add(btnActivationClass)
-      }
-    }
-  })
-}
-
-
-const showPopupSections = () => {
+function showPopupSections() {
   const
     portfolio = 'portfolio',
     services = 'services',
@@ -139,30 +92,22 @@ const showPopupSections = () => {
     const
       sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
-      windowHeingt = window.innerHeight
+      windowHeight = window.innerHeight
 
-    if (sectionCoords < upperOffsetWindow + windowHeingt) {
+    if (sectionCoords < upperOffsetWindow + windowHeight) {
       sectionNode.classList.add(`${sectionName}--active`)
     }
   }
 
-  showSections(portfolio)
-  showSections(services)
-  showSections(trends)
-  showSections(clients)
-  showSections(news)
-  showSections(brands)
+  window.addEventListener('scroll', () => {
+    showSections(portfolio)
+    showSections(services)
+    showSections(trends)
+    showSections(clients)
+    showSections(news)
+    showSections(brands)
+  })
 }
-
-window.onscroll = () => {
-  showPopupSections()
-
-  // manageNumberIncrement()
-  // showBtnToTopOnScroll(document.querySelector('.services'))
-}
-
-
-
 
 function manageVideo() {
   const
@@ -181,23 +126,22 @@ function manageVideo() {
   }
 
   [video, playBtn].forEach(item => {
-    item.onclick = ev => {
+    item.addEventListener('click', ev => {
       ev.preventDefault()
       playVideo()
-    }
+    })
   })
 }
 
-function manageFnsOnScroll() {
+function manageNumberIncrement() {
   let calledOnce = false
 
-  const manageNumberIncrement = () => {
-    const numberEl = document.querySelector('.trends__lower-number')
-
+  const startNumberIncrement = () => {
     const
+      numberEl = document.querySelector('.trends__lower-number'),
       sectionCoords = numberEl.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
-      windowHeingt = window.innerHeight
+      windowHeight = window.innerHeight
 
     let startNum = 0
     const elEndNum = 14
@@ -207,7 +151,7 @@ function manageFnsOnScroll() {
       htmlElem.textContent = startNum++
     }
 
-    if (sectionCoords < upperOffsetWindow + windowHeingt) {
+    if (sectionCoords < upperOffsetWindow + windowHeight) {
       if (!calledOnce) {
         setTimeout(() => {
           setInterval(incrementNums, 100, elEndNum, numberEl)
@@ -218,7 +162,18 @@ function manageFnsOnScroll() {
     }
   }
 
-  window.addEventListener('scroll', manageNumberIncrement)
+  window.addEventListener('scroll', startNumberIncrement)
 }
 
-manageFnsOnScroll()
+function toggleNewsAccordionTabs() {
+  const upperItems = document.querySelectorAll('.news__accordion-tab-upper')
+  const slideActivationClass = 'news__accordion-tab-lower--active'
+  const arrowActivationClass = 'news__accordion-arrow--active'
+
+  upperItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.nextElementSibling.classList.toggle(slideActivationClass)
+      item.lastElementChild.firstElementChild.classList.toggle(arrowActivationClass)
+    })
+  })
+}

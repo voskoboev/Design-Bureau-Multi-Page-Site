@@ -21,11 +21,15 @@ function showBtnToTopOnScroll(appearancePoint) {
 function scrollToTopOnBtnClick() {
   const btn = document.querySelector('.btn-to-top')
 
-  btn.onclick = () => {
+  btn.addEventListener('click', () => {
     scrollTo({
       top: 0,
       behavior: "smooth"
     })
-  }
+  })
+
+  // window.addEventListener('scroll', () => {
+  //   showBtnToTopOnScroll(appearancePoint)
+  // })
 }
 

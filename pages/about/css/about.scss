@@ -4,7 +4,7 @@
 
 @import "../../../common-blocks/btn-to-top/_btn-to-top";
 @import "../../../common-blocks/header-upper/_header-upper";
-@import "../../../common-blocks/services/services";
+@import "../../../common-blocks/services/_services";
 @import "../../../common-blocks/_card";
 @import "../../../common-blocks/_brands";
 @import "../../../common-blocks/_socials";
@@ -48,7 +48,7 @@
 // }
 
 .header {
-  @include header-popup-onscroll;
+  // @include header-popup-onscroll;
 
   .header__menu-item-link,
   .header__call-link {
@@ -254,7 +254,7 @@
     max-width: 400px;
     margin-left: 410px;
 
-    @include font(500, 1rem);
+    @include font(400, 1rem);
     line-height: 140%;
   }
 
@@ -400,7 +400,7 @@
   .idea__poster-arrow {
     width: 24px;
     height: 24px;
-    background: url("/images/pages/about-page/video-arrow.png") no-repeat;
+    background: url("/images//general-imgs/video-arrow.png") no-repeat;
     margin-left: 10px;
   }
 
