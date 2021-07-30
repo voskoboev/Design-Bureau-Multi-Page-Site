@@ -1,0 +1,20 @@
+{
+  "name": "benhome",
+  "version": "1.0.0",
+  "description": "design bureau site",
+  "main": "index.js",
+  "scripts": {
+    "dev-index": "parcel src/index.html",
+    "dev-about": "parcel src/about.html",
+    "prod": "parcel build src/index.html src/about.html"
+  },
+  "keywords": [],
+  "author": "Dmitry",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2",
+    "sass": "^1.35.2"
+  }
+}
