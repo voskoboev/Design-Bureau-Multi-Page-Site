@@ -2,38 +2,30 @@
   @include flex(start, center);
   padding: 30px 60px 0;
   background-color: transparent;
-}
 
-@media screen and (max-width: 1350px) {
-  .header__upper {
+  @media screen and (max-width: 1350px) {
     // @include flex(space-between, center);
     justify-content: space-between;
     // align-items: center;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .header__upper {
+  @media screen and (max-width: 768px) {
     @include pl-pr(40px);
     // display: block;
     // justify-content: none;
     // align-items: none;
   }
-}
 
-@media screen and (max-width: 450px) {
-  .header__upper {
+  @media screen and (max-width: 450px) {
     @include pl-pr(20px);
   }
 }
 
 .header__mobile-btn--open {
   display: none;
-}
 
-@media screen and (max-width: 992px) {
-  .header__mobile-btn--open {
-    background: url("/images/common-blocks/header-upper/burger-white.png")
+  @media screen and (max-width: 992px) {
+    background: url("../../images/common.blocks/header-upper/burger-white.png")
       no-repeat;
     width: 48px;
     height: 48px;
@@ -46,19 +38,17 @@
     right: 40px;
     top: 20px;
     visibility: visible;
-    transition: 1s all ease;
+    transition: 0.2s all ease;
   }
-}
 
-@media screen and (max-width: 450px) {
-  .header__mobile-btn--open {
+  @media screen and (max-width: 450px) {
     right: 20px;
   }
 }
 
 .header__mobile-btn--inactive {
   visibility: hidden;
-  transition: 1s all ease;
+  transition: 0.2s all ease;
 }
 
 .header__logo {
@@ -68,16 +58,12 @@
   margin-right: 200px;
 
   cursor: pointer;
-}
 
-@media screen and (max-width: 1350px) {
-  .header__logo {
+  @media screen and (max-width: 1350px) {
     margin-right: auto;
   }
-}
 
-@media screen and (max-width: 992px) {
-  .header__logo {
+  @media screen and (max-width: 992px) {
     margin-right: 0;
   }
 }
@@ -146,11 +132,10 @@
 
 .header__mobile-btn--close {
   display: none;
-}
 
-@media screen and (max-width: 992px) {
-  .header__mobile-btn--close {
-    background: url("/images/common-blocks/header-upper/close.png") no-repeat;
+  @media screen and (max-width: 992px) {
+    background: url("../../images/common.blocks/header-upper/close.png")
+      no-repeat;
     width: 48px;
     height: 48px;
     outline: none;
@@ -168,10 +153,8 @@
 
 .header__menu {
   display: flex;
-}
 
-@media screen and (max-width: 992px) {
-  .header__menu {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
     // flex-basis: 200px;
     width: 150px;
@@ -181,16 +164,12 @@
 
 .header__menu-item:not(:last-child) {
   margin-right: 50px;
-}
 
-@media screen and (max-width: 1350px) {
-  .header__menu-item:not(:last-child) {
+  @media screen and (max-width: 1350px) {
     margin-right: 25px;
   }
-}
 
-@media screen and (max-width: 992px) {
-  .header__menu-item:not(:last-child) {
+  @media screen and (max-width: 992px) {
     margin-right: 0;
     margin-bottom: 30px;
   }
@@ -198,43 +177,39 @@
 
 .header__menu-item-link {
   @include font(600, 14px, #000);
+
   font-family: "SF Pro Display";
   transition: 0.2s color ease;
-}
 
-@media screen and (max-width: 992px) {
-  .header__menu-item-link {
+  @media screen and (max-width: 992px) {
     color: $accent-color !important;
   }
-}
 
-.header__menu-item-link:hover {
-  color: $accent-color;
-  transition: 0.2s color ease;
+  &:hover {
+    color: $accent-color;
+    transition: 0.2s color ease;
+  }
 }
 
 .header__call {
   display: flex;
   margin-left: auto;
-}
 
-@media screen and (max-width: 992px) {
-  .header__call {
+  @media screen and (max-width: 992px) {
     // align-self: center;
     margin-left: none;
     margin-right: auto;
   }
-}
 
-@media screen and (max-width: 700px) {
-  .header__call {
+  @media screen and (max-width: 700px) {
     display: none;
   }
 }
 
 .header__call-text {
-  margin-right: 12px;
   @include font(600, 18px, $accent-color);
+  
+  margin-right: 12px;
 }
 
 .header__call-link {

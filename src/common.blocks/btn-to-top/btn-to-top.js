@@ -1,15 +1,16 @@
-'use strict'
+// 'use strict'
 
-scrollToTopOnBtnClick()
+// scrollToTopOnBtnClick()
 
 /* 
 This fn is called in concrete js file for every page because of
 neccessity of calling scroll fns in one page scroll handler.
 */
-function showBtnToTopOnScroll(appearancePoint) {
-  const btn = document.querySelector('.btn-to-top')
-  const offset = window.pageYOffset + window.innerHeight
-  const position = appearancePoint.getBoundingClientRect().top + window.pageYOffset
+export function showBtnToTopOnScroll(appearancePoint) {
+  const btn = document.querySelector('.btn-to-top'),
+    point = document.querySelector(appearancePoint),
+    offset = window.pageYOffset + window.innerHeight,
+    position = point.getBoundingClientRect().top + window.pageYOffset
 
   if (position < offset) {
     btn.classList.add('btn-to-top--active')
@@ -18,7 +19,7 @@ function showBtnToTopOnScroll(appearancePoint) {
   }
 }
 
-function scrollToTopOnBtnClick() {
+export function scrollToTopOnBtnClick() {
   const btn = document.querySelector('.btn-to-top')
 
   btn.addEventListener('click', () => {

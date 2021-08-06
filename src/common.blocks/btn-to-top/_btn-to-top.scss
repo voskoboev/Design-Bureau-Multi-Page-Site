@@ -10,19 +10,19 @@
   border: 7px solid #ece9e9;
   opacity: 0.9;
 
-  background: url("/images/common-blocks/btn-to-top/arrow.png") no-repeat;
+  background: url("../../images/common.blocks/btn-to-top/arrow.png") no-repeat;
   background-position: center center;
   cursor: pointer;
 
   transform: translateY(30px);
   visibility: hidden;
   transition: 0.5s all ease;
-}
 
-@media screen and (max-width: 550px) {
-  .btn-to-top {
+  @media screen and (max-width: 550px) {
     display: none;
   }
+
+  // z-index: 150;
 }
 
 .btn-to-top--active {

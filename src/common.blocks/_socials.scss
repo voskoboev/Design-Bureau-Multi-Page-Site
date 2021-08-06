@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials__link {
+  width: 20px;
+  height: 20px;
+  display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.socials__link--first {
+  background: url("../../images/common.blocks/socials/fb.png") no-repeat;
+}
+
+.socials__link--second {
+  background: url("../../images/common.blocks/socials/tw.png") no-repeat 0 2px;
+}
+
+.socials__link--third {
+  background: url("../../images/common.blocks/socials/inst.png") no-repeat;
+}

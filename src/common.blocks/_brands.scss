@@ -7,22 +7,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 200px 0;
-}
 
-@media screen and (max-width: 1250px) {
-  .brands__container {
+  @media screen and (max-width: 1250px) {
     @include pl-pr(40px);
   }
-}
 
-@media screen and (max-width: 992px) {
-  .brands__container {
+  @media screen and (max-width: 992px) {
     justify-content: space-evenly;
   }
-}
 
-@media screen and (max-width: 470px) {
-  .brands__container {
+  @media screen and (max-width: 470px) {
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
@@ -40,26 +34,26 @@
   width: 150px;
   height: 45px;
 
-  background: url("/images/common-blocks/brands/creative.png") no-repeat;
+  background: url("../../images/common.blocks/brands/creative.png") no-repeat;
 }
 
 .brands__item--second {
   width: 141px;
   height: 37px;
 
-  background: url("/images/common-blocks/brands/at.png") no-repeat;
+  background: url("../../images/common.blocks/brands/at.png") no-repeat;
 }
 
 .brands__item--third {
   width: 104px;
   height: 38px;
 
-  background: url("/images/common-blocks/brands/neuton.png") no-repeat;
+  background: url("../../images/common.blocks/brands/neuton.png") no-repeat;
 }
 
 .brands__item--fourth {
   width: 135px;
   height: 35px;
 
-  background: url("/images/common-blocks/brands/francois.png") no-repeat;
+  background: url("../../images/common.blocks/brands/francois.png") no-repeat;
 }

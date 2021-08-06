@@ -6,26 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benhome: main page</title>
-
-  <!-- <link rel="stylesheet" href="../../libs/reset/reset.css">
-  <link rel="stylesheet" href="../../libs/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../../fonts/stylesheet.css"> -->
-  <!-- <link rel="stylesheet" href="scss/index.css"> -->
-  <link rel="stylesheet" href="./pages/index/scss/index.scss">
-
-  <!-- <script src="../../libs/swiper/swiper-bundle.min.js"></script>
-  <script src="../../common-blocks/services/services.js" defer></script>
-  <script src="../../common-blocks/header-upper/header-upper.js" defer></script> -->
+  <link rel="stylesheet" href="./pages/index/index.scss">
   <script src="./pages/index/index.js" defer></script>
 </head>
 
 <body>
+  <div class="btn-to-top">
+  </div>
   <header class="header">
     <div class="header__upper">
       <button class="header__mobile-btn--open">
       </button>
       <a class="header__logo" href="#">
-        <img class="header__logo-benhome" src="./images/general-imgs/logo-white.png" alt="logo-white">
+        <img class="header__logo-benhome" src="./images/general.imgs/logo-white.png" alt="logo-white">
       </a>
       <nav class="header__nav">
         <button class="header__mobile-btn--close">
@@ -126,15 +119,14 @@
         </div>
         <div class="swiper-pagination"></div>
         <!-- If we need pagination -->
-
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next">
+        </div>
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
       </div>
-
     </div>
   </header>
 
@@ -180,9 +172,6 @@
         </a>
       </div>
     </div>
-
-
-
 
 
     <div class="card portfolio__card portfolio__card--third">
@@ -248,6 +237,7 @@
   </section>
 
   <section class="services">
+    <!-- <div class="services__wrapper"> -->
     <div class="services__left">
       <h3 class="services__title">
         SERVICES
@@ -270,7 +260,8 @@
               Explore
             </a>
             <p class="services__list-item-text">
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+              Sections
               1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are reproduced Рunk of
             </p>
           </div>
@@ -291,7 +282,8 @@
               Explore
             </a>
             <p class="services__list-item-text">
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+              Sections
               1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are reproduced Рunk of
             </p>
           </div>
@@ -312,7 +304,8 @@
               Explore
             </a>
             <p class="services__list-item-text">
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+              Sections
               1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are reproduced Рunk of
             </p>
           </div>
@@ -333,7 +326,8 @@
               Explore
             </a>
             <p class="services__list-item-text">
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+              Sections
               1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are reproduced Рunk of
             </p>
           </div>
@@ -345,7 +339,6 @@
             </h4>
             <button class="services__list-item-btn">
               <div class="services__list-item-btn-down-arrow">
-
               </div>
             </button>
           </div>
@@ -354,13 +347,15 @@
               Explore
             </a>
             <p class="services__list-item-text">
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+              Sections
               1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are reproduced Рunk of
             </p>
           </div>
         </li>
       </ul>
     </div>
+    <!-- </div> -->
   </section>
 
   <section class="trends">
@@ -404,7 +399,7 @@
         <div class="trends__video-wrapper">
           <div class="trends__play-btn">
           </div>
-          <video class="trends__video" poster="./images/pages/index-page/trends-section/barn-house.jpg">
+          <video class="trends__video" poster="./images/pages/index/trends-section/barn-house.jpg">
             <source src="./videos/index/modern-house-1.mp4" type="video/mp4">
           </video>
         </div>
@@ -492,10 +487,8 @@
               </p>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
 
@@ -513,7 +506,7 @@
                 HOW TO DESIGN WELL?
               </h4>
               <div class="news__accordion-btn">
-                <img src="./images/pages/index-page/news-section/accordion-arrow.png" alt="arrow"
+                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow news__accordion-arrow--active">
               </div>
             </div>
@@ -536,7 +529,7 @@
                 WELCOME TO OUR NEW SITE
               </h4>
               <div class="news__accordion-btn">
-                <img class="news__accordion-arrow" src="./images/pages/index-page/news-section/accordion-arrow.png"
+                <img class="news__accordion-arrow" src="./images/pages/index/news-section/accordion-arrow.png"
                   alt="arrow">
               </div>
             </div>
@@ -557,7 +550,7 @@
                 TRENDING 2021
               </h4>
               <div class="news__accordion-btn">
-                <img src="./images/pages/index-page/news-section/accordion-arrow.png" alt="arrow"
+                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
               </div>
             </div>
@@ -580,7 +573,7 @@
                 BEST WOOD FOR TABLES
               </h4>
               <div class="news__accordion-btn">
-                <img src="./images/pages/index-page/news-section/accordion-arrow.png" alt="arrow"
+                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
               </div>
             </div>
@@ -602,7 +595,7 @@
                 NEW CONTACT FORM
               </h4>
               <div class="news__accordion-btn">
-                <img src="./images/pages/index-page/news-section/accordion-arrow.png" alt="arrow"
+                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
               </div>
             </div>
@@ -625,7 +618,7 @@
                 TRENDING COLORS
               </h4>
               <div class="news__accordion-btn">
-                <img src="./images/pages/index-page/news-section/accordion-arrow.png" alt="arrow"
+                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
               </div>
             </div>
@@ -666,7 +659,7 @@
 
   <footer class="footer">
     <a href="#" class="footer__logo">
-      <img class="footer__logo-link" src="./images/general-imgs/logo-black.png" alt="logo">
+      <img class="footer__logo-link" src="./images/general.imgs/logo-black.png" alt="logo">
     </a>
 
     <p class="footer__rights">
@@ -730,7 +723,6 @@
       </li>
     </ul>
 
-
     <ul class="footer__languages">
       <li class="footer__languages-item">
         ENG
@@ -745,19 +737,18 @@
 
     <ul class="socials">
       <li class="socials__item">
-        <a href="#" class="socials__link socials__link--first">
+        <a class="socials__link socials__link--first" href="#" target="_blank" rel="noopener">
         </a>
       </li>
       <li class="socials__item">
-        <a href="#" class="socials__link socials__link--second">
+        <a class="socials__link socials__link--second" href="#" target="_blank" rel="noopener">
         </a>
       </li>
       <li class="socials__item">
-        <a href="#" class="socials__link socials__link--third">
+        <a class="socials__link socials__link--third" href="#" target="_blank" rel="noopener">
         </a>
       </li>
     </ul>
-
   </footer>
 
 </body>

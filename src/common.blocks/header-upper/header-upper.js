@@ -1,8 +1,4 @@
-'use strict'
-
-toggleMobileMenu()
-
-function toggleMobileMenu() {
+export function toggleMobileMenu() {
   const btnOpen = document.querySelector('.header__mobile-btn--open')
   const btnClose = document.querySelector('.header__mobile-btn--close')
   const nav = document.querySelector('.header__nav')

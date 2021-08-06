@@ -10,20 +10,18 @@
   // background-size: cover;
 
   // transition: .2s all ease;
-}
 
-@media screen and (max-width: 450px) {
-  .card {
+  &:hover {
+    background: none;
+    background-color: #fff;
+    // outline: 1px solid black;
+    z-index: 10;
+    // transition: .2s all ease;
+  }
+
+  @media screen and (max-width: 450px) {
     padding-left: 20px;
   }
-}
-
-.card:hover {
-  background: none;
-  background-color: #fff;
-  // outline: 1px solid black;
-  z-index: 10;
-  // transition: .2s all ease;
 }
 
 .card:hover .card__info {
@@ -49,10 +47,8 @@
   font-size: 13px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
 
-@media screen and (max-width: 450px) {
-  .card__category {
+  @media screen and (max-width: 450px) {
     font-size: 0.7rem;
   }
 }
@@ -66,22 +62,18 @@
   // line-height: 20px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
 
-@media screen and (max-width: 768px) {
-  .card__title {
+  &:first-line {
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
     margin-bottom: 20px;
   }
-}
 
-@media screen and (max-width: 450px) {
-  .card__title {
+  @media screen and (max-width: 450px) {
     font-size: 1.2rem;
   }
-}
-
-.card__title:first-line {
-  line-height: 30px;
 }
 
 .card__text {
@@ -94,15 +86,15 @@
   font-weight: normal;
   font-size: 1rem;
   line-height: 140%;
-}
 
-@media screen and (max-width: 450px) {
-  .card__text {
+  @media screen and (max-width: 450px) {
     font-size: 0.9rem;
   }
 }
 
 .card__link {
+  @extend %centering-flex-container;
+
   position: absolute;
   bottom: 38px;
 
@@ -118,15 +110,13 @@
   background-color: $accent-color;
   border-radius: 50%;
 
-  @extend %centering-flex-container;
-}
+  &:hover {
+    transform: translateX(5px);
+    transition: 0.2s transform ease;
+  }
 
-.card__link:hover {
-  transform: translateX(5px);
-  transition: 0.2s transform ease;
-}
-
-.card__link::after {
-  content: url(/images/white-right-arrow.png);
-  // padding-left: 10px;
+  &::after {
+    content: url(../../images/white-right-arrow.png);
+    // padding-left: 10px;
+  }
 }
