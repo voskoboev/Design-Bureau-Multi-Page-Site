@@ -1,41 +1,27 @@
 import Swiper from 'swiper'
-import { showBtnToTopOnScroll, scrollToTopOnBtnClick  } from '../../common.blocks/btn-to-top/btn-to-top'
-import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
+import { manageVideo, showPopupSections } from '../../ancillary.scripts/ancillary-srcipts'
+// import { showBtnToTopOnScroll, scrollToTopOnBtnClick  } from '../../common.blocks/btn-to-top/btn-to-top'
 
 // showBtnToTopOnScroll('.trends') // ?
 // scrollToTopOnBtnClick() // ?
-toggleServicesAccordionTabs()
-toggleMobileMenu()
 
-showPopupSections()
+toggleMobileMenu()
+toggleServicesAccordionTabs()
+manageVideo('trends')
+showPopupSections('portfolio')
+showPopupSections('services')
+showPopupSections('trends')
+showPopupSections('clients')
+showPopupSections('news')
+showPopupSections('brands')
+
 initHeaderSwiper()
 manageNumberIncrement()
-manageVideo()
 initClientsCarousel()
 toggleNewsAccordionTabs()
 
-function showPopupSections() {
-  const showSections = sectionName => {
-    const sectionNode = document.querySelector(`.${sectionName}`),
-      sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
-      upperOffsetWindow = window.pageYOffset,
-      windowHeight = window.innerHeight
-
-    if (sectionCoords < upperOffsetWindow + windowHeight) {
-      sectionNode.classList.add(`${sectionName}--active`)
-    }
-  }
-
-  window.addEventListener('scroll', () => {
-    showSections('portfolio')
-    showSections('services')
-    showSections('trends')
-    showSections('clients')
-    showSections('news')
-    showSections('brands')
-  })
-}
 
 function initHeaderSwiper() {
   const slider = document.querySelector('.swiper-container')
@@ -88,29 +74,6 @@ function manageNumberIncrement() {
   }
 
   window.addEventListener('scroll', startNumberIncrement)
-}
-
-function manageVideo() {
-  const video = document.querySelector('.trends__video'),
-    playBtn = document.querySelector('.trends__play-btn')
-
-  const playVideo = () => {
-    video.play()
-    playBtn.classList.add('trends__play-btn--inactive')
-
-    if (video.hasAttribute('controls') === true) {
-      return
-    }
-
-    video.setAttribute('controls', 'controls')
-  }
-
-  [video, playBtn].forEach(item => {
-    item.addEventListener('click', ev => {
-      ev.preventDefault()
-      playVideo()
-    })
-  })
 }
 
 function initClientsCarousel() {

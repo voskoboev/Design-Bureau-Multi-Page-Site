@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev-index": "parcel src/index.html",
-    "dev-about": "parcel src/about.html",
+    "dev-about": "parcel src/pages/about/about.html",
+    "dev-portfolio": "parcel src/pages/portfolio/portfolio.html",
+    "dev-news": "parcel src/pages/news/news.html",
+    "dev-contact": "parcel src/pages/contact/contact.html",
     "prod": "parcel build src/index.html src/about.html"
   },
   "keywords": [],

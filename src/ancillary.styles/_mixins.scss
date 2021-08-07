@@ -25,11 +25,11 @@
 @mixin section-popup-onscroll {
   opacity: 0;
   transform: translateY(200px);
-  transition: 1.7s all ease;
+  transition: 0.5s all ease;
 
   &--active {
     opacity: 1;
     transform: translateY(0);
-    transition: 1.7s all ease;
+    transition: 0.5s all ease;
   }
 }

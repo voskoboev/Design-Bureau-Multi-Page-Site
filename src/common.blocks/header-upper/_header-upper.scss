@@ -23,6 +23,7 @@
 
 .header__mobile-btn--open {
   display: none;
+  cursor: pointer;
 
   @media screen and (max-width: 992px) {
     background: url("../../images/common.blocks/header-upper/burger-white.png")
@@ -99,7 +100,7 @@
 
 .header__nav--active {
   display: block;
-  animation: slide-in-mobile-menu 1s forwards ease;
+  animation: slide-in-mobile-menu 0.5s forwards ease;
 }
 
 @keyframes slide-in-mobile-menu {
@@ -115,7 +116,7 @@
 }
 
 .header__nav--inactive {
-  animation: slide-out-mobile-menu 1s forwards ease;
+  animation: slide-out-mobile-menu 0.5s forwards ease;
 }
 
 @keyframes slide-out-mobile-menu {
@@ -132,6 +133,7 @@
 
 .header__mobile-btn--close {
   display: none;
+  cursor: pointer;
 
   @media screen and (max-width: 992px) {
     background: url("../../images/common.blocks/header-upper/close.png")
@@ -208,7 +210,7 @@
 
 .header__call-text {
   @include font(600, 18px, $accent-color);
-  
+
   margin-right: 12px;
 }
 

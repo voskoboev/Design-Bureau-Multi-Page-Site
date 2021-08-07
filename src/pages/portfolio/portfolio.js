@@ -1,14 +1,12 @@
-'use strict'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 
+toggleMobileMenu()
 toggleGalleryCards()
 
 function toggleGalleryCards() {
-  const
-    menuItemAll = document.querySelector('.projects__menu-item--all'),
+  const menuItemAll = document.querySelector('.projects__menu-item--all'),
     menuItemExterior = document.querySelector('.projects__menu-item--exterior'),
-    menuItemInterior = document.querySelector('.projects__menu-item--interior')
-
-  const
+    menuItemInterior = document.querySelector('.projects__menu-item--interior'),
     galleryItemsAll = document.querySelectorAll('.projects__card'),
     galleryItemsExterior = document.querySelectorAll(`
       .projects__card--third, 
@@ -22,9 +20,7 @@ function toggleGalleryCards() {
       .projects__card--fourth, 
       .projects__card--eighth, 
       .projects__card--nineth
-     `)
-
-  const
+     `),
     galleryItemThird = document.querySelector('.projects__card--third'),
     galleryItemFourth = document.querySelector('.projects__card--fourth'),
     galleryItemNineth = document.querySelector('.projects__card--nineth')

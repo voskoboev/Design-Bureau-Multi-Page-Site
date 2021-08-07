@@ -1,10 +1,16 @@
-'use strict'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
+import { manageVideo } from '../../ancillary.scripts/ancillary-srcipts'
+
+toggleMobileMenu()
+toggleServicesAccordionTabs()
+manageVideo('idea')
 
 showPopupSections()
 manageNumberIncrement()
+toggleTeamCards()
 
 // manageVideo()
-toggleTeamCards()
 
 // showSectionOnLoad('header')
 
@@ -17,15 +23,7 @@ toggleTeamCards()
 // }
 
 
-
 function showPopupSections() {
-  const
-    idea = 'idea',
-    services = 'services',
-    team = 'team',
-    brands = 'brands',
-    footer = 'footer'
-
   const showSections = sectionName => {
     const sectionNode = document.querySelector(`.${sectionName}`)
 
@@ -40,11 +38,11 @@ function showPopupSections() {
   }
 
   window.addEventListener('scroll', () => {
-    showSections(idea)
-    showSections(services)
-    showSections(team)
-    showSections(brands)
-    showSections(footer)
+    showSections('idea')
+    showSections('services')
+    showSections('team')
+    showSections('brands')
+    showSections('footer')
   })
 }
 
@@ -52,20 +50,18 @@ function manageNumberIncrement() {
   let calledOnce = false
 
   const startNumberIncrement = () => {
-    const
-      experience = document.querySelector('.idea__lower-number--experience'),
+    const experience = document.querySelector('.idea__lower-number--experience'),
       projects = document.querySelector('.idea__lower-number--projects'),
-      section = document.querySelector('.idea__lower')
-
-    const
+      section = document.querySelector('.idea__lower'),
       sectionCoords = section.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
-      windowHeingt = window.innerHeight
+      windowHeingt = window.innerHeight,
+      projectsEndNum = 20,
+      experienceEndNum = 14,
+      incrementInterval = 100,
+      startDelay = 500
 
     let startNum = 0
-    const
-      projectsEndNum = 20,
-      experienceEndNum = 14
 
     const incrementNums = (endNum, htmlElem) => {
       if (startNum > endNum) return
@@ -75,11 +71,11 @@ function manageNumberIncrement() {
     if (sectionCoords < upperOffsetWindow + windowHeingt) {
       if (!calledOnce) {
         const joinSetIntervalsCalls = () => {
-          setInterval(incrementNums, 100, experienceEndNum, experience)
-          setInterval(incrementNums, 100, projectsEndNum, projects)
+          setInterval(incrementNums, incrementInterval, experienceEndNum, experience)
+          setInterval(incrementNums, incrementInterval, projectsEndNum, projects)
         }
 
-        setTimeout(joinSetIntervalsCalls, 500)
+        setTimeout(joinSetIntervalsCalls, startDelay)
 
         calledOnce = true
       }
@@ -87,42 +83,6 @@ function manageNumberIncrement() {
   }
 
   window.addEventListener('scroll', startNumberIncrement)
-}
-
-
-
-
-
-
-// Вынести в отдельный файл
-
-const idea = 'idea'
-const news = 'news'
-
-manageVideo(idea)
-
-function manageVideo(sectionName) {
-  const
-    video = document.querySelector(`.${sectionName}__video`),
-    playBtn = document.querySelector(`.${sectionName}__play-btn`)
-
-  const playVideo = () => {
-    video.play()
-    playBtn.classList.add(`${sectionName}__play-btn--inactive`)
-
-    if (video.hasAttribute('controls') === true) {
-      return
-    }
-
-    video.setAttribute('controls', 'controls')
-  }
-
-  [video, playBtn].forEach(item => {
-    item.addEventListener('click', ev => {
-      ev.preventDefault()
-      playVideo()
-    })
-  })
 }
 
 function toggleTeamCards() {
@@ -133,13 +93,25 @@ function toggleTeamCards() {
 
   cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-      card.firstElementChild.classList.add(infoActivationClass)
-      card.lastElementChild.classList.add(photoInactivationClass)
+      card
+        .firstElementChild
+        .classList
+        .add(infoActivationClass)
+      card
+        .lastElementChild
+        .classList
+        .add(photoInactivationClass)
     })
 
     card.addEventListener('mouseleave', () => {
-      card.firstElementChild.classList.remove(infoActivationClass)
-      card.lastElementChild.classList.remove(photoInactivationClass)
+      card
+        .firstElementChild
+        .classList
+        .remove(infoActivationClass)
+      card
+        .lastElementChild
+        .classList
+        .remove(photoInactivationClass)
     })
   })
 }

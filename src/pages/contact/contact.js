@@ -1,34 +1,7 @@
-'use strict'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { showSectionOnLoad, showPopupSections } from '../../ancillary.scripts/ancillary-srcipts'
 
-showPopupSections()
-
-function showPopupSections() {
-  const
-    contacts = 'contacts',
-    footer = 'footer'
-
-  const showSections = sectionName => {
-    const sectionNode = document.querySelector(`.${sectionName}`)
-
-    const
-      sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
-      upperOffsetWindow = window.pageYOffset,
-      windowHeingt = window.innerHeight
-
-    if (sectionCoords < upperOffsetWindow + windowHeingt) {
-      sectionNode.classList.add(`${sectionName}--active`)
-    }
-  }
-
-  window.addEventListener('scroll', () => {
-    showSections(contacts)
-    showSections(footer)
-  })
-}
-
-
-
-
-window.addEventListener('scroll', () => {
-  showBtnToTopOnScroll(document.querySelector('.contacts'))
-})
+toggleMobileMenu()
+showSectionOnLoad('header__central')
+showSectionOnLoad('header__lower')
+showPopupSections('contacts')

@@ -10,12 +10,9 @@
 }
 
 body {
-  // width: 100vw;
   overflow-x: hidden;
-  // overflow: hidden;
-  font-family: $main-font-family, sans-serif; // add default fonts list
+  font-family: $main-fonts; 
 }
-
 
 h1,
 h2,
@@ -30,7 +27,12 @@ h6 {
 a {
   text-decoration: none;
   outline: none;
-  font-family: $main-font-family, sans-serif;
+  font-family: $main-fonts, sans-serif;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
 }
 
 ::selection {

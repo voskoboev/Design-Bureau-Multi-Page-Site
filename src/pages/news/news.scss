@@ -1,51 +1,45 @@
-@import "../../../ancillary-styles/_vars";
-@import "../../../ancillary-styles/_mixins";
-@import "../../../ancillary-styles/_common.styles";
+@import "reset.css/reset.css";
 
-@import "../../../common-blocks/btn-to-top/_btn-to-top";
-@import "../../../common-blocks/header-upper/_header-upper";
-@import "../../../common-blocks/_card";
-@import "../../../common-blocks/_socials";
-@import "../../../common-blocks/_footer";
+@import "../../ancillary.styles/fonts";
+@import "../../ancillary.styles/_vars";
+@import "../../ancillary.styles/_mixins";
+@import "../../ancillary.styles/_global";
+
+@import "../../common.blocks/btn-to-top/_btn-to-top";
+@import "../../common.blocks/header-upper/_header-upper";
+@import "../../common.blocks/_card";
+@import "../../common.blocks/_socials";
+@import "../../common.blocks/_footer";
 
 .header {
   .header__lower {
     padding-top: 210px;
     border-bottom: 1px solid rgba(000, 000, 000, 0.3);
-  }
 
-  @media screen and (max-width: 1024px) {
-    .header__lower {
+    @media screen and (max-width: 1024px) {
       padding-top: 100px;
     }
-  }
 
-  @media screen and (max-width: 450px) {
-    .header__lower {
+    @media screen and (max-width: 450px) {
       padding-top: 50px;
     }
   }
 
   .header__title {
-    margin-left: 400px;
     @include font(700, 3.5rem);
-    line-height: 80%;
-  }
 
-  @media screen and (max-width: 1024px) {
-    .header__title {
+    margin-left: 400px;
+    line-height: 80%;
+
+    @media screen and (max-width: 1024px) {
       font-size: 2rem;
     }
-  }
 
-  @media screen and (max-width: 700px) {
-    .header__title {
+    @media screen and (max-width: 700px) {
       margin-left: 80px;
     }
-  }
 
-  @media screen and (max-width: 450px) {
-    .header__title {
+    @media screen and (max-width: 450px) {
       font-size: 1.5rem;
     }
   }
@@ -57,31 +51,23 @@
   .news__nav {
     padding-top: 70px;
     padding-bottom: 55px;
-  }
 
-  @media screen and (max-width: 1250px) {
-    .news__nav {
+    @media screen and (max-width: 1250px) {
       padding-left: 40px;
       padding-right: 40px;
     }
-  }
 
-  @media screen and (max-width: 1024px) {
-    .news__nav {
+    @media screen and (max-width: 1024px) {
       padding-top: 35px;
       padding-bottom: 30px;
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    .news__nav {
+    @media screen and (max-width: 768px) {
       padding-left: 80px;
       padding-right: 80px;
     }
-  }
 
-  @media screen and (max-width: 600px) {
-    .news__nav {
+    @media screen and (max-width: 600px) {
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -94,12 +80,12 @@
   .news__menu-item {
     text-transform: capitalize;
     transition: 0.2s color ease;
-  }
 
-  .news__menu-item:hover {
-    color: $accent-color;
-    cursor: pointer;
-    transition: 0.2s color ease;
+    &:hover {
+      color: $accent-color;
+      cursor: pointer;
+      transition: 0.2s color ease;
+    }
   }
 
   .news__menu-item:not(:last-child) {
@@ -117,24 +103,18 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(570px, auto);
     grid-gap: 60px; // 60
-  }
 
-  @media screen and (max-width: 1919px) {
-    .news__lower {
+    @media screen and (max-width: 1919px) {
       grid-auto-rows: minmax(500px, auto);
       grid-gap: 40px;
     }
-  }
 
-  @media screen and (max-width: 1350px) {
-    .news__lower {
+    @media screen and (max-width: 1350px) {
       grid-auto-rows: minmax(400px, auto);
       grid-gap: 30px;
     }
-  }
 
-  @media screen and (max-width: 1024px) {
-    .news__lower {
+    @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
       // grid-auto-rows: minmax(400px, auto);
       grid-gap: 40px;
@@ -142,98 +122,83 @@
       padding-left: 40px;
       padding-right: 40px;
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    .news__lower {
+    @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 40px;
 
       padding-left: 80px;
       padding-right: 80px;
     }
-  }
 
-  @media screen and (max-width: 600px) {
-    .news__lower {
+    @media screen and (max-width: 600px) {
       // grid-template-columns: repeat(1, 1fr);
       grid-gap: 20px;
-
       grid-auto-rows: minmax(200px, auto);
       padding-left: 20px;
       padding-right: 20px;
     }
   }
 
-  // .news__card {
-  // }
-
-  @media screen and (max-width: 600px) {
-    .news__card {
+  .news__card {
+    @media screen and (max-width: 600px) {
       padding-top: 30px;
       padding-left: 30px;
+    }
+
+    &:hover {
+      background: $accent-color;
+      background-position: center center;
     }
   }
 
   .news__card--first {
-    background: url("../../../images/pages/news-page/table.jpg") center center
-      no-repeat;
+    background: url("../../images/pages/news/table.jpg") center center no-repeat;
     background-size: cover;
   }
 
   .news__card--second {
-    background: url("../../../images/pages/news-page/facade.jpg") center center
+    background: url("../../images/pages/news/facade.jpg") center center
       no-repeat;
     background-size: cover;
   }
 
   .news__card--third {
-    background: url("../../../images/pages/news-page/hall.jpg ") center center
-      no-repeat;
+    background: url("../../images/pages/news/hall.jpg ") center center no-repeat;
     background-size: cover;
   }
 
   .news__card--fourth {
-    background: url("../../../images/pages/news-page/houses.jpg ") center center
+    background: url("../../images/pages/news/houses.jpg ") center center
       no-repeat;
     background-size: cover;
   }
 
   .news__card--fifth {
-    background: url("../../../images/pages/news-page/bed.jpg") center center
-      no-repeat;
+    background: url("../../images/pages/news/bed.jpg") center center no-repeat;
     background-size: cover;
   }
 
   .news__card--sixth {
-    background: url("../../../images/pages/news-page/plant.jpg") center center
-      no-repeat;
+    background: url("../../images/pages/news/plant.jpg") center center no-repeat;
     background-size: cover;
   }
 
   .news__card--seventh {
-    background: url("../../../images/pages/news-page/yard.jpg") center center
-      no-repeat;
+    background: url("../../images/pages/news/yard.jpg") center center no-repeat;
     background-size: cover;
   }
 
   .news__card--eighth {
-    background: url("../../../images/pages/news-page/wood-interior.jpg") center
-      center no-repeat;
+    background: url("../../images/pages/news/wood-interior.jpg") center center
+      no-repeat;
     background-size: cover;
   }
 
   .news__card--nineth {
-    background: url("../../../images/pages/news-page/bedroom.jpg ") center
-      center no-repeat;
+    background: url("../../images/pages/news/bedroom.jpg ") center center
+      no-repeat;
     background-size: cover;
-  }
-
-  .news__card:hover {
-    background: $accent-color;
-    background-position: center center;
-
-    // transition: 0.2s all ease;
   }
 
   .news__card:hover .news__card-info {
@@ -246,14 +211,12 @@
     visibility: hidden;
   }
 
-  @media screen and (max-width: 600px) {
-    .news__card-title {
+  .news__card-title {
+    @media screen and (max-width: 600px) {
       margin-bottom: 20px;
     }
-  }
 
-  @media screen and (max-width: 450px) {
-    .news__card-title {
+    @media screen and (max-width: 450px) {
       font-size: 1.2rem;
     }
   }
@@ -268,27 +231,23 @@
     background-color: transparent;
     width: 150px;
     height: 30px;
-  }
 
-  @media screen and (max-width: 1350px) {
-    .news__card-link {
+    @media screen and (max-width: 1350px) {
       bottom: 40px;
     }
-  }
 
-  @media screen and (max-width: 600px) {
-    .news__card-link {
+    @media screen and (max-width: 600px) {
       bottom: 30px;
       font-size: 1rem;
     }
-  }
 
-  .news__card-link::after {
-    content: "";
-    width: 20px;
-    height: 7px;
-    margin-left: 15px;
-    background: url("../../../images/pages/news-page/arrow-black.png") no-repeat;
+    &::after {
+      content: "";
+      width: 20px;
+      height: 7px;
+      margin-left: 15px;
+      background: url("../../images/pages/news/arrow-black.png") no-repeat;
+    }
   }
 }
 

@@ -1,24 +1,15 @@
-'use strict'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { showSectionOnLoad } from "../../ancillary.scripts/ancillary-srcipts"
+
+toggleMobileMenu()
+showSectionOnLoad('news')
 
 toggleGalleryTabs()
 
-showSectionOnLoad('news')
-
-function showSectionOnLoad(sectionName) {
-  window.onload = () => {
-    const section = document.querySelector(`.${sectionName}`)
-
-    section.classList.add(`${sectionName}--active`)
-  }
-}
-
 function toggleGalleryTabs() {
-  const
-    menuItemAll = document.querySelector('.news__menu-item--all'),
+  const menuItemAll = document.querySelector('.news__menu-item--all'),
     menuItemExterior = document.querySelector('.news__menu-item--exterior'),
-    menuItemInterior = document.querySelector('.news__menu-item--interior')
-
-  const
+    menuItemInterior = document.querySelector('.news__menu-item--interior'),
     galleryItemsAll = document.querySelectorAll('.news__card'),
     galleryItemsExterior = document.querySelectorAll(`
       .news__card--second, 
@@ -51,6 +42,7 @@ function toggleGalleryTabs() {
   toggleCards(menuItemInterior, galleryItemsInterior, galleryItemsAll)
 }
 
-window.onscroll = () => {
-  showBtnToTopOnScroll(document.querySelector('.footer'))
-}
+// window.addEventListener('scroll', () => {
+//   showBtnToTopOnScroll(document.querySelector('.footer'))
+// })
+
