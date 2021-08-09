@@ -952,8 +952,9 @@
   // }
 
   .news__accordion-tab-upper {
-    border-bottom: 1px solid #000;
     @include flex(space-between, center);
+    
+    border-bottom: 1px solid #000;
     padding-top: 7px;
     padding-bottom: 7px;
     cursor: pointer;
@@ -961,6 +962,7 @@
 
   .news__accordion-title {
     @include font(600, 1rem);
+
     text-transform: uppercase;
     letter-spacing: 0.03rem;
     transition: 0.2s color ease;
@@ -989,6 +991,7 @@
     height: 25px;
     border: 1px solid #000;
     border-radius: 50%;
+    background-color: transparent;
 
     transition: 0.2s all ease;
     display: flex;

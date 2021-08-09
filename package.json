@@ -2,14 +2,13 @@
   "name": "benhome",
   "version": "1.0.0",
   "description": "design bureau site",
-  "main": "index.js",
   "scripts": {
-    "dev-index": "parcel src/pages/index/index.html --no-cache",
-    "dev-about": "parcel src/pages/about/about.html --no-cache",
-    "dev-portfolio": "parcel src/pages/portfolio/portfolio.html --no-cache",
-    "dev-news": "parcel src/pages/news/news.html --no-cache",
-    "dev-contact": "parcel src/pages/contact/contact.html --no-cache",
-    "prod": "parcel build src/index.html src/about.html"
+    "dev-index": "parcel src/pages/index/index.html",
+    "dev-about": "parcel src/pages/about/about.html",
+    "dev-portfolio": "parcel src/pages/portfolio/portfolio.html",
+    "dev-news": "parcel src/pages/news/news.html",
+    "dev-contact": "parcel src/pages/contact/contact.html",
+    "prod": "parcel build src/pages/index/index.html"
   },
   "keywords": [],
   "author": "Dmitry Voskoboev",
