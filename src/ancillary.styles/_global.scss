@@ -26,14 +26,20 @@ h6 {
 
 a {
   text-decoration: none;
-  outline: none;
+  // outline: none;
   font-family: $main-fonts, sans-serif;
 }
 
 button,
 input[type="submit"] {
   cursor: pointer;
+  text-transform: uppercase;
 }
+
+// button:focus {
+//   outline: 2px solid black;
+//   border-radius: 5px;
+// }
 
 ::selection {
   background-color: lighten($accent-color, 20%);

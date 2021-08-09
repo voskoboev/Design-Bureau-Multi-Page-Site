@@ -2,7 +2,7 @@
   @include section-popup-onscroll;
 }
 
-.brands__container {
+.brands__list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -25,35 +25,34 @@
 }
 
 @media screen and (max-width: 992px) {
-  .brands__item {
+  .brands__list-item {
     margin: 20px;
   }
 }
 
-.brands__item--first {
+@for $item from 1 through 4 {
+  .brands__item--#{$item} {
+    background: url("../../images/common.blocks/brands/pic-#{$item}.png")
+      no-repeat;
+  }
+}
+
+.brands__item--1 {
   width: 150px;
   height: 45px;
-
-  background: url("../../images/common.blocks/brands/creative.png") no-repeat;
 }
 
-.brands__item--second {
+.brands__item--2 {
   width: 141px;
   height: 37px;
-
-  background: url("../../images/common.blocks/brands/at.png") no-repeat;
 }
 
-.brands__item--third {
+.brands__item--3 {
   width: 104px;
   height: 38px;
-
-  background: url("../../images/common.blocks/brands/neuton.png") no-repeat;
 }
 
-.brands__item--fourth {
+.brands__item--4 {
   width: 135px;
   height: 35px;
-
-  background: url("../../images/common.blocks/brands/francois.png") no-repeat;
 }

@@ -1,6 +1,10 @@
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { showSectionOnLoad } from "../../ancillary.scripts/ancillary-srcipts"
 
 toggleMobileMenu()
+showSectionOnLoad('header__lower')
+showSectionOnLoad('projects')
+
 toggleGalleryCards()
 
 function toggleGalleryCards() {
@@ -9,21 +13,21 @@ function toggleGalleryCards() {
     menuItemInterior = document.querySelector('.projects__menu-item--interior'),
     galleryItemsAll = document.querySelectorAll('.projects__card'),
     galleryItemsExterior = document.querySelectorAll(`
-      .projects__card--third, 
-      .projects__card--fifth, 
-      .projects__card--sixth,
-      .projects__card--seventh
+      .projects__card--3, 
+      .projects__card--5, 
+      .projects__card--6,
+      .projects__card--7
       `),
     galleryItemsInterior = document.querySelectorAll(`
-      .projects__card--first, 
-      .projects__card--second,
-      .projects__card--fourth, 
-      .projects__card--eighth, 
-      .projects__card--nineth
+      .projects__card--1, 
+      .projects__card--2,
+      .projects__card--4, 
+      .projects__card--8, 
+      .projects__card--9
      `),
-    galleryItemThird = document.querySelector('.projects__card--third'),
-    galleryItemFourth = document.querySelector('.projects__card--fourth'),
-    galleryItemNineth = document.querySelector('.projects__card--nineth')
+    galleryItemThird = document.querySelector('.projects__card--3'),
+    galleryItemFourth = document.querySelector('.projects__card--4'),
+    galleryItemNineth = document.querySelector('.projects__card--9')
 
   function toggleCards(
     menuItem,

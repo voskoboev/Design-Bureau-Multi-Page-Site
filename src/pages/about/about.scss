@@ -13,22 +13,19 @@
 @import "../../common.blocks/_footer";
 
 .header {
-  // @include header-popup-onscroll;
-
   .header__menu-item-link,
   .header__call-link {
     color: #000;
   }
 
   .header__menu-item-link:hover {
-    // ?
     color: $accent-color;
   }
 
   .header__central {
+    @include section-popup-onscroll;
+
     padding-top: 200px;
-    // padding-left: 400px;
-    // padding-bottom: 65px;
 
     @media screen and (max-width: 1024px) {
       padding-top: 100px;
@@ -40,12 +37,13 @@
   }
 
   .header__title {
+
+    cursor: text;
     font-weight: bold;
     font-size: 57px;
     line-height: 80%;
     width: 550px;
     text-transform: none;
-
     margin-left: 405px;
 
     @media screen and (max-width: 1250px) {
@@ -82,26 +80,23 @@
   }
 
   .header__lower {
+    @include section-popup-onscroll;
+
     width: 100%;
     min-height: 768px;
-    // border: 1px solid #000;
-
     background: url("../../images/pages/about/office-meeting.jpg") center center
-      no-repeat; // 0 -250px
+      no-repeat;
     background-size: cover;
 
     @media screen and (max-width: 1350px) {
       min-height: 500px;
     }
+
+    @media screen and (max-width: 450px) {
+      min-height: 410px;
+    }
   }
 }
-
-// @media screen and (max-width: 1150px) {
-//   .header__lower {
-//     height: auto;
-//     min-height: 500px;
-//   }
-// }
 
 .idea {
   @include section-popup-onscroll;
@@ -143,20 +138,6 @@
     }
   }
 
-  // .idea__upper-right {
-  //   width: 50%;
-
-  //   position: relative;
-  // }
-
-  // @media screen and (max-width: 1550px) {
-  //   .idea__upper-right {
-  //     width: 100%;
-  //     display: flex;
-  //     justify-content: center;
-  //   }
-  // }
-
   .idea__title {
     @include font(700, 1.5rem);
 
@@ -165,14 +146,12 @@
     border-bottom: 1px solid #000;
     margin-bottom: 235px;
 
-    // font-weight: bold;
-    // font-size: 24px;
-    // line-height: 20px;
-
-    // text-transform: uppercase;
-
     @media screen and (max-width: 1550px) {
       margin-bottom: 100px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 50px;
     }
 
     @media screen and (max-width: 700px) {
@@ -186,7 +165,7 @@
 
   .idea__text {
     @include font(400, 1rem);
-
+    
     max-width: 400px;
     margin-left: 410px;
     line-height: 140%;
@@ -238,13 +217,10 @@
     height: 475px;
     object-fit: cover;
     position: relative;
-    // border: 1px solid #000;
     cursor: pointer;
 
     @media screen and (max-width: 900px) {
       height: 350px;
-      // margin-right: 40px;
-      // margin-left: 40px;
       width: 100%;
     }
 
@@ -254,20 +230,8 @@
     }
   }
 
-  // .idea__video::before {
-  //   content: "../../images/pages/about-page/video-arrow.png";
-  //   width: 50px;
-  //   height: 50px;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 100;
-  // }
-
   .idea__video-container {
     position: relative;
-    // border: 1px solid #000;
-
     max-width: 900px;
     max-height: 475px;
   }
@@ -287,7 +251,6 @@
     z-index: 100;
     width: 110px;
     height: 110px;
-    // background-color: #f9f9f9;
     border-radius: 50%;
     transition: 0.2s all ease;
     cursor: pointer;
@@ -295,15 +258,8 @@
     @media screen and (max-width: 700px) {
       width: 90px;
       height: 90px;
-      // top: calc(50% - 45px);
-      // left: calc(50% - 45px);
     }
   }
-
-  // .idea__poster:hover .idea__play-btn {
-  //   background-color: #fff;
-  //   transition: 0.2s all ease;
-  // }
 
   .idea__play-btn--inactive {
     display: none;
@@ -374,10 +330,6 @@
 
     border-bottom: 1px solid #000;
     letter-spacing: 0.03em;
-    // font-weight: bold;
-    // font-size: 24px;
-    // line-height: 20px;
-    // text-transform: uppercase;
     margin-bottom: 80px;
 
     @media screen and (max-width: 450px) {
@@ -387,10 +339,10 @@
   }
 
   .idea__lower-text {
+
     max-width: 330px;
     text-align: center;
     margin-left: auto;
-
     font-weight: normal;
     font-size: 15px;
     line-height: 140%;
@@ -415,15 +367,11 @@
   }
 
   .team__title {
-    @include font(700, 1.5rem); // font-weight: bold;
+    @include font(700, 1.5rem);
 
     max-width: 600px;
     text-align: right;
     border-bottom: 1px solid #000;
-
-    // font-size: 25px;
-    // line-height: 20px;
-    // text-transform: uppercase;
 
     @media screen and (max-width: 700px) {
       width: 280px;
@@ -438,15 +386,14 @@
     display: flex;
 
     @media screen and (max-width: 1550px) {
-      // flex-wrap: wrap;
       flex-direction: column;
       align-items: space-evenly;
       background-color: #f9f9f9;
     }
   }
 
-  .team__lower-wrapper--first,
-  .team__lower-wrapper--second {
+  .team__lower-wrapper--1,
+  .team__lower-wrapper--2 {
     display: flex;
     width: 50%;
 
@@ -461,7 +408,7 @@
     }
   }
 
-  .team__lower-wrapper--first {
+  .team__lower-wrapper--1 {
     @media screen and (max-width: 1550px) {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
@@ -475,7 +422,6 @@
     width: 50%;
     height: 555px;
     background-color: #f9f9f9;
-    // border: 1px solid #000;
     position: relative;
 
     @media screen and (max-width: 880px) {
@@ -484,17 +430,9 @@
     }
   }
 
-  // @media screen and (max-width: 1024px) {
-  //   .team__person {
-  //     height: auto;
-
-  //   }
-  // }
-
-  .team__person--first,
-  .team__person--third {
+  .team__person--1,
+  .team__person--3 {
     @media screen and (max-width: 1550px) {
-      // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       border-right: 1px solid rgba(0, 0, 0, 0.2);
     }
 
@@ -504,14 +442,10 @@
   }
 
   @media screen and (max-width: 880px) {
-    .team__person:not(.team__person--fourth) {
+    .team__person:not(.team__person--4) {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
-
-  // .team__person--first {
-  //   border-right: 1px solid rgba(0, 0, 0, 0.2);
-  // }
 
   .team__person-info {
     visibility: hidden;
@@ -530,11 +464,7 @@
     @include font(700, 1.5rem, $accent-color);
 
     margin-bottom: 85px;
-    // font-weight: bold;
-    // font-size: 25px;
     line-height: 80%;
-    // text-transform: uppercase;
-    // color: $accent-color;
   }
 
   .team__person-text {
@@ -544,8 +474,6 @@
     margin-left: auto;
     text-align: center;
     margin-bottom: 265px;
-    // font-weight: normal;
-    // font-size: 15px;
     line-height: 140%;
 
     @media screen and (max-width: 370px) {
@@ -565,16 +493,14 @@
   }
 
   .team__person-photo-img {
-    height: 480px; // 480
-    // visibility: visible;
+    height: 480px;
     position: absolute;
     bottom: 0;
-    // left: calc(50% - 150px);
     left: 50%;
     transform: translateX(-55%);
 
     @media screen and (max-width: 880px) {
-      left: 50%;
+      left: 55%;
       transform: translateX(-55%);
     }
   }

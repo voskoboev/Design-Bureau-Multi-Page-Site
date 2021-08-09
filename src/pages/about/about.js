@@ -1,50 +1,20 @@
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
-import { manageVideo } from '../../ancillary.scripts/ancillary-srcipts'
+import { manageVideo, showSectionOnLoad, showPopupSections } from '../../ancillary.scripts/ancillary-srcipts'
 
 toggleMobileMenu()
 toggleServicesAccordionTabs()
 manageVideo('idea')
+showSectionOnLoad('header__central')
+showSectionOnLoad('header__lower')
+showPopupSections('idea')
+showPopupSections('services')
+showPopupSections('team')
+showPopupSections('brands')
+showPopupSections('footer')
 
-showPopupSections()
 manageNumberIncrement()
 toggleTeamCards()
-
-// manageVideo()
-
-// showSectionOnLoad('header')
-
-// function showSectionOnLoad(sectionName) {
-//   window.onload = () => {
-//     const section = document.querySelector(`.${sectionName}`)
-
-//     section.classList.add(`${sectionName}--active`)
-//   }
-// }
-
-
-function showPopupSections() {
-  const showSections = sectionName => {
-    const sectionNode = document.querySelector(`.${sectionName}`)
-
-    const
-      sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
-      upperOffsetWindow = window.pageYOffset,
-      windowHeingt = window.innerHeight
-
-    if (sectionCoords < upperOffsetWindow + windowHeingt) {
-      sectionNode.classList.add(`${sectionName}--active`)
-    }
-  }
-
-  window.addEventListener('scroll', () => {
-    showSections('idea')
-    showSections('services')
-    showSections('team')
-    showSections('brands')
-    showSections('footer')
-  })
-}
 
 function manageNumberIncrement() {
   let calledOnce = false
@@ -86,8 +56,7 @@ function manageNumberIncrement() {
 }
 
 function toggleTeamCards() {
-  const
-    cards = document.querySelectorAll('.team__person'),
+  const cards = document.querySelectorAll('.team__person'),
     infoActivationClass = 'team__person-info--active',
     photoInactivationClass = 'team__person-photo--inactive'
 

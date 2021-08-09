@@ -13,6 +13,8 @@
 
 .header {
   .header__lower {
+    @include section-popup-onscroll;
+
     padding-top: 210px;
     border-bottom: 1px solid rgba(000, 000, 000, 0.3);
 
@@ -30,6 +32,7 @@
 
     margin-left: 400px;
     line-height: 80%;
+    text-transform: capitalize;
 
     @media screen and (max-width: 1024px) {
       font-size: 2rem;
@@ -152,53 +155,11 @@
     }
   }
 
-  .news__card--first {
-    background: url("../../images/pages/news/table.jpg") center center no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--second {
-    background: url("../../images/pages/news/facade.jpg") center center
-      no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--third {
-    background: url("../../images/pages/news/hall.jpg ") center center no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--fourth {
-    background: url("../../images/pages/news/houses.jpg ") center center
-      no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--fifth {
-    background: url("../../images/pages/news/bed.jpg") center center no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--sixth {
-    background: url("../../images/pages/news/plant.jpg") center center no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--seventh {
-    background: url("../../images/pages/news/yard.jpg") center center no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--eighth {
-    background: url("../../images/pages/news/wood-interior.jpg") center center
-      no-repeat;
-    background-size: cover;
-  }
-
-  .news__card--nineth {
-    background: url("../../images/pages/news/bedroom.jpg ") center center
-      no-repeat;
-    background-size: cover;
+  @for $item from 1 through 9 {
+    .news__card--#{$item} {
+      background: url("../../images/pages/news/pic-#{$item}.jpg") center center no-repeat;
+      background-size: cover;
+    }
   }
 
   .news__card:hover .news__card-info {

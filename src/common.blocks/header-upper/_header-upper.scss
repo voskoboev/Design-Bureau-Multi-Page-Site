@@ -1,5 +1,6 @@
 .header__upper {
   @include flex(start, center);
+
   padding: 30px 60px 0;
   background-color: transparent;
 
@@ -164,6 +165,10 @@
   }
 }
 
+.header__menu-item {
+  text-transform: uppercase;
+}
+
 .header__menu-item:not(:last-child) {
   margin-right: 50px;
 
@@ -212,6 +217,7 @@
   @include font(600, 18px, $accent-color);
 
   margin-right: 12px;
+  text-transform: uppercase;
 }
 
 .header__call-link {

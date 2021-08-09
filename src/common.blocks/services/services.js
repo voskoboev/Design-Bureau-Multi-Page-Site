@@ -1,5 +1,3 @@
-'use strict'
-
 export function toggleServicesAccordionTabs() {
   const upperItems = document.querySelectorAll('.services__list-item-upper')
   const slideActivationClass = 'services__list-item-lower--active'
@@ -8,9 +6,19 @@ export function toggleServicesAccordionTabs() {
 
   upperItems.forEach(item => {
     item.addEventListener('click', () => {
-      item.nextElementSibling.classList.toggle(slideActivationClass)
-      item.lastElementChild.classList.toggle(btnActivationClass)
-      item.lastElementChild.children[0].classList.toggle(arrowActivationClass)
+      item
+        .nextElementSibling
+        .classList
+        .toggle(slideActivationClass)
+      item
+        .lastElementChild
+        .classList
+        .toggle(btnActivationClass)
+      item
+        .lastElementChild
+        .children[0]
+        .classList
+        .toggle(arrowActivationClass)
     })
   })
 }

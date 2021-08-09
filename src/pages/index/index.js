@@ -2,6 +2,7 @@ import Swiper from 'swiper'
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
 import { manageVideo, showPopupSections } from '../../ancillary.scripts/ancillary-srcipts'
+
 // import { showBtnToTopOnScroll, scrollToTopOnBtnClick  } from '../../common.blocks/btn-to-top/btn-to-top'
 
 // showBtnToTopOnScroll('.trends') // ?
@@ -77,16 +78,12 @@ function manageNumberIncrement() {
 }
 
 function initClientsCarousel() {
-  const tab1 = document.querySelector('.clients__carousel-slide--first'),
-    tab2 = document.querySelector('.clients__carousel-slide--second'),
+  const tab1 = document.querySelector('.clients__carousel-slide--1'),
+    tab2 = document.querySelector('.clients__carousel-slide--2'),
     wrapper = document.querySelector('.clients__carousel'),
     tabsArr = [tab1, tab2],
     timeOutInterval = 700,
     changeTabsInterval = 2000
-
-  // const tab3 = document.querySelector('')
-  // const arrowLeft = document.querySelector('.clients__arrow--left')
-  // const arrowRight = document.querySelector('.clients__arrow--right')
 
   let counter = 0
 
@@ -113,15 +110,6 @@ function initClientsCarousel() {
   wrapper.addEventListener('mouseleave', () => {
     timer = setInterval(changeTabs, changeTabsInterval, tabsArr)
   })
-
-  // arrowLeft.addEventListener('click', () => {
-  //   clearInterval(timer)
-  //   timer = setInterval(changeTabs, 2000, tabsArr)
-  // })
-
-  // arrowRight.addEventListener('click', () => {
-  //   ++counter
-  // })
 }
 
 

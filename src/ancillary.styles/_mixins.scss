@@ -7,7 +7,6 @@
 
 @mixin font($weight, $size: 1rem, $color: #000) {
   font: {
-    // family: $main-font-family;
     weight: $weight;
     size: $size;
   }
@@ -26,6 +25,12 @@
   opacity: 0;
   transform: translateY(200px);
   transition: 0.5s all ease;
+
+  @media screen and (max-width: 450px) {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
 
   &--active {
     opacity: 1;

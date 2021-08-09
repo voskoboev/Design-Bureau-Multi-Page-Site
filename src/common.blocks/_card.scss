@@ -46,7 +46,6 @@
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 
   @media screen and (max-width: 450px) {
     font-size: 0.7rem;
@@ -61,9 +60,8 @@
   font-size: 25px;
   // line-height: 20px;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 
-  &:first-line {
+  &::first-line {
     line-height: 30px;
   }
 

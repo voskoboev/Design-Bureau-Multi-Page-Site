@@ -4,15 +4,15 @@
   "description": "design bureau site",
   "main": "index.js",
   "scripts": {
-    "dev-index": "parcel src/index.html",
-    "dev-about": "parcel src/pages/about/about.html",
-    "dev-portfolio": "parcel src/pages/portfolio/portfolio.html",
-    "dev-news": "parcel src/pages/news/news.html",
-    "dev-contact": "parcel src/pages/contact/contact.html",
+    "dev-index": "parcel src/pages/index/index.html --no-cache",
+    "dev-about": "parcel src/pages/about/about.html --no-cache",
+    "dev-portfolio": "parcel src/pages/portfolio/portfolio.html --no-cache",
+    "dev-news": "parcel src/pages/news/news.html --no-cache",
+    "dev-contact": "parcel src/pages/contact/contact.html --no-cache",
     "prod": "parcel build src/index.html src/about.html"
   },
   "keywords": [],
-  "author": "Dmitry",
+  "author": "Dmitry Voskoboev",
   "license": "ISC",
   "dependencies": {
     "reset.css": "^2.0.2",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "parcel": "^2.0.0-beta.2",
     "sass": "^1.35.2"
   }

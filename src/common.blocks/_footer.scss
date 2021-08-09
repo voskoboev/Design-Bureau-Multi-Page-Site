@@ -43,6 +43,8 @@
 //font($weight, $size: 1rem, $color: #000)
 .footer__menu-link {
   @include font(normal, 14px);
+
+  text-transform: capitalize;
   line-height: 140%;
   font-family: inherit;
 

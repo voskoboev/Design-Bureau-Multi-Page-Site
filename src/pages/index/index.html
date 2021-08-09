@@ -5,9 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- og -->
+  <meta name="author" content="Dmitry Voskoboev">
+  <meta name="description" content="Design bureau renders excluesive full cycle design services">
+  <meta name="keywords"
+    content="design, exterior, interior, bureau, firm, exterior, interior, architecture, furniture, buildings">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Benhome: Interior and Exterior Design Bureau">
+  <meta property="og:description" content="Design bureau renders excluesive full cycle design services">
+  <meta property="og:imgage" content="">
+  <!-- /og -->
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- /favicon -->
   <title>Benhome: main page</title>
-  <link rel="stylesheet" href="./pages/index/index.scss">
-  <script src="./pages/index/index.js" defer></script>
+  <link rel="stylesheet" href="./index.scss">
+  <script src="./index.js" defer></script>
 </head>
 
 <body>
@@ -17,57 +35,55 @@
     <div class="header__upper">
       <button class="header__mobile-btn--open">
       </button>
-      <a class="header__logo" href="#">
-        <img class="header__logo-benhome" src="./images/general.imgs/logo-white.png" alt="logo-white">
+      <a class="header__logo" href="/">
+        <img class="header__logo-benhome" src="../../images/general.imgs/logo-white.png" alt="logo-white">
       </a>
       <nav class="header__nav">
         <button class="header__mobile-btn--close">
         </button>
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a class="header__menu-item-link" href="#">
-              HOME
+            <a class="header__menu-item-link" href="/">
+              Home
             </a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-item-link" href="./pages/about/about.html">
-              ABOUT
+            <a class="header__menu-item-link" href="../about/about.html">
+              About
             </a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-item-link" href="./pages/portfolio/portfolio.html">
-              PORTFOLIO
+            <a class="header__menu-item-link" href="../portfolio/portfolio.html">
+              Portfolio
             </a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-item-link" href="./pages/news/news.html">
-              NEWS
+            <a class="header__menu-item-link" href="../news/news.html">
+              News
             </a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-item-link" href="./pages/contact/contact.html">
-              CONTACT
+            <a class="header__menu-item-link" href="../contact/contact.html">
+              Contact
             </a>
           </li>
         </ul>
       </nav>
-
       <div class="header__call">
         <p class="header__call-text">
-          CALL US:
+          Call us:
         </p>
         <a class="header__call-link" href="tel:+19226279252">
           +1 (922) 627-92-52
         </a>
       </div>
     </div>
-
     <div class="header__lower">
       <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide swiper-slide__first">
+          <div class="swiper-slide swiper-slide--1">
             <div class="swiper-slide__upper">
               <h2 class="swiper-slide__title">
                 Slide 1
@@ -75,7 +91,7 @@
             </div>
             <div class="swiper-slide__lower">
               <button class="swiper-slide__btn">
-                LEARN MORE
+                Learn More
               </button>
               <p class="swiper-slide__text">
                 The font blends perfectly with white backgrounds, making the design unique and presentable The font
@@ -83,7 +99,7 @@
               </p>
             </div>
           </div>
-          <div class="swiper-slide swiper-slide__second">
+          <div class="swiper-slide swiper-slide--2">
             <div class="swiper-slide__upper">
               <h2 class="swiper-slide__title">
                 Slide 2
@@ -99,7 +115,7 @@
               </p>
             </div>
           </div>
-          <div class="swiper-slide swiper-slide__third">
+          <div class="swiper-slide swiper-slide--3">
             <div class="swiper-slide__upper">
               <h2 class="swiper-slide__title">
                 Slide 3
@@ -129,9 +145,8 @@
       </div>
     </div>
   </header>
-
   <section class="portfolio">
-    <div class="card portfolio__card portfolio__card--first">
+    <div class="card portfolio__card portfolio__card--1">
       <div class="card__info">
         <p class="card__category projects__card-category">
           ARCHITECTURE
@@ -151,8 +166,7 @@
         </a>
       </div>
     </div>
-
-    <div class="card portfolio__card portfolio__card--second">
+    <div class="card portfolio__card portfolio__card--2">
       <div class="card__info">
         <p class="card__category projects__card-category">
           ARCHITECTURE
@@ -168,13 +182,10 @@
           14 translation by H. Rackham.
         </p>
         <a href="#" class="card__link projects__card-link">
-
         </a>
       </div>
     </div>
-
-
-    <div class="card portfolio__card portfolio__card--third">
+    <div class="card portfolio__card portfolio__card--3">
       <div class="card__info">
         <p class="card__category projects__card-category">
           ARCHITECTURE
@@ -190,11 +201,10 @@
           14 translation by H. Rackham.
         </p>
         <a href="#" class="card__link projects__card-link">
-
         </a>
       </div>
     </div>
-    <div class="card portfolio__card portfolio__card--fourth">
+    <div class="card portfolio__card portfolio__card--4">
       <div class="card__info">
         <p class="card__category projects__card-category">
           ARCHITECTURE
@@ -210,11 +220,10 @@
           14 translation by H. Rackham.
         </p>
         <a href="#" class="card__link projects__card-link">
-
         </a>
       </div>
     </div>
-    <div class="card portfolio__card portfolio__card--fifth">
+    <div class="card portfolio__card portfolio__card--5">
       <div class="card__info">
         <p class="card__category projects__card-category">
           ARCHITECTURE
@@ -230,33 +239,31 @@
           14 translation by H. Rackham.
         </p>
         <a href="#" class="card__link projects__card-link">
-
         </a>
       </div>
     </div>
   </section>
-
   <section class="services">
     <!-- <div class="services__wrapper"> -->
     <div class="services__left">
-      <h3 class="services__title">
-        SERVICES
+      <h3 class="services__title" tabindex="0">
+        Services
       </h3>
     </div>
     <div class="services__right">
       <ul class="services__list">
         <li class="services__list-item">
           <div class="services__list-item-upper">
-            <h4 class="services__list-item-title">
+            <h4 class="services__list-item-title" tabindex="0">
               ARCHITECTURE DESIGN
             </h4>
-            <button class="services__list-item-btn services__list-item-btn--active">
+            <button class="services__list-item-btn services__list-item-btn--active" tabindex="0">
               <div class="services__list-item-btn-down-arrow services__list-item-btn-down-arrow--active">
               </div>
             </button>
           </div>
           <div class="services__list-item-lower services__list-item-lower--active">
-            <a href="#" class="services__list-item-link">
+            <a href="#" class="services__list-item-link" tabindex="0">
               Explore
             </a>
             <p class="services__list-item-text">
@@ -268,17 +275,16 @@
         </li>
         <li class="services__list-item">
           <div class="services__list-item-upper">
-            <h4 class="services__list-item-title">
+            <h4 class="services__list-item-title" tabindex="0">
               PLANNING
             </h4>
-            <button class="services__list-item-btn">
+            <button class="services__list-item-btn" tabindex="0">
               <div class="services__list-item-btn-down-arrow">
-
               </div>
             </button>
           </div>
           <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link">
+            <a href="#" class="services__list-item-link" tabindex="0">
               Explore
             </a>
             <p class="services__list-item-text">
@@ -290,17 +296,16 @@
         </li>
         <li class="services__list-item">
           <div class="services__list-item-upper">
-            <h4 class="services__list-item-title">
+            <h4 class="services__list-item-title" tabindex="0">
               LANDSCAPE DESIGN
             </h4>
-            <button class="services__list-item-btn">
+            <button class="services__list-item-btn" tabindex="0">
               <div class="services__list-item-btn-down-arrow">
-
               </div>
             </button>
           </div>
           <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link">
+            <a href="#" class="services__list-item-link" tabindex="0">
               Explore
             </a>
             <p class="services__list-item-text">
@@ -312,17 +317,16 @@
         </li>
         <li class="services__list-item">
           <div class="services__list-item-upper">
-            <h4 class="services__list-item-title">
+            <h4 class="services__list-item-title" tabindex="0">
               BRANDING
             </h4>
-            <button class="services__list-item-btn">
+            <button class="services__list-item-btn" tabindex="0">
               <div class="services__list-item-btn-down-arrow">
-
               </div>
             </button>
           </div>
           <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link">
+            <a href="#" class="services__list-item-link" tabindex="0">
               Explore
             </a>
             <p class="services__list-item-text">
@@ -334,16 +338,16 @@
         </li>
         <li class="services__list-item">
           <div class="services__list-item-upper">
-            <h4 class="services__list-item-title">
+            <h4 class="services__list-item-title" tabindex="0">
               STYLE
             </h4>
-            <button class="services__list-item-btn">
+            <button class="services__list-item-btn" tabindex="0">
               <div class="services__list-item-btn-down-arrow">
               </div>
             </button>
           </div>
           <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link">
+            <a href="#" class="services__list-item-link" tabindex="0">
               Explore
             </a>
             <p class="services__list-item-text">
@@ -357,7 +361,6 @@
     </div>
     <!-- </div> -->
   </section>
-
   <section class="trends">
     <div class=" container trends__upper">
       <div class="trends__upper-left">
@@ -399,48 +402,26 @@
         <div class="trends__video-wrapper">
           <div class="trends__play-btn">
           </div>
-          <video class="trends__video" poster="./images/pages/index/trends-section/barn-house.jpg">
-            <source src="./videos/index/modern-house-1.mp4" type="video/mp4">
+          <video class="trends__video" poster="../../images/pages/index/trends-section/barn-house.jpg">
+            <source src="../../videos/index/modern-house-1.mp4" type="video/mp4">
+            Your browser doesn't support video player
           </video>
         </div>
       </div>
     </div>
   </section>
-
   <section class="clients">
     <div class="container">
       <div class="clients__upper">
         <h3 class="clients__title">
           FROM OUR CLIENTS
         </h3>
-
-        <!-- <div class="clients__arrow-wrapper">
-          <div class="clients__arrow clients__arrow--left">
-            <svg width="23" height="43" viewBox="0 0 23 43" fill="#f8f8f8" xmlns="http://www.w3.org/2000/svg">
-              <line class="clients__arrow-line" x1="22.2929" y1="41.7071" x2="1.29289" y2="20.7071" stroke="#000"
-                stroke-width="2" />
-              <line class="clients__arrow-line" x1="1.29289" y1="21.2929" x2="21.2929" y2="1.29289" stroke="#000"
-                stroke-width="2" />
-            </svg>
-          </div>
-          <div class="clients__arrow clients__arrow--right">
-            <svg width="23" height="43" viewBox="0 0 23 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line class="clients__arrow-line" x1="0.707107" y1="1.29289" x2="21.7071" y2="22.2929" stroke="#000"
-                stroke-width="2" />
-              <line class="clients__arrow-line" x1="21.7071" y1="21.7071" x2="1.70711" y2="41.7071" stroke="#000"
-                stroke-width="2" />
-            </svg>
-          </div>
-        </div> -->
-
       </div>
-
       <div class="clients__lower">
         <div class="clients__carousel">
-
-          <div class="clients__carousel-slide clients__carousel-slide--first">
+          <div class="clients__carousel-slide clients__carousel-slide--1">
             <div class="clients__lower--left">
-              <div class="clients__pic clients__pic--first">
+              <div class="clients__pic clients__pic--1">
               </div>
               <p class="clients__name">
                 ADAM STONE
@@ -451,7 +432,7 @@
               </p>
             </div>
             <div class="clients__lower--right">
-              <div class="clients__pic clients__pic--second">
+              <div class="clients__pic clients__pic--2">
               </div>
               <p class="clients__name">
                 REBECCA JOHNS
@@ -462,10 +443,9 @@
               </p>
             </div>
           </div>
-
-          <div class="clients__carousel-slide clients__carousel-slide--second">
+          <div class="clients__carousel-slide clients__carousel-slide--2">
             <div class="clients__lower--left">
-              <div class="clients__pic clients__pic--third">
+              <div class="clients__pic clients__pic--3">
               </div>
               <p class="clients__name">
                 ANDREW YANG
@@ -476,7 +456,7 @@
               </p>
             </div>
             <div class="clients__lower--right">
-              <div class="clients__pic clients__pic--fourth">
+              <div class="clients__pic clients__pic--4">
               </div>
               <p class="clients__name">
                 LIZA WARREN
@@ -491,24 +471,22 @@
       </div>
     </div>
   </section>
-
   <section class="news ">
     <div class="container news__container">
       <div class="news__side news__side--left">
         <h2 class="news__title">
           News.
         </h2>
-
         <div class="news__accordion">
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
-              <h4 class="news__accordion-title">
+              <h4 class="news__accordion-title" tabindex="0">
                 HOW TO DESIGN WELL?
               </h4>
-              <div class="news__accordion-btn">
-                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
+              <button class="news__accordion-btn" tabindex="0">
+                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow news__accordion-arrow--active">
-              </div>
+              </button>
             </div>
             <div class="news__accordion-tab-lower news__accordion-tab-lower--active">
               <a href="#" class="news__accordion-link">
@@ -519,19 +497,16 @@
                 Sections 1.10.32 and 1.10.33
               </p>
             </div>
-
           </div>
-          <!-- </div> -->
-
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
-              <h4 class="news__accordion-title">
+              <h4 class="news__accordion-title" tabindex="0">
                 WELCOME TO OUR NEW SITE
               </h4>
-              <div class="news__accordion-btn">
-                <img class="news__accordion-arrow" src="./images/pages/index/news-section/accordion-arrow.png"
+              <button class="news__accordion-btn" tabindex="0">
+                <img class="news__accordion-arrow" src="../../images/pages/index/news-section/accordion-arrow.png"
                   alt="arrow">
-              </div>
+              </button>
             </div>
             <div class="news__accordion-tab-lower">
               <a href="#" class="news__accordion-link">
@@ -543,18 +518,16 @@
               </p>
             </div>
           </div>
-
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
-              <h4 class="news__accordion-title">
+              <h4 class="news__accordion-title" tabindex="0">
                 TRENDING 2021
               </h4>
-              <div class="news__accordion-btn">
-                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
+              <button class="news__accordion-btn" tabindex="0">
+                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
-              </div>
+              </button>
             </div>
-
             <div class="news__accordion-tab-lower">
               <a href="#" class="news__accordion-link">
                 Explore
@@ -565,19 +538,16 @@
               </p>
             </div>
           </div>
-
-
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
-              <h4 class="news__accordion-title">
+              <h4 class="news__accordion-title" tabindex="0">
                 BEST WOOD FOR TABLES
               </h4>
-              <div class="news__accordion-btn">
-                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
+              <button class="news__accordion-btn" tabindex="0">
+                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
-              </div>
+              </button>
             </div>
-
             <div class="news__accordion-tab-lower">
               <a href="#" class="news__accordion-link">
                 Explore
@@ -588,18 +558,16 @@
               </p>
             </div>
           </div>
-
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
-              <h4 class="news__accordion-title">
+              <h4 class="news__accordion-title" tabindex="0">
                 NEW CONTACT FORM
               </h4>
-              <div class="news__accordion-btn">
-                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
+              <button class="news__accordion-btn" tabindex="0">
+                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
-              </div>
+              </button>
             </div>
-
             <div class="news__accordion-tab-lower">
               <a href="#" class="news__accordion-link">
                 Explore
@@ -610,19 +578,16 @@
               </p>
             </div>
           </div>
-
-
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
-              <h4 class="news__accordion-title">
+              <h4 class="news__accordion-title" tabindex="0">
                 TRENDING COLORS
               </h4>
-              <div class="news__accordion-btn">
-                <img src="./images/pages/index/news-section/accordion-arrow.png" alt="arrow"
+              <button class="news__accordion-btn" tabindex="0">
+                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
                   class="news__accordion-arrow">
-              </div>
+              </button>
             </div>
-
             <div class="news__accordion-tab-lower">
               <a href="#" class="news__accordion-link">
                 Explore
@@ -634,123 +599,123 @@
             </div>
           </div>
         </div>
-
       </div>
       <div class="news__side news__side--right">
         <div class="news__pic">
         </div>
       </div>
-
     </div>
   </section>
-
   <section class="brands">
     <div class="brands__container container">
-      <div class="brands__item brands__item--first">
-      </div>
-      <div class="brands__item brands__item--second">
-      </div>
-      <div class="brands__item brands__item--third">
-      </div>
-      <div class="brands__item brands__item--fourth">
-      </div>
+      <ul class="brands__list">
+        <li class="brands__list-item">
+          <div class="brands__item brands__item--1">
+          </div>
+        </li>
+        <li class="brands__list-item">
+          <div class="brands__item brands__item--2">
+          </div>
+        </li>
+        <li class="brands__list-item">
+          <div class="brands__item brands__item--3">
+          </div>
+        </li>
+        <li class="brands__list-item">
+          <div class="brands__item brands__item--4">
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
-
   <footer class="footer">
-    <a href="#" class="footer__logo">
-      <img class="footer__logo-link" src="./images/general.imgs/logo-black.png" alt="logo">
+    <a class="footer__logo" href="/">
+      <img class="footer__logo-link" src="../../images/general.imgs/logo-black.png" alt="logo">
     </a>
-
     <p class="footer__rights">
       © Sentro 2021 <br>
       All Rights Resevered
     </p>
-
     <ul class="footer__menu footer__menu--secondary">
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="#">
           Site Map
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="#">
           Terms & Conditions
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="#">
           Privacy Policy
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="#">
           Help
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="#">
           Affiliated
         </a>
       </li>
     </ul>
-
     <ul class="footer__menu footer__menu--primary">
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="/">
           Home
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="../about/about.html">
           About
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="../portfolio/portfolio.html">
           Portfolio
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="../news/news.html">
           News
         </a>
       </li>
       <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">
+        <a class="footer__menu-link" href="../contact/contact.html">
           Contact
         </a>
       </li>
     </ul>
-
     <ul class="footer__languages">
-      <li class="footer__languages-item">
+      <li class="footer__languages-item" tabindex="0">
         ENG
       </li>
-      <li class="footer__languages-item">
+      <li class="footer__languages-item" tabindex="0">
         FRA
       </li>
-      <li class="footer__languages-item">
+      <li class="footer__languages-item" tabindex="0">
         GER
       </li>
     </ul>
-
     <ul class="socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--first" href="#" target="_blank" rel="noopener">
+        <a class="socials__link socials__link--1" href="https://www.facebook.com/" target="_blank" rel="noopener">
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--second" href="#" target="_blank" rel="noopener">
+        <a class="socials__link socials__link--2" href="https://twitter.com/" target="_blank" rel="noopener">
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--third" href="#" target="_blank" rel="noopener">
+        <a class="socials__link socials__link--3" href="https://www.instagram.com/" target="_blank" rel="noopener">
         </a>
       </li>
     </ul>
   </footer>
-
 </body>
 
 </html>

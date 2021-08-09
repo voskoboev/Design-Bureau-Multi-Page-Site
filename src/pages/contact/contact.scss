@@ -29,8 +29,8 @@
     @include font(700, 3.5rem);
 
     margin-left: 410px;
-    // line-height: 40px;
     line-height: 80%;
+    text-transform: capitalize;
 
     @media screen and (max-width: 1024px) {
       font-size: 2rem;
@@ -197,7 +197,6 @@
     font-weight: regular;
     font-size: 15px;
     color: #000;
-
     transition: 0.1s color linear;
   }
 
@@ -217,9 +216,6 @@
   .contacts__socials-text {
     font-weight: 700;
     font-size: 15px;
-    // display: table;
-    // vertical-align: middle;
-
     width: auto;
   }
 
@@ -262,27 +258,15 @@
   .contacts__input {
     font-family: inherit;
     letter-spacing: 0.05rem;
-
-    // color: #000;
   }
-
-  // @media screen and (max-width: 1250px) {
-  //   .contacts__input {
-  //     width: 100%
-  //   }
-  // }
 
   .contacts__input:not(.contacts__input--btn) {
     border: 1px solid #000;
     padding: 16px;
-
     margin-bottom: 30px;
-
     font-weight: normal;
     font-size: 15px;
     color: #000;
-
-
   }
 
   .contacts__input:not(.contacts__input--btn):focus::placeholder {
@@ -295,26 +279,18 @@
     height: 50px;
     display: inline-block;
 
-    // margin-bottom: 30px;
-
     @media screen and (max-width: 1250px) {
       width: 100%;
     }
   }
 
-  // @media screen and (max-width: 768px) {
-  //   .contacts__input--name,
-  //   .contacts__input--email {
-  //     width: 50%
-  //   }
-  // }
-
   .contacts__input--name {
     margin-right: 30px;
-  }
 
-  // .contacts__input--email {
-  // }
+    @media screen and (max-width: 1250px) {
+      margin-right: 0;
+    }
+  }
 
   .contacts__input--textarea {
     width: 100%;
@@ -326,21 +302,16 @@
   .contacts__input--btn {
     width: 230px;
     height: 50px;
-
     font-family: inherit;
     text-transform: uppercase;
-
     border: none;
     outline: 1px solid $accent-color;
     background-color: $accent-color;
-
     font-weight: 600;
     font-size: 13px;
-
     padding: 16px;
     color: #fff;
     letter-spacing: 0.1rem;
-
     transition: 0.2s all ease;
 
     @media screen and (max-width: 450px) {

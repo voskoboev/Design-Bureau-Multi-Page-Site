@@ -3,6 +3,7 @@ import { showSectionOnLoad } from "../../ancillary.scripts/ancillary-srcipts"
 
 toggleMobileMenu()
 showSectionOnLoad('news')
+showSectionOnLoad('header__lower')
 
 toggleGalleryTabs()
 
@@ -12,17 +13,17 @@ function toggleGalleryTabs() {
     menuItemInterior = document.querySelector('.news__menu-item--interior'),
     galleryItemsAll = document.querySelectorAll('.news__card'),
     galleryItemsExterior = document.querySelectorAll(`
-      .news__card--second, 
-      .news__card--fourth, 
-      .news__card--seventh
+      .news__card--2, 
+      .news__card--4, 
+      .news__card--7
       `),
     galleryItemsInterior = document.querySelectorAll(`
-      .news__card--first, 
-      .news__card--third,
-      .news__card--fifth, 
-      .news__card--sixth, 
-      .news__card--eighth, 
-      .news__card--nineth
+      .news__card--1, 
+      .news__card--3,
+      .news__card--5, 
+      .news__card--6, 
+      .news__card--8, 
+      .news__card--9
      `)
 
   const toggleCards = (menuItem, galleryItems, allGalleryItems) => {
