@@ -1,6 +1,5 @@
 export function manageVideo(sectionName) {
-  const
-    video = document.querySelector(`.${sectionName}__video`),
+  const video = document.querySelector(`.${sectionName}__video`),
     playBtn = document.querySelector(`.${sectionName}__play-btn`)
 
   const playVideo = () => {
@@ -14,7 +13,7 @@ export function manageVideo(sectionName) {
     video.setAttribute('controls', 'controls')
   }
 
-  [video, playBtn].forEach(item => {
+  ;[video, playBtn].forEach(item => {
     item.addEventListener('click', ev => {
       ev.preventDefault()
       playVideo()
@@ -35,7 +34,8 @@ export function showPopupSections(sectionName) {
 
   const showSections = sectionName => {
     const sectionNode = document.querySelector(`.${sectionName}`),
-      sectionCoords = sectionNode.getBoundingClientRect().top + window.pageYOffset,
+      sectionCoords =
+        sectionNode.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
       windowHeingt = window.innerHeight
 
@@ -48,4 +48,3 @@ export function showPopupSections(sectionName) {
     showSections(section)
   })
 }
-

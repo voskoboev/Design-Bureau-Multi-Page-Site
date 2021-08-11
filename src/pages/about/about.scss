@@ -1,16 +1,18 @@
-@import "reset.css/reset.css";
+/* stylelint-disable declaration-colon-newline-after */
 
-@import "../../ancillary.styles/_fonts";
-@import "../../ancillary.styles/_vars";
-@import "../../ancillary.styles/_mixins";
-@import "../../ancillary.styles/_global";
+@import 'reset.css/reset.css';
+
+@import '../../ancillary.styles/_fonts';
+@import '../../ancillary.styles/_vars';
+@import '../../ancillary.styles/_mixins';
+@import '../../ancillary.styles/_global';
 
 // @import "../../common.blocks/btn-to-top/_btn-to-top";
-@import "../../common.blocks/header-upper/_header-upper";
-@import "../../common.blocks/services/_services";
-@import "../../common.blocks/_brands";
-@import "../../common.blocks/_socials";
-@import "../../common.blocks/_footer";
+@import '../../common.blocks/header-upper/_header-upper';
+@import '../../common.blocks/services/_services';
+@import '../../common.blocks/_brands';
+@import '../../common.blocks/_socials';
+@import '../../common.blocks/_footer';
 
 .header {
   .header__menu-item-link,
@@ -37,22 +39,21 @@
   }
 
   .header__title {
-
-    cursor: text;
-    font-weight: bold;
-    font-size: 57px;
-    line-height: 80%;
     width: 550px;
-    text-transform: none;
     margin-left: 405px;
+    font-size: 57px;
+    font-weight: bold;
+    line-height: 80%;
+    text-transform: none;
+    cursor: text;
 
     @media screen and (max-width: 1250px) {
       margin-left: 80px;
     }
 
     @media screen and (max-width: 1024px) {
-      font-size: 2rem;
       width: 350px;
+      font-size: 2rem;
     }
 
     @media screen and (max-width: 700px) {
@@ -60,8 +61,8 @@
     }
 
     @media screen and (max-width: 450px) {
-      font-size: 1.5rem;
       width: 250px;
+      font-size: 1.5rem;
     }
   }
 
@@ -70,8 +71,8 @@
   }
 
   .header__central-decor-el {
-    height: 75px;
     width: 100%;
+    height: 75px;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
 
     @media screen and (max-width: 450px) {
@@ -84,7 +85,7 @@
 
     width: 100%;
     min-height: 768px;
-    background: url("../../images/pages/about/office-meeting.jpg") center center
+    background: url('../../images/pages/about/office-meeting.jpg') center center
       no-repeat;
     background-size: cover;
 
@@ -132,9 +133,9 @@
     width: 50%;
 
     @media screen and (max-width: 1550px) {
-      width: 100%;
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
   }
 
@@ -142,9 +143,9 @@
     @include font(700, 1.5rem);
 
     width: 600px;
+    margin-bottom: 235px;
     text-align: right;
     border-bottom: 1px solid #000;
-    margin-bottom: 235px;
 
     @media screen and (max-width: 1550px) {
       margin-bottom: 100px;
@@ -165,7 +166,7 @@
 
   .idea__text {
     @include font(400, 1rem);
-    
+
     max-width: 400px;
     margin-left: 410px;
     line-height: 140%;
@@ -175,10 +176,10 @@
     }
 
     @media screen and (max-width: 1550px) {
-      max-width: 400px;
-      margin-left: 0;
       align-self: center;
+      max-width: 400px;
       margin-bottom: 50px;
+      margin-left: 0;
     }
 
     @media screen and (max-width: 1024px) {
@@ -194,13 +195,13 @@
   }
 
   .idea__upper-right {
-    width: 50%;
     position: relative;
+    width: 50%;
 
     @media screen and (max-width: 1550px) {
-      width: 100%;
       display: flex;
       justify-content: center;
+      width: 100%;
     }
 
     @media screen and (max-width: 1024px) {
@@ -213,15 +214,15 @@
   }
 
   .idea__video {
+    position: relative;
     width: 900px;
     height: 475px;
     object-fit: cover;
-    position: relative;
     cursor: pointer;
 
     @media screen and (max-width: 900px) {
-      height: 350px;
       width: 100%;
+      height: 350px;
     }
 
     @media screen and (max-width: 550px) {
@@ -236,29 +237,29 @@
     max-height: 475px;
   }
 
-  .idea__video-container:hover .idea__play-btn {
-    background-color: #fff;
-  }
-
   .idea__play-btn {
     @extend %centering-flex-container;
 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
     z-index: 100;
     width: 110px;
     height: 110px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     transition: 0.2s all ease;
-    cursor: pointer;
+    transform: translate(-50%, -50%);
 
     @media screen and (max-width: 700px) {
       width: 90px;
       height: 90px;
     }
+  }
+
+  .idea__video-container:hover .idea__play-btn {
+    background-color: #fff;
   }
 
   .idea__play-btn--inactive {
@@ -268,8 +269,8 @@
   .idea__poster-arrow {
     width: 24px;
     height: 24px;
-    background: url("../../images/general.imgs/video-arrow.png") no-repeat;
     margin-left: 10px;
+    background: url('../../images/general.imgs/video-arrow.png') no-repeat;
   }
 
   .idea__lower {
@@ -281,9 +282,9 @@
     }
 
     @media screen and (max-width: 670px) {
-      padding-bottom: 0;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 0;
     }
   }
 
@@ -316,36 +317,34 @@
   .idea__lower-number {
     @include font(600, 7rem, $accent-color);
 
-    line-height: 100%;
     margin-bottom: 55px;
+    line-height: 100%;
 
     @media screen and (max-width: 450px) {
-      font-size: 6rem;
       margin-bottom: 30px;
+      font-size: 6rem;
     }
   }
 
   .idea__lower-title {
     @include font(700, 1.5rem);
 
-    border-bottom: 1px solid #000;
-    letter-spacing: 0.03em;
     margin-bottom: 80px;
+    border-bottom: 1px solid #000;
 
     @media screen and (max-width: 450px) {
-      font-size: 1.2rem;
       margin-bottom: 40px;
+      font-size: 1.2rem;
     }
   }
 
   .idea__lower-text {
-
     max-width: 330px;
-    text-align: center;
     margin-left: auto;
-    font-weight: normal;
     font-size: 15px;
+    font-weight: normal;
     line-height: 140%;
+    text-align: center;
   }
 }
 
@@ -419,10 +418,10 @@
   }
 
   .team__person {
+    position: relative;
     width: 50%;
     height: 555px;
     background-color: #f9f9f9;
-    position: relative;
 
     @media screen and (max-width: 880px) {
       width: 100%;
@@ -448,9 +447,9 @@
   }
 
   .team__person-info {
+    padding: 35px 45px 35px 35px;
     visibility: hidden;
     opacity: 0;
-    padding: 35px 45px 35px 35px;
     transition: 0.5s all ease;
   }
 
@@ -471,10 +470,10 @@
     @include font(400, 1rem);
 
     max-width: 320px;
-    margin-left: auto;
-    text-align: center;
     margin-bottom: 265px;
+    margin-left: auto;
     line-height: 140%;
+    text-align: center;
 
     @media screen and (max-width: 370px) {
       margin-bottom: 230px;
@@ -487,16 +486,16 @@
   }
 
   .team__person-photo--inactive {
+    visibility: hidden;
     opacity: 0;
     transition: 0.2s all ease;
-    visibility: hidden;
   }
 
   .team__person-photo-img {
-    height: 480px;
     position: absolute;
     bottom: 0;
     left: 50%;
+    height: 480px;
     transform: translateX(-55%);
 
     @media screen and (max-width: 880px) {

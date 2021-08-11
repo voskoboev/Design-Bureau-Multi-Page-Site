@@ -1,22 +1,11 @@
 .card {
-  // max-width: 600px;
-  // min-height: 570px;
-  // background-color: lighten($accent-color, 5%);
-
   position: relative;
-
   padding: 50px 0 60px 40px;
-  // background: url('../../../images/exterior-1.jpg') no-repeat;
-  // background-size: cover;
-
-  // transition: .2s all ease;
 
   &:hover {
+    z-index: 10;
     background: none;
     background-color: #fff;
-    // outline: 1px solid black;
-    z-index: 10;
-    // transition: .2s all ease;
   }
 
   @media screen and (max-width: 450px) {
@@ -24,27 +13,25 @@
   }
 }
 
-.card:hover .card__info {
-  visibility: visible;
-  opacity: 1;
-  // transition: .2s all ease;
+.card__info {
+  z-index: 10;
+  visibility: hidden;
+  background-color: #fff;
+  opacity: 0; // ?
 }
 
-.card__info {
-  background-color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  // transition: .2s all ease;
-  z-index: 10;
+.card:hover .card__info {
+  visibility: visible;
+  opacity: 1; // ?
 }
 
 .card__category {
   position: absolute;
   top: 50px;
   right: 32px;
-
-  font-weight: 600;
   font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
   letter-spacing: 0.03em;
 
   @media screen and (max-width: 450px) {
@@ -53,13 +40,11 @@
 }
 
 .card__title {
-  border-bottom: 1px solid #000;
   margin-bottom: 55px;
-
-  font-weight: bold;
   font-size: 25px;
-  // line-height: 20px;
+  font-weight: bold;
   letter-spacing: 0.03em;
+  border-bottom: 1px solid #000;
 
   &::first-line {
     line-height: 30px;
@@ -77,13 +62,12 @@
 .card__text {
   max-width: 330px;
   min-height: 130px;
-  margin-left: auto;
   margin-right: 30px;
-  text-align: center;
-
-  font-weight: normal;
+  margin-left: auto;
   font-size: 1rem;
+  font-weight: normal;
   line-height: 140%;
+  text-align: center;
 
   @media screen and (max-width: 450px) {
     font-size: 0.9rem;
@@ -95,26 +79,22 @@
 
   position: absolute;
   bottom: 38px;
-
-  font-family: inherit;
-  font-weight: normal;
-  font-size: 18px;
-  color: #000;
-
-  transition: 0.3s transform ease;
-
   width: 88px;
   height: 88px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
   background-color: $accent-color;
   border-radius: 50%;
+  transition: 0.3s transform ease;
 
   &:hover {
-    transform: translateX(5px);
     transition: 0.2s transform ease;
+    transform: translateX(5px);
   }
 
   &::after {
     content: url(../../images/white-right-arrow.png);
-    // padding-left: 10px;
   }
 }

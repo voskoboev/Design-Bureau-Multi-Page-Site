@@ -94,11 +94,11 @@
   .contacts__title {
     @include font(700, 1.5rem);
 
-    line-height: 80%;
-    text-transform: uppercase;
     width: 600px;
-    border-bottom: 1px solid #000;
+    line-height: 80%;
     text-align: right;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
 
     @media screen and (max-width: 700px) {
       width: 280px;
@@ -158,8 +158,8 @@
   .contacts__tel {
     @include font(700, 2rem, $accent-color);
 
-    max-width: 300px;
     display: block;
+    max-width: 300px;
     margin-bottom: 120px;
 
     @media screen and (max-width: 768px) {
@@ -173,10 +173,10 @@
   }
 
   .contacts__address {
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 140%;
     margin-bottom: 70px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 140%;
 
     @media screen and (max-width: 768px) {
       margin-bottom: 35px;
@@ -194,8 +194,8 @@
   .contacts__email-text,
   .contacts__email-link {
     font-family: inherit;
-    font-weight: regular;
     font-size: 15px;
+    font-weight: regular;
     color: #000;
     transition: 0.1s color linear;
   }
@@ -214,15 +214,15 @@
   }
 
   .contacts__socials-text {
-    font-weight: 700;
-    font-size: 15px;
     width: auto;
+    font-size: 15px;
+    font-weight: 700;
   }
 
   .contacts__socials-items-container {
     display: flex;
-    min-width: 100px;
     align-items: center;
+    min-width: 100px;
   }
 
   .contacts__socials-link {
@@ -235,19 +235,19 @@
   }
 
   .contacts__socials-img:hover .contacts__socials-path {
-    transition: 0.1s all ease;
     fill: $accent-color;
+    transition: 0.1s all ease;
   }
 
   .contacts__text {
     @include font(700, 2.5rem);
 
-    line-height: 120%;
     margin-bottom: 60px;
+    line-height: 120%;
 
     @media screen and (max-width: 450px) {
-      font-size: 1.5rem;
       margin-bottom: 40px;
+      font-size: 1.5rem;
     }
   }
 
@@ -261,12 +261,12 @@
   }
 
   .contacts__input:not(.contacts__input--btn) {
-    border: 1px solid #000;
     padding: 16px;
     margin-bottom: 30px;
-    font-weight: normal;
     font-size: 15px;
+    font-weight: normal;
     color: #000;
+    border: 1px solid #000;
   }
 
   .contacts__input:not(.contacts__input--btn):focus::placeholder {
@@ -275,9 +275,9 @@
 
   .contacts__input--name,
   .contacts__input--email {
+    display: inline-block;
     width: 260px;
     height: 50px;
-    display: inline-block;
 
     @media screen and (max-width: 1250px) {
       width: 100%;
@@ -293,25 +293,24 @@
   }
 
   .contacts__input--textarea {
+    display: block;
     width: 100%;
     min-height: 175px;
     resize: none;
-    display: block;
   }
 
   .contacts__input--btn {
     width: 230px;
     height: 50px;
-    font-family: inherit;
-    text-transform: uppercase;
-    border: none;
-    outline: 1px solid $accent-color;
-    background-color: $accent-color;
-    font-weight: 600;
-    font-size: 13px;
     padding: 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
     color: #fff;
+    text-transform: uppercase;
     letter-spacing: 0.1rem;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
     transition: 0.2s all ease;
 
     @media screen and (max-width: 450px) {

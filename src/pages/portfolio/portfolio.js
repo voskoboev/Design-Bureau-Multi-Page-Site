@@ -1,5 +1,5 @@
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
-import { showSectionOnLoad } from "../../ancillary.scripts/ancillary-srcipts"
+import { showSectionOnLoad } from '../../ancillary.scripts/ancillary-srcipts'
 
 toggleMobileMenu()
 showSectionOnLoad('header__lower')

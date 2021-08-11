@@ -1,16 +1,15 @@
 .footer {
-  // @include section-popup-onscroll;
   @include flex(space-between, start);
 
   flex-wrap: wrap;
+  width: 100%;
   padding: 120px 60px 110px;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
-  width: 100%;
 
   @media screen and (max-width: 768px) {
+    justify-content: space-between;
     padding-top: 70px;
     padding-bottom: 70px;
-    justify-content: space-between;
   }
 }
 
@@ -24,15 +23,15 @@
 }
 
 .footer__rights-span {
-  margin-top: 10px;
   display: block;
+  margin-top: 10px;
 }
 
 .footer__rights {
-  font-family: SF Pro Display;
+  font-family: inherit;
+  font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 170%;
 }
 
@@ -40,14 +39,12 @@
   margin-bottom: 10px;
 }
 
-//font($weight, $size: 1rem, $color: #000)
 .footer__menu-link {
   @include font(normal, 14px);
 
-  text-transform: capitalize;
-  line-height: 140%;
   font-family: inherit;
-
+  line-height: 140%;
+  text-transform: capitalize;
   transition: 0.2s color ease;
 
   &:hover {
@@ -62,10 +59,6 @@
   }
 }
 
-// .footer__languages {
-//   display: flex;
-// }
-
 .footer__languages-item {
   text-transform: uppercase;
   cursor: pointer;
@@ -75,8 +68,8 @@
   margin-bottom: 10px;
 
   @media screen and (max-width: 450px) {
-    margin-bottom: 0;
     margin-right: 20px;
+    margin-bottom: 0;
   }
 }
 

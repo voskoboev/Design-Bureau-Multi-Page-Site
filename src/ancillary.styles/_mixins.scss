@@ -1,8 +1,8 @@
 @mixin flex($jcc: start, $ai: normal, $fld: row) {
   display: flex;
-  justify-content: $jcc;
-  align-items: $ai;
   flex-direction: $fld;
+  align-items: $ai;
+  justify-content: $jcc;
 }
 
 @mixin font($weight, $size: 1rem, $color: #000) {
@@ -16,25 +16,25 @@
 
 @mixin pl-pr($val) {
   padding: {
-    left: $val;
     right: $val;
+    left: $val;
   }
 }
 
 @mixin section-popup-onscroll {
   opacity: 0;
-  transform: translateY(200px);
   transition: 0.5s all ease;
+  transform: translateY(200px);
 
   @media screen and (max-width: 450px) {
     opacity: 1;
-    transform: translateY(0);
     transition: none;
+    transform: translateY(0);
   }
 
   &--active {
     opacity: 1;
-    transform: translateY(0);
     transition: 0.5s all ease;
+    transform: translateY(0);
   }
 }

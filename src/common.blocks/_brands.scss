@@ -1,11 +1,13 @@
+/* stylelint-disable declaration-colon-newline-after */
+
 .brands {
   @include section-popup-onscroll;
 }
 
 .brands__list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 200px 0;
 
   @media screen and (max-width: 1250px) {

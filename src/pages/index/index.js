@@ -1,7 +1,10 @@
 import Swiper from 'swiper'
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
-import { manageVideo, showPopupSections } from '../../ancillary.scripts/ancillary-srcipts'
+import {
+  manageVideo,
+  showPopupSections
+} from '../../ancillary.scripts/ancillary-srcipts'
 
 // import { showBtnToTopOnScroll, scrollToTopOnBtnClick  } from '../../common.blocks/btn-to-top/btn-to-top'
 
@@ -23,10 +26,10 @@ manageNumberIncrement()
 initClientsCarousel()
 toggleNewsAccordionTabs()
 
-
 function initHeaderSwiper() {
   const slider = document.querySelector('.swiper-container')
 
+  // eslint-disable-next-line no-unused-vars
   const swiper = new Swiper(slider, {
     speed: 400,
     initialSlide: 0,
@@ -35,11 +38,11 @@ function initHeaderSwiper() {
     slideClass: 'swiper-slide',
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      prevEl: '.swiper-button-prev'
     },
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
+      type: 'bullets'
     }
   })
 }
@@ -88,7 +91,7 @@ function initClientsCarousel() {
   let counter = 0
 
   function changeTabs(arr) {
-    let conditionalCounter = counter === 0 ? arr.length - 1 : counter - 1
+    const conditionalCounter = counter === 0 ? arr.length - 1 : counter - 1
 
     if (counter === arr.length) {
       counter = 0
@@ -112,7 +115,6 @@ function initClientsCarousel() {
   })
 }
 
-
 function toggleNewsAccordionTabs() {
   const upperItems = document.querySelectorAll('.news__accordion-tab-upper'),
     slideActivationClass = 'news__accordion-tab-lower--active',
@@ -120,15 +122,10 @@ function toggleNewsAccordionTabs() {
 
   upperItems.forEach(item => {
     item.addEventListener('click', () => {
-      item
-        .nextElementSibling
-        .classList
-        .toggle(slideActivationClass)
-      item
-        .lastElementChild
-        .firstElementChild
-        .classList
-        .toggle(arrowActivationClass)
+      item.nextElementSibling.classList.toggle(slideActivationClass)
+      item.lastElementChild.firstElementChild.classList.toggle(
+        arrowActivationClass
+      )
     })
   })
 }

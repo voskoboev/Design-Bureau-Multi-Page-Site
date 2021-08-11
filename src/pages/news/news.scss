@@ -1,15 +1,17 @@
-@import "reset.css/reset.css";
+/* stylelint-disable declaration-colon-newline-after */
 
-@import "../../ancillary.styles/fonts";
-@import "../../ancillary.styles/_vars";
-@import "../../ancillary.styles/_mixins";
-@import "../../ancillary.styles/_global";
+@import 'reset.css/reset.css';
 
-@import "../../common.blocks/btn-to-top/_btn-to-top";
-@import "../../common.blocks/header-upper/_header-upper";
-@import "../../common.blocks/_card";
-@import "../../common.blocks/_socials";
-@import "../../common.blocks/_footer";
+@import '../../ancillary.styles/fonts';
+@import '../../ancillary.styles/_vars';
+@import '../../ancillary.styles/_mixins';
+@import '../../ancillary.styles/_global';
+
+@import '../../common.blocks/btn-to-top/_btn-to-top';
+@import '../../common.blocks/header-upper/_header-upper';
+@import '../../common.blocks/_card';
+@import '../../common.blocks/_socials';
+@import '../../common.blocks/_footer';
 
 .header {
   .header__lower {
@@ -56,8 +58,7 @@
     padding-bottom: 55px;
 
     @media screen and (max-width: 1250px) {
-      padding-left: 40px;
-      padding-right: 40px;
+      @include pl-pr(40px);
     }
 
     @media screen and (max-width: 1024px) {
@@ -66,13 +67,11 @@
     }
 
     @media screen and (max-width: 768px) {
-      padding-left: 80px;
-      padding-right: 80px;
+      @include pl-pr(80px);
     }
 
     @media screen and (max-width: 600px) {
-      padding-left: 20px;
-      padding-right: 20px;
+      @include pl-pr(20px);
     }
   }
 
@@ -95,17 +94,11 @@
     margin-right: 45px;
   }
 
-  // @media screen and (max-width: 450px) {
-  //   .news__menu-item:not(:last-child) {
-  //     margin-right: 20px;
-  //   }
-  // }
-
   .news__lower {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(570px, auto);
-    grid-gap: 60px; // 60
+    grid-gap: 60px;
 
     @media screen and (max-width: 1919px) {
       grid-auto-rows: minmax(500px, auto);
@@ -118,28 +111,24 @@
     }
 
     @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-      // grid-auto-rows: minmax(400px, auto);
-      grid-gap: 40px;
+      @include pl-pr(40px);
 
-      padding-left: 40px;
-      padding-right: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
     }
 
     @media screen and (max-width: 768px) {
+      @include pl-pr(80px);
+
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 40px;
-
-      padding-left: 80px;
-      padding-right: 80px;
     }
 
     @media screen and (max-width: 600px) {
-      // grid-template-columns: repeat(1, 1fr);
-      grid-gap: 20px;
+      @include pl-pr(20px);
+
       grid-auto-rows: minmax(200px, auto);
-      padding-left: 20px;
-      padding-right: 20px;
+      grid-gap: 20px;
     }
   }
 
@@ -157,19 +146,21 @@
 
   @for $item from 1 through 9 {
     .news__card--#{$item} {
-      background: url("../../images/pages/news/pic-#{$item}.jpg") center center no-repeat;
+      background: url('../../images/pages/news/pic-#{$item}.jpg')
+        center
+        center
+        no-repeat;
       background-size: cover;
     }
+  }
+
+  .news__card-info {
+    visibility: hidden;
   }
 
   .news__card:hover .news__card-info {
     visibility: visible;
     background-color: $accent-color;
-    // transition: 0.2s all ease;
-  }
-
-  .news__card-info {
-    visibility: hidden;
   }
 
   .news__card-title {
@@ -189,9 +180,9 @@
   }
 
   .news__card-link {
-    background-color: transparent;
     width: 150px;
     height: 30px;
+    background-color: transparent;
 
     @media screen and (max-width: 1350px) {
       bottom: 40px;
@@ -203,11 +194,11 @@
     }
 
     &::after {
-      content: "";
       width: 20px;
       height: 7px;
       margin-left: 15px;
-      background: url("../../images/pages/news/arrow-black.png") no-repeat;
+      content: '';
+      background: url('../../images/pages/news/arrow-black.png') no-repeat;
     }
   }
 }

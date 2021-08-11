@@ -1,21 +1,22 @@
-@import "reset.css/reset.css";
-@import "swiper/swiper.scss";
+/* stylelint-disable declaration-colon-newline-after */
 
-@import "../../ancillary.styles/_fonts";
-@import "../../ancillary.styles/_vars";
-@import "../../ancillary.styles/_mixins";
-@import "../../ancillary.styles/_global";
+@import 'reset.css/reset.css';
+@import 'swiper/swiper.scss';
+
+@import '../../ancillary.styles/_fonts';
+@import '../../ancillary.styles/_vars';
+@import '../../ancillary.styles/_mixins';
+@import '../../ancillary.styles/_global';
 
 // @import '../../common.blocks/btn-to-top/_btn-to-top';
-@import "../../common.blocks/services/_services";
-@import "../../common.blocks/header-upper/_header-upper";
-@import "../../common.blocks/_card";
-@import "../../common.blocks/_socials";
-@import "../../common.blocks/_brands";
-@import "../../common.blocks/_footer";
+@import '../../common.blocks/services/_services';
+@import '../../common.blocks/header-upper/_header-upper';
+@import '../../common.blocks/_card';
+@import '../../common.blocks/_socials';
+@import '../../common.blocks/_brands';
+@import '../../common.blocks/_footer';
 
 .header {
-  // background-color: teal;
   width: 100vw;
   height: 100vh;
 
@@ -25,24 +26,12 @@
     }
   }
 
-  // position: relative;
-
-  // width: 100%;
-  // height: 100%;
-
   .header__upper {
     position: absolute;
     top: 0;
     z-index: 10;
     width: 100%;
   }
-
-  // .header__call {
-  //   position: absolute;
-  //   // left: auto;
-  //   margin-left: none;
-  //   right: 0;
-  // }
 
   .header__menu-item-link {
     color: #fff;
@@ -58,10 +47,6 @@
     color: #fff;
   }
 
-  // .header__lower {
-  //   position: relative; // ?
-  // }
-
   .swiper-container {
     position: relative;
     width: 100vw;
@@ -73,27 +58,20 @@
   }
 
   .swiper-wrapper {
-    // width: 100vw;
-    // height: 100vh;
     position: relative;
   }
-
-  // .swiper-slide {
-  //   overflow: hidden;
-  // }
 
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
+    top: 50%;
+    z-index: 110;
     width: 20px;
     height: 45px;
     color: #fff;
-    transition: 0.2s all ease;
-    top: 50%;
-
-    transform: translateY(-50%);
-    z-index: 110;
     background-color: red;
+    transition: 0.2s all ease;
+    transform: translateY(-50%);
   }
 
   // .swiper-button-prev {
@@ -149,58 +127,34 @@
   .swiper-slide {
     width: 100vw;
     height: 100vh;
-    // background-position: center center;
 
     @media screen and (max-width: 768px) {
       height: 70vh;
     }
   }
 
-  // @media screen and (max-width: 450px) {
-  //   .swiper-slide {
-  //     height: 60vh;
-  //   }
-  // }
-
-  .swiper-slide--1 {
-    background: url("../../images/pages/index/header-section/exterior-2.jpg")
-      center center no-repeat;
-    background-size: cover;
-    // background-position-y: -200px; // изменить картинку или позиционирование в адаптиве
+  @for $item from 1 through 3 {
+    .swiper-slide--#{$item} {
+      background: url('../../images/pages/index/header-section/slide-#{$item}.jpg')
+        center
+        center
+        no-repeat;
+      background-size: cover;
+    }
   }
-
-  .swiper-slide--2 {
-    background: url("../../images/pages/index/header-section/interior-1.jpg")
-      center center no-repeat;
-    background-size: cover;
-    // background-position-y: -200px;
-  }
-
-  .swiper-slide--3 {
-    background: url("../../images/pages/index/header-section/exterior-1.jpg")
-      center center no-repeat;
-    background-size: cover;
-    // background-position-y: -100px;
-  }
-
-  // .swiper-slide__upper,
-  // .swiper-slide__lower {
-  //   // height: 35vh;
-  // }
 
   .swiper-slide__upper {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding-left: 405px;
-
     height: 52.5%;
+    padding-left: 405px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
     @media screen and (max-width: 768px) {
+      height: 40%;
       padding-left: 200px;
       border-bottom: none;
-      height: 40%;
     }
 
     @media screen and (max-width: 450px) {
@@ -210,12 +164,8 @@
 
   .swiper-slide__title {
     @include font(600, 5.625rem, #fff);
-    // line-height: 70px;
-
-    // line-height: 80%;
 
     text-transform: none;
-
     cursor: default;
 
     @media screen and (max-width: 1024px) {
@@ -225,8 +175,8 @@
 
   .swiper-slide__lower {
     display: flex;
-    padding-left: 405px;
     padding-top: 60px;
+    padding-left: 405px;
 
     @media screen and (max-width: 1024px) {
       padding-left: 65px;
@@ -242,16 +192,15 @@
   }
 
   .swiper-slide__btn {
-    // display: block; // ?
     @include font(600, 13px, #fff);
 
     width: 230px;
     height: 50px;
-    border: none;
-    border: 2px solid $accent-color;
     margin-right: 80px;
     font-family: inherit;
     background-color: $accent-color;
+    border: none;
+    border: 2px solid $accent-color;
     transition: 0.2s all ease;
 
     @media screen and (max-width: 768px) {
@@ -259,9 +208,9 @@
     }
 
     &:hover {
-      border: 2px solid darken($accent-color, 5%);
       color: darken(#fff, 5%);
       background-color: darken($accent-color, 5%);
+      border: 2px solid darken($accent-color, 5%);
       transition: 0.2s all ease;
     }
   }
@@ -269,12 +218,10 @@
   .swiper-slide__text {
     @include font(400, 1rem, #fff);
 
-    max-width: 330px;
     z-index: 10;
-    // font-weight: 400;
-    // font-size: 16px;
-    line-height: 140%;
+    max-width: 330px;
     margin-top: -7px;
+    line-height: 140%;
     cursor: default;
 
     @media screen and (max-width: 768px) {
@@ -287,9 +234,9 @@
   }
 
   .swiper-pagination {
-    text-align: left;
-    margin-left: 60px;
     margin-bottom: 45px;
+    margin-left: 60px;
+    text-align: left;
 
     @media screen and (max-width: 450px) {
       margin-left: 20px;
@@ -327,42 +274,18 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .portfolio__card {
-    // background-size: cover;
+  .portfolio__card:hover {
+    background: none;
+  }
 
-    &:hover {
-      background: none;
+  @for $item from 1 through 5 {
+    .portfolio__card--#{$item} {
+      background: url('../../images/pages/index/portfolio-section/pic-#{$item}.jpg')
+        center
+        center
+        no-repeat;
+      background-size: cover;
     }
-  }
-
-  .portfolio__card--1 {
-    background: url("../../images/pages/index/portfolio-section/interior-1-cut.jpg")
-      center center no-repeat;
-    background-size: cover;
-  }
-
-  .portfolio__card--2 {
-    background: url("../../images/pages/index/portfolio-section/interior-2-cut.jpg")
-      left center no-repeat;
-    background-size: cover;
-  }
-
-  .portfolio__card--3 {
-    background: url("../../images/pages/index/portfolio-section/exterior-1-cut.jpg")
-      center center no-repeat;
-    background-size: cover;
-  }
-
-  .portfolio__card--4 {
-    background: url("../../images/pages/index/portfolio-section/interior-3-cut.jpg")
-      left center no-repeat;
-    background-size: cover;
-  }
-
-  .portfolio__card--5 {
-    background: url("../../images/pages/index/portfolio-section/extrior-2.jpg")
-      center center no-repeat;
-    background-size: cover;
   }
 
   .portfolio__card--2 {
@@ -388,9 +311,6 @@
   @include section-popup-onscroll;
 
   padding-top: 200px;
-
-  // .trends__container {
-  // }
 
   @media screen and (max-width: 1024px) {
     padding-top: 100px;
@@ -430,22 +350,18 @@
     @include font(600, 3.5rem);
 
     max-width: 190px;
-    // line-height: 100%; // ? заменить везде % или оставить пиксели
-
-    // line-height: 80%;
-    text-transform: capitalize;
-
-    letter-spacing: 0.1rem; // ? rem или em
     margin-bottom: 200px;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
 
     @media screen and (max-width: 1024px) {
       margin: 0 auto 70px;
     }
 
     @media screen and (max-width: 450px) {
-      font-size: 2.5rem;
-      margin-bottom: 50px;
       max-width: 140px;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
     }
   }
 
@@ -460,8 +376,8 @@
     line-height: 140%;
 
     @media screen and (max-width: 1024px) {
-      text-align: center;
       margin: 0 auto 40px;
+      text-align: center;
     }
 
     @media screen and (max-width: 450px) {
@@ -470,14 +386,11 @@
   }
 
   .trends__upper-right {
-    // width: 50%;
     position: absolute;
-    // right: 0;
     left: 50%;
     width: 950px;
     height: 566px;
-
-    background: url("../../images/pages/index/trends-section/interior-1.jpg")
+    background: url('../../images/pages/index/trends-section/interior-1.jpg')
       center center no-repeat;
     background-size: cover;
 
@@ -493,12 +406,12 @@
   }
 
   .trends__lower {
-    padding-top: 150px;
     display: flex;
+    padding-top: 150px;
 
     @media screen and (max-width: 1200px) {
-      padding-top: 100px;
       flex-direction: column;
+      padding-top: 100px;
     }
 
     @media screen and (max-width: 450px) {
@@ -507,13 +420,13 @@
   }
 
   .trends__lower-left {
-    width: 50%;
     display: flex;
     justify-content: flex-end;
+    width: 50%;
 
     @media screen and (max-width: 1200px) {
-      width: 100%;
       justify-content: center;
+      width: 100%;
       padding-bottom: 100px;
     }
 
@@ -522,18 +435,11 @@
     }
   }
 
-  // @media screen and (max-width: 650px) {
-  //   .trends__lower-left {
-  //     width: 100%;
-  //   }
-  // }
-
   .trends__lower-left-wrapper {
-    padding: 67px 0 84px 50px;
-    background-color: #f9f9f9;
-
     width: 555px;
     min-height: 505px;
+    padding: 67px 0 84px 50px;
+    background-color: #f9f9f9;
 
     @media screen and (max-width: 650px) {
       width: 100%;
@@ -544,54 +450,37 @@
     }
   }
 
-  // @media screen and (max-width: 450px) {
-  //   .trends__lower-left-wrapper {
-  //     padding-bottom: 0;
-  //   }
-  // }
-
   .trends__lower-number {
     @include font(600, 7rem, $accent-color);
     // line-height: 90px;
     margin-bottom: 55px;
 
     @media screen and (max-width: 450px) {
-      font-size: 6rem;
       margin-bottom: 30px;
+      font-size: 6rem;
     }
   }
 
   .trends__lower-left-title {
-    border-bottom: 1px solid #000;
-    font-weight: bold;
-    font-size: 24px;
-    // line-height: 20px;
-    // line-height: 80%;
-    // letter-spacing: 0.03em;
-    text-transform: uppercase;
-
     margin-bottom: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
 
     @media screen and (max-width: 450px) {
-      font-size: 1.2rem;
       margin-bottom: 50px;
+      font-size: 1.2rem;
     }
   }
-
-  // @media screen and (max-width: 450px) {
-  //   .trends__lower-left-title {
-  //     width: 100%;
-  //   }
-  // }
 
   .trends__lower-text {
     @include font(400, 1rem);
 
     max-width: 330px;
-    text-align: center;
     margin-left: auto;
-
     line-height: 140%;
+    text-align: center;
 
     @media screen and (max-width: 450px) {
       padding-right: 20px;
@@ -600,28 +489,19 @@
 
   .trends__lower-right {
     width: 50%;
-    // padding-left: 130px;
 
     @media screen and (max-width: 1200px) {
       width: 100%;
     }
-
-    @media screen and (max-width: 450px) {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
   }
 
   .trends__lower-right-title {
-    border-bottom: 1px solid #000;
-    margin-left: 150px;
-
     @include font(700, 1.625rem);
 
-    // line-height: 80%;
-    // letter-spacing: 0.1rem;
-    text-transform: uppercase;
     margin-bottom: 30px;
+    margin-left: 150px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
 
     @media screen and (max-width: 450px) {
       font-size: 1.2rem;
@@ -631,8 +511,8 @@
   .trends__video-wrapper {
     @extend %centering-flex-container;
 
-    margin-left: 150px;
     position: relative;
+    margin-left: 150px;
     cursor: pointer;
 
     @media screen and (max-width: 1700px) {
@@ -645,13 +525,13 @@
   }
 
   .trends__play-btn {
-    width: 110px;
-    height: 110px;
-    background-color: #fff;
-    border-radius: 50%;
     position: absolute;
     z-index: 10;
+    width: 110px;
+    height: 110px;
     cursor: pointer;
+    background-color: #fff;
+    border-radius: 50%;
 
     @media screen and (max-width: 450px) {
       width: 90px;
@@ -659,13 +539,12 @@
     }
 
     &::after {
-      content: url("../../images/general.imgs/video-arrow.png");
       position: absolute;
-      left: 53%;
       top: 50%;
-
+      left: 53%;
       width: 20px;
       height: 22px;
+      content: url('../../images/general.imgs/video-arrow.png');
       transform: translate(-50%, -50%);
     }
   }
@@ -675,20 +554,29 @@
   }
 
   .trends__video {
-    // width: 100%;
     width: 900px;
-    // height: 600px;
-    // height: 100%;
-    // margin-left: auto;
     height: 505px;
     object-fit: cover;
 
-    @media screen and (max-width: 650px) {
-      height: 400px;
+    @media screen and (max-width: 1500px) {
+      width: 100%;
+      height: 505px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      @include pl-pr(40px);
+    }
+
+    @media screen and (max-width: 900px) {
+      height: 350px;
+    }
+
+    @media screen and (max-width: 550px) {
+      height: 250px;
     }
 
     @media screen and (max-width: 450px) {
-      height: 300px;
+      @include pl-pr(20px);
     }
   }
 }
@@ -696,9 +584,9 @@
 .clients {
   @include section-popup-onscroll;
 
+  position: relative;
   padding-top: 200px;
   padding-bottom: 200px;
-  position: relative;
 
   @media screen and (max-width: 1024px) {
     padding-top: 100px;
@@ -710,42 +598,29 @@
     padding-bottom: 50px;
   }
 
-  // background-color: #f9f9f9;
-
   .clients__upper {
     display: flex;
     justify-content: flex-end;
-    // align-items: flex-start;
   }
 
   .clients__title {
+    @include font(700, 1.5rem);
+
     position: absolute;
     left: 0;
     width: 730px;
-    border-bottom: 1px solid #000;
     text-align: right;
-
-    // line-height: 80%;
-
-    @include font(700, 1.5rem);
-    // line-height: 80%;
-    // letter-spacing: 0.em;
+    border-bottom: 1px solid #000;
 
     @media screen and (max-width: 1024px) {
       width: 400px;
     }
 
     @media screen and (max-width: 450px) {
-      font-size: 1.2rem;
       width: 280px;
+      font-size: 1.2rem;
     }
   }
-
-  // @media screen and (max-width: 450px) {
-  //   .clients__title {
-  //     width: 200px;
-  //   }
-  // }
 
   .clients__lower {
     padding-top: 230px;
@@ -759,13 +634,8 @@
     }
   }
 
-  .clients__carousel {
-    // display: flex;
-    // flex-direction: column;
-    // position: relative;
-    // flex-wrap: wrap;
-
-    @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
+    .clients__carousel {
       display: flex;
       flex-direction: column;
     }
@@ -791,18 +661,17 @@
 
   .clients__lower--left,
   .clients__lower--right {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 50%;
   }
 
   @media screen and (max-width: 1024px) {
     .clients__lower--left,
     .clients__lower--right {
-      width: 100%;
-
       align-items: center;
+      width: 100%;
     }
 
     .clients__lower--left {
@@ -811,51 +680,39 @@
   }
 
   .clients__pic {
+    align-self: center;
     width: 265px;
     height: 265px;
-    border-radius: 50%;
-    background-color: #f8f8f8;
     margin-bottom: 80px;
-    align-self: center;
+    background-color: #f8f8f8;
+    border-radius: 50%;
 
     @media screen and (max-width: 450px) {
       margin-bottom: 50px;
     }
   }
 
-  .clients__pic--1 {
-    background: url("../../images/pages/index/clients-section/person-2.jpg");
-    background-size: cover;
-    background-position-x: -15px;
+  @for $item from 1 through 4 {
+    .clients__pic--#{$item} {
+      background: url('../../images/pages/index/clients-section/person-#{$item}.jpg');
+      background-size: cover;
+    }
   }
 
+  .clients__pic--1,
   .clients__pic--2 {
-    background: url("../../images/pages/index/clients-section/person-1.jpg");
-    background-size: cover;
     background-position-x: -15px;
-  }
-
-  .clients__pic--3 {
-    background: url("../../images/pages/index/clients-section/person-3.jpg")
-      center center;
-    background-size: cover;
-  }
-
-  .clients__pic--4 {
-    background: url("../../images/pages/index/clients-section/person-4.jpg")
-      center center;
-    background-size: cover;
   }
 
   .clients__name {
     @include font(700, 1.5rem);
 
-    border-bottom: 1px solid #000;
+    position: relative;
     width: 480px;
     margin-bottom: 35px;
-    position: relative;
-    letter-spacing: 0.03rem;
     text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    border-bottom: 1px solid #000;
 
     @media screen and (max-width: 520px) {
       width: 300px;
@@ -869,9 +726,9 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      content: url("../../images/pages/index/clients-section/q-marks.svg");
       width: 37px;
       height: 33px;
+      content: url('../../images/pages/index/clients-section/q-marks.svg');
     }
   }
 
@@ -879,8 +736,11 @@
     @include font(400, 1rem);
 
     max-width: 300px;
-    text-align: right;
+    height: 120px;
+    overflow: hidden;
     line-height: 140%;
+    text-align: right;
+    text-align: center;
 
     @media screen and (max-width: 520px) {
       font-size: 0.9rem;
@@ -921,10 +781,10 @@
 
   @media screen and (max-width: 1100px) {
     .news__side--left {
-      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
   }
 
@@ -941,23 +801,15 @@
 
   .news__accordion-tab {
     max-width: 485px;
-    // display: flex;
-    // flex-direction: column;
   }
-
-  // @media screen and (max-width: 550px) {
-  //   .news__accordion-tab {
-  //     width: 400px;
-  //   }
-  // }
 
   .news__accordion-tab-upper {
     @include flex(space-between, center);
-    
-    border-bottom: 1px solid #000;
+
     padding-top: 7px;
     padding-bottom: 7px;
     cursor: pointer;
+    border-bottom: 1px solid #000;
   }
 
   .news__accordion-title {
@@ -968,39 +820,38 @@
     transition: 0.2s color ease;
   }
 
+  .news__accordion-title {
+    text-transform: uppercase;
+  }
+
   .news__accordion-tab-upper:hover .news__accordion-title {
     color: $accent-color;
     transition: 0.2s color ease;
   }
 
-  .news__accordion-tab-upper:hover .news__accordion-btn {
-    background-color: $accent-color;
-    transition: 0.2s all ease;
-    border: none;
-  }
-
-  .news__accordion-title {
-    text-transform: uppercase;
-  }
-
   .news__accordion-btn {
     @extend %centering-flex-container;
 
-    padding-left: 2px;
+    display: flex;
     width: 25px;
     height: 25px;
+    padding-left: 2px;
+    background-color: transparent;
     border: 1px solid #000;
     border-radius: 50%;
-    background-color: transparent;
-
     transition: 0.2s all ease;
-    display: flex;
+  }
+
+  .news__accordion-tab-upper:hover .news__accordion-btn {
+    background-color: $accent-color;
+    border: none;
+    transition: 0.2s all ease;
   }
 
   .news__accordion-arrow {
+    display: block;
     width: 8px;
     height: 8px;
-    display: block;
     margin-left: 4px;
   }
 
@@ -1010,28 +861,27 @@
 
   .news__accordion-tab-lower {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-
-    // overflow: hidden;
+    justify-content: space-between;
     height: 0;
+    visibility: hidden;
+    // overflow: hidden;
     opacity: 0;
     transition: 0.2s all linear;
-    visibility: hidden;
   }
 
   .news__accordion-tab-lower--active {
+    height: 100%;
     padding: 40px 0 40px;
+    visibility: visible;
     opacity: 1;
     transition: 0.2s all linear;
-    height: 100%;
-    visibility: visible;
   }
 
   .news__accordion-link {
+    margin-right: 20px;
     color: $accent-color;
     transition: 0.2s color ease;
-    margin-right: 20px;
 
     &:hover {
       color: darken($accent-color, 10%);
@@ -1040,10 +890,10 @@
   }
 
   .news__acccordion-text {
-    max-width: 400px;
     @include font(400, 1rem);
+
+    max-width: 400px;
     line-height: 140%;
-    // height: 66px;
 
     @media screen and (max-width: 450px) {
       font-size: 0.9rem;
@@ -1062,8 +912,7 @@
   .news__pic {
     width: 485px;
     height: 505px;
-
-    background: url("../../images/pages/index/news-section/interior-1.jpg")
+    background: url('../../images/pages/index/news-section/interior-1.jpg')
       no-repeat;
     background-size: cover;
   }

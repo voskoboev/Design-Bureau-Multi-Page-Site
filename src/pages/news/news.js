@@ -1,5 +1,5 @@
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
-import { showSectionOnLoad } from "../../ancillary.scripts/ancillary-srcipts"
+import { showSectionOnLoad } from '../../ancillary.scripts/ancillary-srcipts'
 
 toggleMobileMenu()
 showSectionOnLoad('news')
@@ -46,4 +46,3 @@ function toggleGalleryTabs() {
 // window.addEventListener('scroll', () => {
 //   showBtnToTopOnScroll(document.querySelector('.footer'))
 // })
-

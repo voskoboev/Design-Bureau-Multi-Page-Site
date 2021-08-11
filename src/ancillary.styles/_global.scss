@@ -11,7 +11,12 @@
 
 body {
   overflow-x: hidden;
-  font-family: $main-fonts; 
+  font-family: $main-fonts;
+}
+
+.body--inactive {
+  height: 100%;
+  overflow: hidden;
 }
 
 h1,
@@ -20,26 +25,20 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase;
   line-height: 80%;
+  text-transform: uppercase;
 }
 
 a {
+  font-family: $main-fonts;
   text-decoration: none;
-  // outline: none;
-  font-family: $main-fonts, sans-serif;
 }
 
 button,
-input[type="submit"] {
-  cursor: pointer;
+input[type='submit'] {
   text-transform: uppercase;
+  cursor: pointer;
 }
-
-// button:focus {
-//   outline: 2px solid black;
-//   border-radius: 5px;
-// }
 
 ::selection {
   background-color: lighten($accent-color, 20%);

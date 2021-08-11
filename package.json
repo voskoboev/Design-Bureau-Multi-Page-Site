@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "design bureau site",
   "scripts": {
-    "dev-index": "parcel src/pages/index/index.html",
-    "dev-about": "parcel src/pages/about/about.html",
-    "dev-portfolio": "parcel src/pages/portfolio/portfolio.html",
-    "dev-news": "parcel src/pages/news/news.html",
-    "dev-contact": "parcel src/pages/contact/contact.html",
+    "dev": "parcel src/pages/index/index.html",
     "prod": "parcel build src/pages/index/index.html"
   },
   "keywords": [],
@@ -20,7 +16,21 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
     "parcel": "^2.0.0-beta.2",
-    "sass": "^1.35.2"
+    "prettier": "^2.3.2",
+    "sass": "^1.35.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.20.1"
   }
 }

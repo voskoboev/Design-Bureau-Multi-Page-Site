@@ -1,6 +1,10 @@
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
-import { manageVideo, showSectionOnLoad, showPopupSections } from '../../ancillary.scripts/ancillary-srcipts'
+import {
+  manageVideo,
+  showSectionOnLoad,
+  showPopupSections
+} from '../../ancillary.scripts/ancillary-srcipts'
 
 toggleMobileMenu()
 toggleServicesAccordionTabs()
@@ -20,7 +24,9 @@ function manageNumberIncrement() {
   let calledOnce = false
 
   const startNumberIncrement = () => {
-    const experience = document.querySelector('.idea__lower-number--experience'),
+    const experience = document.querySelector(
+        '.idea__lower-number--experience'
+      ),
       projects = document.querySelector('.idea__lower-number--projects'),
       section = document.querySelector('.idea__lower'),
       sectionCoords = section.getBoundingClientRect().top + window.pageYOffset,
@@ -41,8 +47,18 @@ function manageNumberIncrement() {
     if (sectionCoords < upperOffsetWindow + windowHeingt) {
       if (!calledOnce) {
         const joinSetIntervalsCalls = () => {
-          setInterval(incrementNums, incrementInterval, experienceEndNum, experience)
-          setInterval(incrementNums, incrementInterval, projectsEndNum, projects)
+          setInterval(
+            incrementNums,
+            incrementInterval,
+            experienceEndNum,
+            experience
+          )
+          setInterval(
+            incrementNums,
+            incrementInterval,
+            projectsEndNum,
+            projects
+          )
         }
 
         setTimeout(joinSetIntervalsCalls, startDelay)
@@ -62,28 +78,13 @@ function toggleTeamCards() {
 
   cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-      card
-        .firstElementChild
-        .classList
-        .add(infoActivationClass)
-      card
-        .lastElementChild
-        .classList
-        .add(photoInactivationClass)
+      card.firstElementChild.classList.add(infoActivationClass)
+      card.lastElementChild.classList.add(photoInactivationClass)
     })
 
     card.addEventListener('mouseleave', () => {
-      card
-        .firstElementChild
-        .classList
-        .remove(infoActivationClass)
-      card
-        .lastElementChild
-        .classList
-        .remove(photoInactivationClass)
+      card.firstElementChild.classList.remove(infoActivationClass)
+      card.lastElementChild.classList.remove(photoInactivationClass)
     })
   })
 }
-
-
-

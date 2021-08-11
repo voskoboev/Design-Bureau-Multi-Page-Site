@@ -1,7 +1,4 @@
-
-
 // scrollToTopOnBtnClick()
-
 /* 
 This fn is called in concrete js file for every page because of
 neccessity of calling scroll fns in one page scroll handler.
@@ -25,7 +22,7 @@ export function scrollToTopOnBtnClick() {
   btn.addEventListener('click', () => {
     scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: 'smooth'
     })
   })
 
@@ -33,4 +30,3 @@ export function scrollToTopOnBtnClick() {
   //   showBtnToTopOnScroll(appearancePoint)
   // })
 }
-
