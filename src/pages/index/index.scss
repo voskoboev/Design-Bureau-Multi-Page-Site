@@ -2,6 +2,8 @@
 
 @import 'reset.css/reset.css';
 @import 'swiper/swiper.scss';
+@import 'swiper/components/navigation/navigation.scss';
+@import 'swiper/components/pagination/pagination.scss';
 
 @import '../../ancillary.styles/_fonts';
 @import '../../ancillary.styles/_vars';
@@ -65,54 +67,40 @@
   .swiper-button-next {
     position: absolute;
     top: 50%;
-    z-index: 110;
+    z-index: 20;
     width: 20px;
     height: 45px;
     color: #fff;
-    background-color: red;
     transition: 0.2s all ease;
-    transform: translateY(-50%);
+
+    @media screen and (max-width: 350px) {
+      // display: none;
+    }
   }
 
-  // .swiper-button-prev {
-  //   left: 65px;
-  // }
+  .swiper-button-prev {
+    left: 65px;
 
-  // .swiper-button-next {
-  //   left: 100px;
-  // }
+    @media screen and (max-width: 768px) {
+      top: 240px;
+    }
 
-  // .swiper-button-prev {
-  //   left: 65px;
-  // }
+    @media screen and (max-width: 450px) {
+      left: 20px;
+    }
+  }
 
-  // @media screen and (max-width: 768px) {
-  //   .swiper-button-prev {
-  //     top: 240px;
-  //   }
-  // }
+  .swiper-button-next {
+    left: 120px;
 
-  // @media screen and (max-width: 450px) {
-  //   .swiper-button-prev {
-  //     left: 20px;
-  //   }
-  // }
+    @media screen and (max-width: 768px) {
+      top: 240px;
+    }
 
-  // .swiper-button-next {
-  //   left: 120px;
-  // }
-
-  // @media screen and (max-width: 768px) {
-  //   .swiper-button-next {
-  //     top: 240px;
-  //   }
-  // }
-
-  // @media screen and (max-width: 450px) {
-  //   .swiper-button-next {
-  //     left: 75px;
-  //   }
-  // }
+    @media screen and (max-width: 450px) {
+      left: 75px;
+    }
+  }
 
   .swiper-button-prev:hover,
   .swiper-button-next:hover {
@@ -194,12 +182,16 @@
   .swiper-slide__btn {
     @include font(600, 13px, #fff);
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 230px;
     height: 50px;
     margin-right: 80px;
     font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
     background-color: $accent-color;
-    border: none;
     border: 2px solid $accent-color;
     transition: 0.2s all ease;
 

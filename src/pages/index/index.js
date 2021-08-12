@@ -1,4 +1,4 @@
-import Swiper from 'swiper'
+import Swiper, { Navigation, Pagination } from 'swiper'
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
 import {
@@ -10,6 +10,7 @@ import {
   scrollToTopOnBtnClick
 } from '../../common.blocks/btn-to-top/btn-to-top'
 
+initHeaderSwiper()
 toggleMobileMenu()
 toggleServicesAccordionTabs()
 manageVideo('trends')
@@ -22,13 +23,15 @@ showPopupSections('brands')
 showBtnToTopOnScroll('.portfolio')
 scrollToTopOnBtnClick('.portfolio')
 
-initHeaderSwiper()
 manageNumberIncrement()
 initClientsCarousel()
 toggleNewsAccordionTabs()
 
 function initHeaderSwiper() {
   const slider = document.querySelector('.swiper-container')
+
+  Swiper.use([Navigation])
+  Swiper.use([Pagination])
 
   // eslint-disable-next-line no-unused-vars
   const swiper = new Swiper(slider, {
@@ -52,8 +55,9 @@ function manageNumberIncrement() {
   let calledOnce = false
 
   const startNumberIncrement = () => {
-    const numberEl = document.querySelector('.trends__lower-number'),
-      sectionCoords = numberEl.getBoundingClientRect().top + window.pageYOffset,
+    const numberElem = document.querySelector('.trends__lower-number'),
+      sectionCoords =
+        numberElem.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
       windowHeight = window.innerHeight,
       startInterval = 100,
@@ -70,7 +74,7 @@ function manageNumberIncrement() {
     if (sectionCoords < upperOffsetWindow + windowHeight) {
       if (!calledOnce) {
         setTimeout(() => {
-          setInterval(incrementNums, startInterval, endNum, numberEl)
+          setInterval(incrementNums, startInterval, endNum, numberElem)
         }, timeOutInterval)
 
         calledOnce = true
