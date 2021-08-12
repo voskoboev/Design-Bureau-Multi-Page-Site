@@ -1,9 +1,15 @@
 import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
 import { showSectionOnLoad } from '../../ancillary.scripts/ancillary-srcipts'
+import {
+  showBtnToTopOnScroll,
+  scrollToTopOnBtnClick
+} from '../../common.blocks/btn-to-top/btn-to-top'
 
 toggleMobileMenu()
 showSectionOnLoad('news')
 showSectionOnLoad('header__lower')
+showBtnToTopOnScroll('.footer')
+scrollToTopOnBtnClick('.footer')
 
 toggleGalleryTabs()
 

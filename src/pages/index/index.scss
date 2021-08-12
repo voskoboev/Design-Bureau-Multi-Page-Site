@@ -8,7 +8,7 @@
 @import '../../ancillary.styles/_mixins';
 @import '../../ancillary.styles/_global';
 
-// @import '../../common.blocks/btn-to-top/_btn-to-top';
+@import '../../common.blocks/btn-to-top/_btn-to-top';
 @import '../../common.blocks/services/_services';
 @import '../../common.blocks/header-upper/_header-upper';
 @import '../../common.blocks/_card';
@@ -749,8 +749,6 @@
 }
 
 .news {
-  @include section-popup-onscroll;
-
   padding-top: 160px;
   padding-bottom: 160px;
   background-color: #f9f9f9;
@@ -772,6 +770,8 @@
   }
 
   .news__container {
+    @include section-popup-onscroll;
+
     display: flex;
   }
 

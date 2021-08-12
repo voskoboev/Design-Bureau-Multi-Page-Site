@@ -5,21 +5,22 @@ import {
   manageVideo,
   showPopupSections
 } from '../../ancillary.scripts/ancillary-srcipts'
-
-// import { showBtnToTopOnScroll, scrollToTopOnBtnClick  } from '../../common.blocks/btn-to-top/btn-to-top'
-
-// showBtnToTopOnScroll('.trends') // ?
-// scrollToTopOnBtnClick() // ?
+import {
+  showBtnToTopOnScroll,
+  scrollToTopOnBtnClick
+} from '../../common.blocks/btn-to-top/btn-to-top'
 
 toggleMobileMenu()
 toggleServicesAccordionTabs()
 manageVideo('trends')
 showPopupSections('portfolio')
-showPopupSections('services')
+showPopupSections('services__wrapper')
 showPopupSections('trends')
 showPopupSections('clients')
-showPopupSections('news')
+showPopupSections('news__container')
 showPopupSections('brands')
+showBtnToTopOnScroll('.portfolio')
+scrollToTopOnBtnClick('.portfolio')
 
 initHeaderSwiper()
 manageNumberIncrement()

@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Dmitry Voskoboev">
   <meta name="description" content="Design bureau renders excluesive full cycle design services">
-  <meta name="keywords"
-    content="design, exterior, interior, bureau, firm, exterior, interior, architecture, furniture, buildings">
+  <meta name="keywords" content="design, exterior, interior, bureau, firm, architecture, furniture, buildings">
   <!-- og -->
   <meta property="og:url" content="https://benhome.netlify.app/index.html">
   <meta property="og:type" content="website">
@@ -28,7 +27,7 @@
   <link rel="preload" href="../../fonts/SFProDisplay-Semibold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../fonts/SFProDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <!-- /fonts preload -->
-  <title>Benhome: main page</title>
+  <title>Benhome: Home</title>
   <link rel="stylesheet" href="./index.scss">
   <script src="./index.js" defer></script>
 </head>
@@ -40,7 +39,7 @@
     <div class="header__upper">
       <button class="header__mobile-btn--open">
       </button>
-      <a class="header__logo" href="/">
+      <a class="header__logo" href="/" aria-label="Header logo">
         <img class="header__logo-benhome" src="../../images/general.imgs/logo-white.png" alt="logo-white">
       </a>
       <nav class="header__nav">
@@ -112,7 +111,7 @@
             </div>
             <div class="swiper-slide__lower">
               <button class="swiper-slide__btn">
-                LEARN MORE
+                Learn more
               </button>
               <p class="swiper-slide__text">
                 The font blends perfectly with white backgrounds, making the design unique and presentable The font
@@ -128,7 +127,7 @@
             </div>
             <div class="swiper-slide__lower">
               <button class="swiper-slide__btn">
-                LEARN MORE
+                Learn more
               </button>
               <p class="swiper-slide__text">
                 The font blends perfectly with white backgrounds, making the design unique and presentable The font
@@ -166,8 +165,7 @@
           English
           14 translation by H. Rackham.
         </p>
-        <a href="#" class="card__link projects__card-link">
-
+        <a class="card__link projects__card-link" href="#" aria-label="Portfolio item 1">
         </a>
       </div>
     </div>
@@ -186,7 +184,7 @@
           English
           14 translation by H. Rackham.
         </p>
-        <a href="#" class="card__link projects__card-link">
+        <a class="card__link projects__card-link" href="#" aria-label="Portfolio item 2">
         </a>
       </div>
     </div>
@@ -205,7 +203,7 @@
           English
           14 translation by H. Rackham.
         </p>
-        <a href="#" class="card__link projects__card-link">
+        <a class="card__link projects__card-link" href="#" aria-label="Portfolio item 3">
         </a>
       </div>
     </div>
@@ -224,7 +222,7 @@
           English
           14 translation by H. Rackham.
         </p>
-        <a href="#" class="card__link projects__card-link">
+        <a class="card__link projects__card-link" href="#" aria-label="Portfolio item 4">
         </a>
       </div>
     </div>
@@ -243,123 +241,123 @@
           English
           14 translation by H. Rackham.
         </p>
-        <a href="#" class="card__link projects__card-link">
+        <a class="card__link projects__card-link" href="#" aria-label="Portfolio item 5">
         </a>
       </div>
     </div>
   </section>
   <section class="services">
-    <!-- <div class="services__wrapper"> -->
-    <div class="services__left">
-      <h3 class="services__title" tabindex="0">
-        Services
-      </h3>
+    <div class="services__wrapper">
+      <div class="services__left">
+        <h3 class="services__title" tabindex="0">
+          Services
+        </h3>
+      </div>
+      <div class="services__right">
+        <ul class="services__list">
+          <li class="services__list-item">
+            <div class="services__list-item-upper">
+              <h4 class="services__list-item-title" tabindex="0">
+                Architecture Design
+              </h4>
+              <button class="services__list-item-btn services__list-item-btn--active" tabindex="0">
+                <div class="services__list-item-btn-down-arrow services__list-item-btn-down-arrow--active">
+                </div>
+              </button>
+            </div>
+            <div class="services__list-item-lower services__list-item-lower--active">
+              <a class="services__list-item-link" href="#" tabindex="0">
+                Explore
+              </a>
+              <p class="services__list-item-text">
+                Our work experience include residential design, commercial design,
+                architectural engineering and interior design. My clients include
+                residential, commercial and industrial firms.
+              </p>
+            </div>
+          </li>
+          <li class="services__list-item">
+            <div class="services__list-item-upper">
+              <h4 class="services__list-item-title" tabindex="0">
+                Planning
+              </h4>
+              <button class="services__list-item-btn" tabindex="0">
+                <div class="services__list-item-btn-down-arrow">
+                </div>
+              </button>
+            </div>
+            <div class="services__list-item-lower">
+              <a class="services__list-item-link" href="#" tabindex="0">
+                Explore
+              </a>
+              <p class="services__list-item-text">
+                We believe that you can reach a lot more in your project with planning.
+              </p>
+            </div>
+          </li>
+          <li class="services__list-item">
+            <div class="services__list-item-upper">
+              <h4 class="services__list-item-title" tabindex="0">
+                Landscape Design
+              </h4>
+              <button class="services__list-item-btn" tabindex="0">
+                <div class="services__list-item-btn-down-arrow">
+                </div>
+              </button>
+            </div>
+            <div class="services__list-item-lower">
+              <a class="services__list-item-link" href="#" tabindex="0">
+                Explore
+              </a>
+              <p class="services__list-item-text">
+                Landscape disigns itself is a 'distillation of the views, ideas and thoughts' held by our firm.
+              </p>
+            </div>
+          </li>
+          <li class="services__list-item">
+            <div class="services__list-item-upper">
+              <h4 class="services__list-item-title" tabindex="0">
+                Branding
+              </h4>
+              <button class="services__list-item-btn" tabindex="0">
+                <div class="services__list-item-btn-down-arrow">
+                </div>
+              </button>
+            </div>
+            <div class="services__list-item-lower">
+              <a class="services__list-item-link" href="#" tabindex="0">
+                Explore
+              </a>
+              <p class="services__list-item-text">
+                The first thing people notice and the last thing they remember.
+                Successful branding recognition is our main goal.
+              </p>
+            </div>
+          </li>
+          <li class="services__list-item">
+            <div class="services__list-item-upper">
+              <h4 class="services__list-item-title" tabindex="0">
+                Style
+              </h4>
+              <button class="services__list-item-btn" tabindex="0">
+                <div class="services__list-item-btn-down-arrow">
+                </div>
+              </button>
+            </div>
+            <div class="services__list-item-lower">
+              <a class="services__list-item-link" href="#" tabindex="0">
+                Explore
+              </a>
+              <p class="services__list-item-text">
+                We’re not perfect, but we strive for excellence. We work hard
+                to find the best way to make our customers happy, and we’re
+                excited to be able to share out style with you
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="services__right">
-      <ul class="services__list">
-        <li class="services__list-item">
-          <div class="services__list-item-upper">
-            <h4 class="services__list-item-title" tabindex="0">
-              Architecture Design
-            </h4>
-            <button class="services__list-item-btn services__list-item-btn--active" tabindex="0">
-              <div class="services__list-item-btn-down-arrow services__list-item-btn-down-arrow--active">
-              </div>
-            </button>
-          </div>
-          <div class="services__list-item-lower services__list-item-lower--active">
-            <a href="#" class="services__list-item-link" tabindex="0">
-              Explore
-            </a>
-            <p class="services__list-item-text">
-              Our work experience include residential design, commercial design,
-              architectural engineering and interior design. My clients include
-              residential, commercial and industrial firms.
-            </p>
-          </div>
-        </li>
-        <li class="services__list-item">
-          <div class="services__list-item-upper">
-            <h4 class="services__list-item-title" tabindex="0">
-              Planning
-            </h4>
-            <button class="services__list-item-btn" tabindex="0">
-              <div class="services__list-item-btn-down-arrow">
-              </div>
-            </button>
-          </div>
-          <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link" tabindex="0">
-              Explore
-            </a>
-            <p class="services__list-item-text">
-              We believe that you can reach a lot more in your project with planning.
-            </p>
-          </div>
-        </li>
-        <li class="services__list-item">
-          <div class="services__list-item-upper">
-            <h4 class="services__list-item-title" tabindex="0">
-              Landscape Design
-            </h4>
-            <button class="services__list-item-btn" tabindex="0">
-              <div class="services__list-item-btn-down-arrow">
-              </div>
-            </button>
-          </div>
-          <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link" tabindex="0">
-              Explore
-            </a>
-            <p class="services__list-item-text">
-              Landscape disigns itself is a 'distillation of the views, ideas and thoughts' held by our firm.
-            </p>
-          </div>
-        </li>
-        <li class="services__list-item">
-          <div class="services__list-item-upper">
-            <h4 class="services__list-item-title" tabindex="0">
-              Branding
-            </h4>
-            <button class="services__list-item-btn" tabindex="0">
-              <div class="services__list-item-btn-down-arrow">
-              </div>
-            </button>
-          </div>
-          <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link" tabindex="0">
-              Explore
-            </a>
-            <p class="services__list-item-text">
-              The first thing people notice and the last thing they remember.
-              Successful branding recognition is our main goal.
-            </p>
-          </div>
-        </li>
-        <li class="services__list-item">
-          <div class="services__list-item-upper">
-            <h4 class="services__list-item-title" tabindex="0">
-              Style
-            </h4>
-            <button class="services__list-item-btn" tabindex="0">
-              <div class="services__list-item-btn-down-arrow">
-              </div>
-            </button>
-          </div>
-          <div class="services__list-item-lower">
-            <a href="#" class="services__list-item-link" tabindex="0">
-              Explore
-            </a>
-            <p class="services__list-item-text">
-              We’re not perfect, but we strive for excellence. We work hard
-              to find the best way to make our customers happy, and we’re
-              excited to be able to share out style with you
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!-- </div> -->
   </section>
   <section class="trends">
     <div class=" container trends__upper">
@@ -368,7 +366,7 @@
           <span class="trends__title-span">
             Follow
           </span>
-          trends.
+          Trends.
         </h3>
         <p class="trends__upper-text">
           Benhome Architectural Design Studio can enrich your marketing promotion for
@@ -398,14 +396,14 @@
       </div>
       <div class="trends__lower-right">
         <h2 class="trends__lower-right-title">
-          WATCH OUR VIDEO
+          Watch our video
         </h2>
         <div class="trends__video-wrapper">
           <div class="trends__play-btn">
           </div>
           <video class="trends__video" poster="../../images/pages/index/trends-section/barn-house.jpg">
             <source src="../../videos/index/modern-house-1.mp4" type="video/mp4">
-            Your browser doesn't support video player
+            Your browser doesn't support video player.
           </video>
         </div>
       </div>
@@ -415,7 +413,7 @@
     <div class="container">
       <div class="clients__upper">
         <h3 class="clients__title">
-          FROM OUR CLIENTS
+          From our clients
         </h3>
       </div>
       <div class="clients__lower">
@@ -475,7 +473,7 @@
       </div>
     </div>
   </section>
-  <section class="news ">
+  <section class="news">
     <div class="container news__container">
       <div class="news__side news__side--left">
         <h2 class="news__title">
@@ -488,12 +486,12 @@
                 How to design well?
               </h4>
               <button class="news__accordion-btn" tabindex="0">
-                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
-                  class="news__accordion-arrow news__accordion-arrow--active">
+                <img class="news__accordion-arrow news__accordion-arrow--active"
+                  src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow">
               </button>
             </div>
             <div class="news__accordion-tab-lower news__accordion-tab-lower--active">
-              <a href="#" class="news__accordion-link">
+              <a class="news__accordion-link" href="#">
                 Explore
               </a>
               <p class="news__acccordion-text">
@@ -513,7 +511,7 @@
               </button>
             </div>
             <div class="news__accordion-tab-lower">
-              <a href="#" class="news__accordion-link">
+              <a class="news__accordion-link" href="#">
                 Explore
               </a>
               <p class="news__acccordion-text">
@@ -532,7 +530,7 @@
               </button>
             </div>
             <div class="news__accordion-tab-lower">
-              <a href="#" class="news__accordion-link">
+              <a class="news__accordion-link" href="#">
                 Explore
               </a>
               <p class="news__acccordion-text">
@@ -543,15 +541,15 @@
           <div class="news__accordion-tab">
             <div class="news__accordion-tab-upper">
               <h4 class="news__accordion-title" tabindex="0">
-                BEST WOOD FOR TABLES
+                Best wood for tables
               </h4>
               <button class="news__accordion-btn" tabindex="0">
-                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
-                  class="news__accordion-arrow">
+                <img class="news__accordion-arrow" src="../../images/pages/index/news-section/accordion-arrow.png"
+                  alt="arrow">
               </button>
             </div>
             <div class="news__accordion-tab-lower">
-              <a href="#" class="news__accordion-link">
+              <a class="news__accordion-link" href="#">
                 Explore
               </a>
               <p class="news__acccordion-text">
@@ -566,12 +564,12 @@
                 New contact form
               </h4>
               <button class="news__accordion-btn" tabindex="0">
-                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
-                  class="news__accordion-arrow">
+                <img class="news__accordion-arrow" src="../../images/pages/index/news-section/accordion-arrow.png"
+                  alt="arrow">
               </button>
             </div>
             <div class="news__accordion-tab-lower">
-              <a href="#" class="news__accordion-link">
+              <a class="news__accordion-link" href="#">
                 Explore
               </a>
               <p class="news__acccordion-text">
@@ -585,12 +583,12 @@
                 Trending colors
               </h4>
               <button class="news__accordion-btn" tabindex="0">
-                <img src="../../images/pages/index/news-section/accordion-arrow.png" alt="arrow"
-                  class="news__accordion-arrow">
+                <img class="news__accordion-arrow" src="../../images/pages/index/news-section/accordion-arrow.png"
+                  alt="arrow">
               </button>
             </div>
             <div class="news__accordion-tab-lower">
-              <a href="#" class="news__accordion-link">
+              <a class="news__accordion-link" href="#">
                 Explore
               </a>
               <p class="news__acccordion-text">
@@ -629,11 +627,11 @@
     </div>
   </section>
   <footer class="footer">
-    <a class="footer__logo" href="/">
+    <a class="footer__logo" href="/" aria-label="Footer logo">
       <img class="footer__logo-link" src="../../images/general.imgs/logo-black.png" alt="logo">
     </a>
     <p class="footer__rights">
-      © Sentro 2021 <br>
+      &copy; Sentro 2021 <br>
       All Rights Resevered
     </p>
     <ul class="footer__menu footer__menu--secondary">
@@ -703,15 +701,18 @@
     </ul>
     <ul class="socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--1" href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <a class="socials__link socials__link--1" href="https://www.facebook.com/" target="_blank" rel="noopener"
+          aria-label="Social media item 1">
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--2" href="https://twitter.com/" target="_blank" rel="noopener">
+        <a class="socials__link socials__link--2" href="https://twitter.com/" target="_blank" rel="noopener"
+          aria-label="Social media item 2">
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--3" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <a class="socials__link socials__link--3" href="https://www.instagram.com/" target="_blank" rel="noopener"
+          aria-label="Social media item 2">
         </a>
       </li>
     </ul>

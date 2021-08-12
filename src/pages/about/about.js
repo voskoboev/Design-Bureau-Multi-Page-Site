@@ -5,6 +5,10 @@ import {
   showSectionOnLoad,
   showPopupSections
 } from '../../ancillary.scripts/ancillary-srcipts'
+import {
+  showBtnToTopOnScroll,
+  scrollToTopOnBtnClick
+} from '../../common.blocks/btn-to-top/btn-to-top'
 
 toggleMobileMenu()
 toggleServicesAccordionTabs()
@@ -12,10 +16,12 @@ manageVideo('idea')
 showSectionOnLoad('header__central')
 showSectionOnLoad('header__lower')
 showPopupSections('idea')
-showPopupSections('services')
+showPopupSections('services__wrapper')
 showPopupSections('team')
 showPopupSections('brands')
 showPopupSections('footer')
+showBtnToTopOnScroll('.idea')
+scrollToTopOnBtnClick('.idea')
 
 manageNumberIncrement()
 toggleTeamCards()

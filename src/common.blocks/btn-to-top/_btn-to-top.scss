@@ -5,7 +5,6 @@
   z-index: 100;
   width: 75px;
   height: 75px;
-  // background-color: #f9f9f9;
   cursor: pointer;
   visibility: hidden;
   background: url('../../images/common.blocks/btn-to-top/arrow.png') no-repeat;
@@ -13,18 +12,16 @@
   border: 7px solid #ece9e9;
   border-radius: 50%;
   opacity: 0.9;
-  transition: 0.5s all ease;
+  transition: 0.2s all ease;
   transform: translateY(30px);
 
   @media screen and (max-width: 550px) {
     display: none;
   }
-
-  // z-index: 150;
 }
 
 .btn-to-top--active {
   visibility: visible;
-  transition: 0.5s all ease;
+  transition: 0.2s all ease;
   transform: translateY(0);
 }
