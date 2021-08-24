@@ -1,6 +1,6 @@
 /* stylelint-disable declaration-colon-newline-after */
 
-@import 'reset.css/reset.css';
+@import '../../../node_modules/reset.css/reset.css';
 
 @import '../../ancillary.styles/_fonts';
 @import '../../ancillary.styles/_vars';
@@ -85,7 +85,7 @@
 
     width: 100%;
     min-height: 768px;
-    background: url('../../images/pages/about/office-meeting.jpg') center center
+    background: url('../../images/pages/about/office-meeting.jpg?quality=70') center center
       no-repeat;
     background-size: cover;
 
@@ -270,7 +270,7 @@
     width: 24px;
     height: 24px;
     margin-left: 10px;
-    background: url('../../images/general.imgs/video-arrow.png') no-repeat;
+    background: url('../../images/general.imgs/video-arrow.png?quality=70') no-repeat;
   }
 
   .idea__lower {

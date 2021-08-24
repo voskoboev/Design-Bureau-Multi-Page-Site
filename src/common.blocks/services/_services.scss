@@ -103,12 +103,12 @@
 .services__list-item-btn-down-arrow {
   width: 7px;
   height: 7px;
-  background-image: url('../../images/common.blocks/services/black-down-arrow.png');
+  background-image: url('../../images/common.blocks/services/black-down-arrow.png?quality=70');
   background-position: center center;
 }
 
 .services__list-item-btn-down-arrow--active {
-  background-image: url('../../images/common.blocks/services/white-up-arrow.png');
+  background-image: url('../../images/common.blocks/services/white-up-arrow.png?quality=70');
 }
 
 .services__list-item-lower {
@@ -144,7 +144,7 @@
 
   &::after {
     padding-left: 8px;
-    content: url('../../images/orange-arrow.png');
+    content: url('../../images/orange-arrow.png?quality=70');
   }
 
   @media screen and (max-width: 520px) {

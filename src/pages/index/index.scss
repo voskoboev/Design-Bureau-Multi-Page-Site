@@ -1,9 +1,10 @@
 /* stylelint-disable declaration-colon-newline-after */
 
-@import 'reset.css/reset.css';
-@import 'swiper/swiper.scss';
-@import 'swiper/components/navigation/navigation.scss';
-@import 'swiper/components/pagination/pagination.scss';
+@import '../../../node_modules/reset.css/reset.css';
+
+@import '../../../node_modules/swiper/swiper.scss';
+@import '../../../node_modules/swiper/components/navigation/navigation.scss';
+@import '../../../node_modules/swiper/components/pagination/pagination.scss';
 
 @import '../../ancillary.styles/_fonts';
 @import '../../ancillary.styles/_vars';
@@ -123,7 +124,7 @@
 
   @for $item from 1 through 3 {
     .swiper-slide--#{$item} {
-      background: url('../../images/pages/index/header-section/slide-#{$item}.jpg')
+      background: url('../../images/pages/index/header-section/slide-#{$item}.jpg?quality=70')
         center
         center
         no-repeat;
@@ -272,7 +273,7 @@
 
   @for $item from 1 through 5 {
     .portfolio__card--#{$item} {
-      background: url('../../images/pages/index/portfolio-section/pic-#{$item}.jpg')
+      background: url('../../images/pages/index/portfolio-section/pic-#{$item}.jpg?quality=70')
         center
         center
         no-repeat;
@@ -382,7 +383,7 @@
     left: 50%;
     width: 950px;
     height: 566px;
-    background: url('../../images/pages/index/trends-section/interior-1.jpg')
+    background: url('../../images/pages/index/trends-section/interior-1.jpg?quality=70')
       center center no-repeat;
     background-size: cover;
 
@@ -536,7 +537,7 @@
       left: 53%;
       width: 20px;
       height: 22px;
-      content: url('../../images/general.imgs/video-arrow.png');
+      content: url('../../images/general.imgs/video-arrow.png?quality=70');
       transform: translate(-50%, -50%);
     }
   }
@@ -686,7 +687,7 @@
 
   @for $item from 1 through 4 {
     .clients__pic--#{$item} {
-      background: url('../../images/pages/index/clients-section/person-#{$item}.jpg');
+      background: url('../../images/pages/index/clients-section/person-#{$item}.jpg?quality=70');
       background-size: cover;
     }
   }
@@ -904,7 +905,7 @@
   .news__pic {
     width: 485px;
     height: 505px;
-    background: url('../../images/pages/index/news-section/interior-1.jpg')
+    background: url('../../images/pages/index/news-section/interior-1.jpg?quality=70')
       no-repeat;
     background-size: cover;
   }

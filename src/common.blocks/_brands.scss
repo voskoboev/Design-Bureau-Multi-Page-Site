@@ -34,7 +34,7 @@
 
 @for $item from 1 through 4 {
   .brands__item--#{$item} {
-    background: url("../../images/common.blocks/brands/pic-#{$item}.png")
+    background: url("../../images/common.blocks/brands/pic-#{$item}.png?quality=70")
       no-repeat;
   }
 }

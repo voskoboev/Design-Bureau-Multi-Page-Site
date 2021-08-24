@@ -1,6 +1,6 @@
 /* stylelint-disable declaration-colon-newline-after */
 
-@import 'reset.css/reset.css';
+@import '../../../node_modules/reset.css/reset.css';
 
 @import '../../ancillary.styles/fonts';
 @import '../../ancillary.styles/_vars';
@@ -146,7 +146,7 @@
 
   @for $item from 1 through 9 {
     .news__card--#{$item} {
-      background: url('../../images/pages/news/pic-#{$item}.jpg')
+      background: url('../../images/pages/news/pic-#{$item}.jpg?quality=70')
         center
         center
         no-repeat;
@@ -198,7 +198,7 @@
       height: 7px;
       margin-left: 15px;
       content: '';
-      background: url('../../images/pages/news/arrow-black.png') no-repeat;
+      background: url('../../images/pages/news/arrow-black.png?quality=70') no-repeat;
     }
   }
 }

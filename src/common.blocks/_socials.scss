@@ -1,3 +1,5 @@
+/* stylelint-disable declaration-colon-newline-after */
+
 .socials {
   display: flex;
   align-items: center;
@@ -18,13 +20,16 @@
 }
 
 .socials__link--1 {
-  background: url("../../images/common.blocks/socials/fb.svg") no-repeat;
+  background: url('../../images/common.blocks/socials/fb.svg?quality=70')
+    no-repeat;
 }
 
 .socials__link--2 {
-  background: url("../../images/common.blocks/socials/tw.svg") no-repeat 0 2px;
+  background: url('../../images/common.blocks/socials/tw.svg?quality=70')
+    no-repeat 0 2px;
 }
 
 .socials__link--3 {
-  background: url("../../images/common.blocks/socials/inst.svg") no-repeat;
+  background: url('../../images/common.blocks/socials/inst.svg?quality=70')
+    no-repeat;
 }

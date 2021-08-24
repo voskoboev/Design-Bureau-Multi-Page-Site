@@ -1,6 +1,6 @@
 /* stylelint-disable declaration-colon-newline-after */
 
-@import 'reset.css/reset.css';
+@import '../../../node_modules/reset.css/reset.css';
 
 @import '../../ancillary.styles/_fonts';
 @import '../../ancillary.styles/_vars';
@@ -165,7 +165,7 @@
 
   @for $item from 1 through 9 {
     .projects__card--#{$item} {
-      background: url('../../images/pages/portfolio/pic-#{$item}.jpg')
+      background: url('../../images/pages/portfolio/pic-#{$item}.jpg?quality=70')
         center
         center
         no-repeat;
@@ -230,7 +230,7 @@
     }
 
     &::after {
-      content: url('../../images/pages/portfolio/arrow.png');
+      content: url('../../images/pages/portfolio/arrow.png?quality=70');
     }
   }
 }
