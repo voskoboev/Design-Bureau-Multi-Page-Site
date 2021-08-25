@@ -1,12 +1,12 @@
-import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/headerUpper'
 import {
   showSectionOnLoad,
   showPopupSections
-} from '../../ancillary.scripts/ancillary-srcipts'
+} from '../../ancillary.scripts/ancillarySrcipts'
 import {
   showBtnToTopOnScroll,
   scrollToTopOnBtnClick
-} from '../../common.blocks/btn-to-top/btn-to-top'
+} from '../../common.blocks/btn-to-top/btnToTop'
 
 toggleMobileMenu()
 showSectionOnLoad('header__central')

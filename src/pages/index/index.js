@@ -1,14 +1,14 @@
 import Swiper, { Navigation, Pagination } from 'swiper'
-import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/headerUpper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
 import {
   manageVideo,
   showPopupSections
-} from '../../ancillary.scripts/ancillary-srcipts'
+} from '../../ancillary.scripts/ancillarySrcipts'
 import {
   showBtnToTopOnScroll,
   scrollToTopOnBtnClick
-} from '../../common.blocks/btn-to-top/btn-to-top'
+} from '../../common.blocks/btn-to-top/btnToTop'
 
 initHeaderSwiper()
 toggleMobileMenu()
@@ -60,7 +60,7 @@ function manageNumberIncrement() {
         numberElem.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
       windowHeight = window.innerHeight,
-      startInterval = 100,
+      startInterval = 50,
       timeOutInterval = 200,
       endNum = 14
 

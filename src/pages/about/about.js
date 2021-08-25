@@ -1,14 +1,14 @@
-import { toggleMobileMenu } from '../../common.blocks/header-upper/header-upper'
+import { toggleMobileMenu } from '../../common.blocks/header-upper/headerUpper'
 import { toggleServicesAccordionTabs } from '../../common.blocks/services/services'
 import {
   manageVideo,
   showSectionOnLoad,
   showPopupSections
-} from '../../ancillary.scripts/ancillary-srcipts'
+} from '../../ancillary.scripts/ancillarySrcipts'
 import {
   showBtnToTopOnScroll,
   scrollToTopOnBtnClick
-} from '../../common.blocks/btn-to-top/btn-to-top'
+} from '../../common.blocks/btn-to-top/btnToTop'
 
 toggleMobileMenu()
 toggleServicesAccordionTabs()
@@ -38,9 +38,9 @@ function manageNumberIncrement() {
       sectionCoords = section.getBoundingClientRect().top + window.pageYOffset,
       upperOffsetWindow = window.pageYOffset,
       windowHeingt = window.innerHeight,
-      projectsEndNum = 20,
+      projectsEndNum = 25,
       experienceEndNum = 14,
-      incrementInterval = 100,
+      incrementInterval = 50,
       startDelay = 500
 
     let startNum = 0

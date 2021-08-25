@@ -23,6 +23,10 @@
 
 .services__left {
   width: 50%;
+
+  @media screen and (max-width: 1150px) {
+    width: 0%;
+  }
 }
 
 .services__title {
@@ -54,7 +58,7 @@
 }
 
 .services__list {
-  max-width: 555px;
+  width: 555px;
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -158,6 +162,7 @@
   @include font(400, 15px);
 
   max-width: 380px;
+  padding-left: 15px;
   line-height: 140%;
   text-align: left;
 

@@ -25,7 +25,7 @@
 
   @media screen and (max-width: 768px) {
     & {
-      height: 70vh;
+      height: 90vh;
     }
   }
 
@@ -56,7 +56,7 @@
     height: 100vh;
 
     @media screen and (max-width: 768px) {
-      height: 70vh;
+      height: 90vh;
     }
   }
 
@@ -74,8 +74,8 @@
     color: #fff;
     transition: 0.2s all ease;
 
-    @media screen and (max-width: 350px) {
-      // display: none;
+    @media screen and (max-width: 550px) {
+      display: none;
     }
   }
 
@@ -109,16 +109,12 @@
     transition: 0.2s all ease;
   }
 
-  .swiper-scrollbar {
-    display: none;
-  }
-
   .swiper-slide {
     width: 100vw;
     height: 100vh;
 
     @media screen and (max-width: 768px) {
-      height: 70vh;
+      height: 90vh;
     }
   }
 
@@ -146,8 +142,12 @@
       border-bottom: none;
     }
 
+    @media screen and (max-width: 550px) {
+      padding-left: 60px;
+    }
+
     @media screen and (max-width: 450px) {
-      padding-left: 110px;
+      padding-left: 20px;
     }
   }
 
@@ -232,6 +232,7 @@
     text-align: left;
 
     @media screen and (max-width: 450px) {
+      margin-bottom: 20px;
       margin-left: 20px;
     }
   }
@@ -445,7 +446,7 @@
 
   .trends__lower-number {
     @include font(600, 7rem, $accent-color);
-    // line-height: 90px;
+
     margin-bottom: 55px;
 
     @media screen and (max-width: 450px) {
@@ -687,7 +688,7 @@
 
   @for $item from 1 through 4 {
     .clients__pic--#{$item} {
-      background: url('../../images/pages/index/clients-section/person-#{$item}.jpg?quality=70');
+      background: url('../../images/pages/index/clients-section/person-#{$item}.jpg?quality=70&width=265');
       background-size: cover;
     }
   }
@@ -858,7 +859,6 @@
     justify-content: space-between;
     height: 0;
     visibility: hidden;
-    // overflow: hidden;
     opacity: 0;
     transition: 0.2s all linear;
   }
