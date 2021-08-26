@@ -4,7 +4,7 @@
 - Valid, crossbrowser, responsive, accessible, optimized;
 - Parcel, Reset.css, SCSS, Vanilla JS, Swiper.js, ESLint, Stylelint;
 - [Hosted Site](https://benhome.netlify.app/).
-- 
+
 ### Business Purpose:
 
 Presentation of design bureau services for potential clients.

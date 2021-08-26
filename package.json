@@ -2,9 +2,10 @@
   "name": "benhome",
   "version": "1.0.0",
   "description": "design bureau site",
+  "source": "src/pages/index/index.html",
   "scripts": {
-    "dev": "parcel src/pages/index/index.html",
-    "prod": "parcel build src/pages/index/index.html"
+    "dev": "parcel",
+    "prod": "parcel build"
   },
   "keywords": [],
   "author": "Dmitry Voskoboev",
