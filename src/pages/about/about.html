@@ -29,7 +29,7 @@
   <!-- /fonts preload -->
   <title>Benhome: About</title>
   <link rel="stylesheet" href="./about.scss">
-  <script src="./about.js" type="module" defer></script>
+  <script src="./about.js" type="module"></script>
 </head>
 
 <body>
@@ -37,10 +37,10 @@
   </div>
   <header class="header">
     <div class="header__upper">
-      <button class="header__mobile-btn--open">
+      <button class="header__mobile-btn--open" aria-label="Mobile menu button">
       </button>
       <a class="header__logo" href="/" aria-label="Header logo">
-        <img class="header__logo-benhome" src="../../images/general.imgs/logo-black.png?quality=70" alt="logo-white">
+        <img class="header__logo-img" src="../../images/general.imgs/logo-black.png?quality=70" alt="logo-white">
       </a>
       <nav class="header__nav">
         <button class="header__mobile-btn--close">
@@ -162,7 +162,8 @@
               <h4 class="services__list-item-title" tabindex="0">
                 Architecture Design
               </h4>
-              <button class="services__list-item-btn services__list-item-btn--active" tabindex="0">
+              <button class="services__list-item-btn services__list-item-btn--active" tabindex="0"
+                aria-label="Open item button">
                 <div class="services__list-item-btn-down-arrow services__list-item-btn-down-arrow--active">
                 </div>
               </button>
@@ -183,7 +184,7 @@
               <h4 class="services__list-item-title" tabindex="0">
                 Planning
               </h4>
-              <button class="services__list-item-btn" tabindex="0">
+              <button class="services__list-item-btn" tabindex="0" aria-label="Open item button">
                 <div class="services__list-item-btn-down-arrow">
                 </div>
               </button>
@@ -202,7 +203,7 @@
               <h4 class="services__list-item-title" tabindex="0">
                 Landscape Design
               </h4>
-              <button class="services__list-item-btn" tabindex="0">
+              <button class="services__list-item-btn" tabindex="0" aria-label="Open item button">
                 <div class="services__list-item-btn-down-arrow">
                 </div>
               </button>
@@ -222,7 +223,7 @@
               <h4 class="services__list-item-title" tabindex="0">
                 Branding
               </h4>
-              <button class="services__list-item-btn" tabindex="0">
+              <button class="services__list-item-btn" tabindex="0" aria-label="Open item button">
                 <div class="services__list-item-btn-down-arrow">
                 </div>
               </button>
@@ -242,7 +243,7 @@
               <h4 class="services__list-item-title" tabindex="0">
                 Style
               </h4>
-              <button class="services__list-item-btn" tabindex="0">
+              <button class="services__list-item-btn" tabindex="0" aria-label="Open item button">
                 <div class="services__list-item-btn-down-arrow">
                 </div>
               </button>
@@ -422,7 +423,7 @@
   </section>
   <footer class="footer">
     <a class="footer__logo" href="/" aria-label="Footer logo">
-      <img class="footer__logo-link" src="../../images/general.imgs/logo-black.png?quality=70" alt="logo">
+      <img class="footer__logo-img" src="../../images/general.imgs/logo-black.png?quality=70" alt="logo">
     </a>
     <p class="footer__rights">
       &copy; Sentro 2021 <br>
