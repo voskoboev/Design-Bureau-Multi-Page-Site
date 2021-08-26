@@ -1,3 +1,4 @@
+// import '../../libs/inputmask/inputmask.min.js'
 import { toggleMobileMenu } from '../../common.blocks/header-upper/headerUpper'
 import {
   showSectionOnLoad,
@@ -14,3 +15,10 @@ showSectionOnLoad('header__lower')
 showPopupSections('contacts')
 showBtnToTopOnScroll('.contacts')
 scrollToTopOnBtnClick('.contacts')
+
+// function inputMask() {
+//   const inputTel = document.querySelector('.modal-window__input-tel')
+//   const im = new Inputmask('+7 (999) 999-99-99')
+
+//   im.mask(inputTel)
+// }
