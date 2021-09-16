@@ -94,6 +94,10 @@
     margin-right: 45px;
   }
 
+  .projects__menu-item--all {
+    color: $accent-color;
+  }
+
   .projects__lower {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

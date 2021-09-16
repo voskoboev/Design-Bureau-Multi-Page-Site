@@ -90,6 +90,10 @@
     }
   }
 
+  .news__menu-item--all {
+    color: $accent-color;
+  }
+
   .news__menu-item:not(:last-child) {
     margin-right: 45px;
   }
@@ -198,7 +202,8 @@
       height: 7px;
       margin-left: 15px;
       content: '';
-      background: url('../../images/pages/news/arrow-black.png?quality=70') no-repeat;
+      background: url('../../images/pages/news/arrow-black.png?quality=70')
+        no-repeat;
     }
   }
 }

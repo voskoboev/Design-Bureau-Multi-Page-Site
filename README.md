@@ -3,7 +3,7 @@
 ### Summary:
 - Valid, crossbrowser, responsive, accessible, optimized;
 - Parcel, Reset.css, SCSS, Vanilla JS, Swiper.js, ESLint, Stylelint;
-- [Hosted Site](https://benhome.netlify.app/).
+- [Hosted Site](http://dvoskoboev.ru/).
 
 ### Business Purpose:
 

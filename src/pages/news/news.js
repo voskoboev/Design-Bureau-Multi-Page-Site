@@ -14,7 +14,8 @@ scrollToTopOnBtnClick('.footer')
 toggleGalleryTabs()
 
 function toggleGalleryTabs() {
-  const menuItemAll = document.querySelector('.news__menu-item--all'),
+  const allMenuItems = document.querySelectorAll('.news__menu-item'),
+    menuItemAll = document.querySelector('.news__menu-item--all'),
     menuItemExterior = document.querySelector('.news__menu-item--exterior'),
     menuItemInterior = document.querySelector('.news__menu-item--interior'),
     galleryItemsAll = document.querySelectorAll('.news__card'),
@@ -33,7 +34,7 @@ function toggleGalleryTabs() {
      `)
 
   const toggleCards = (menuItem, galleryItems, allGalleryItems) => {
-    menuItem.onclick = () => {
+    menuItem.addEventListener('click', () => {
       allGalleryItems.forEach(item => {
         item.style.display = 'none'
       })
@@ -41,7 +42,13 @@ function toggleGalleryTabs() {
       galleryItems.forEach(item => {
         item.style.display = 'block'
       })
-    }
+
+      allMenuItems.forEach(item => {
+        item.style.color = '#000'
+      })
+
+      menuItem.style.color = '#f27935'
+    })
   }
 
   toggleCards(menuItemAll, galleryItemsAll, galleryItemsAll)

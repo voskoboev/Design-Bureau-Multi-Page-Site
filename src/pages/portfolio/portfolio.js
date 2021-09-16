@@ -14,7 +14,8 @@ scrollToTopOnBtnClick('.footer')
 toggleGalleryCards()
 
 function toggleGalleryCards() {
-  const menuItemAll = document.querySelector('.projects__menu-item--all'),
+  const allMenuItems = document.querySelectorAll('.projects__menu-item'),
+    menuItemAll = document.querySelector('.projects__menu-item--all'),
     menuItemExterior = document.querySelector('.projects__menu-item--exterior'),
     menuItemInterior = document.querySelector('.projects__menu-item--interior'),
     galleryItemsAll = document.querySelectorAll('.projects__card'),
@@ -78,6 +79,12 @@ function toggleGalleryCards() {
         item.style.gridColumn = 'auto'
         item.style.display = 'block'
       })
+
+      allMenuItems.forEach(item => {
+        item.style.color = '#000'
+      })
+
+      menuItem.style.color = '#f27935'
     })
   }
 
