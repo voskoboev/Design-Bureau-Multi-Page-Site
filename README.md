@@ -5,6 +5,10 @@
 - Parcel, Reset.css, SCSS, Vanilla JS, Swiper.js, ESLint, Stylelint;
 - [Hosted Site](http://dvoskoboev.ru/).
 
+### Get Started:
+
+Insert console command 'npm run dev'.
+
 ### Business Purpose:
 
 Presentation of design bureau services for potential clients.
