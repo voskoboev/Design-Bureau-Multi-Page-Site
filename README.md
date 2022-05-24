@@ -3,7 +3,7 @@
 ### Summary:
 - Valid, crossbrowser, responsive, accessible, optimized;
 - Parcel, Reset.css, SCSS, Vanilla JS, Swiper.js, ESLint, Stylelint;
-- [Hosted Site](http://dvoskoboev.ru/).
+- [Hosted Site](http://f0677561.xsph.ru/).
 
 ### Get Started:
 
